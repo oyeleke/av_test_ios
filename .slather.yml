@@ -1,0 +1,6 @@
+coverage_service: cobertura_xml
+workspace: AV TEST AID.xcworkspace
+xcodeproj: AV TEST AID.xcodeproj
+scheme: AV TEST AID-develop
+ignore:
+  - Pods/*
