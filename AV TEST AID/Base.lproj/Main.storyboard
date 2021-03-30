@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aXS-GV-C4h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aXS-GV-C4h">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -52,102 +54,89 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgImage" translatesAutoresizingMaskIntoConstraints="NO" id="3tH-aZ-SVJ">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
-                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="spQ-n7-OBb">
-                                <rect key="frame" x="-10" y="44" width="424" height="818"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Al0-fH-akk">
-                                        <rect key="frame" x="39.000000000000007" y="428" width="105.66666666666669" height="30"/>
-                                        <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="24"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IR-uM-jO0">
-                                        <rect key="frame" x="39" y="502" width="266.33333333333331" height="19"/>
-                                        <string key="text">We’ve got all the questions to help you 
-pass your aviation exam in flying colours.</string>
-                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pass your aviation exam in flying colours." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3s-e1-hih">
-                                        <rect key="frame" x="39" y="529" width="285" height="19"/>
-                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvH-LZ-Vgo" customClass="CustomDesignableButton" customModule="AV_TEST_AID" customModuleProvider="target">
-                                        <rect key="frame" x="39" y="615" width="346" height="50"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="alE-Pi-RZZ"/>
-                                            <constraint firstAttribute="height" constant="50" id="ujt-e8-QK2"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="14"/>
-                                        <state key="normal" title="CREATE ACCOUNT">
-                                            <color key="titleColor" red="0.0078431372549019607" green="0.16862745098039217" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="createAccountTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CgN-Qp-ehS"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hyt-AJ-MBj" customClass="CustomDesignableButton" customModule="AV_TEST_AID" customModuleProvider="target">
-                                        <rect key="frame" x="39" y="701" width="346" height="50"/>
-                                        <color key="backgroundColor" red="0.0039215686269999999" green="0.4941176471" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="1Qp-jg-HmI"/>
-                                            <constraint firstAttribute="height" constant="50" id="sAX-dD-euN"/>
-                                        </constraints>
-                                        <state key="normal" title="SIGN IN"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="signINTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ln-FM-0U1"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0039215686274509803" green="0.49411764705882355" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Hyt-AJ-MBj" secondAttribute="trailing" constant="39" id="17w-H5-CBO"/>
-                                    <constraint firstItem="Hyt-AJ-MBj" firstAttribute="leading" secondItem="spQ-n7-OBb" secondAttribute="leading" constant="39" id="3Eu-dk-A9X"/>
-                                    <constraint firstItem="C3s-e1-hih" firstAttribute="leading" secondItem="spQ-n7-OBb" secondAttribute="leading" constant="39" id="AaF-9R-icS"/>
-                                    <constraint firstAttribute="trailing" secondItem="nvH-LZ-Vgo" secondAttribute="trailing" constant="39" id="GOa-Pp-j7t"/>
-                                    <constraint firstAttribute="bottom" secondItem="Hyt-AJ-MBj" secondAttribute="bottom" constant="67" id="Hqm-qU-ume"/>
-                                    <constraint firstItem="Al0-fH-akk" firstAttribute="leading" secondItem="spQ-n7-OBb" secondAttribute="leading" constant="39" id="PKi-XS-o3I"/>
-                                    <constraint firstItem="8IR-uM-jO0" firstAttribute="top" secondItem="Al0-fH-akk" secondAttribute="bottom" constant="44" id="Yy2-uA-gqw"/>
-                                    <constraint firstItem="Hyt-AJ-MBj" firstAttribute="top" secondItem="nvH-LZ-Vgo" secondAttribute="bottom" constant="36" id="Yym-wn-Ebn"/>
-                                    <constraint firstItem="Hyt-AJ-MBj" firstAttribute="leading" secondItem="spQ-n7-OBb" secondAttribute="leading" constant="39" id="ZuL-8m-5zw"/>
-                                    <constraint firstItem="nvH-LZ-Vgo" firstAttribute="leading" secondItem="spQ-n7-OBb" secondAttribute="leading" constant="39" id="a8S-rp-OGv"/>
-                                    <constraint firstItem="8IR-uM-jO0" firstAttribute="leading" secondItem="spQ-n7-OBb" secondAttribute="leading" constant="39" id="dr2-if-Itx"/>
-                                    <constraint firstItem="nvH-LZ-Vgo" firstAttribute="top" secondItem="C3s-e1-hih" secondAttribute="bottom" constant="67" id="tdW-VC-NhQ"/>
-                                    <constraint firstItem="C3s-e1-hih" firstAttribute="top" secondItem="8IR-uM-jO0" secondAttribute="bottom" constant="8" id="wqA-cO-ZnL"/>
-                                </constraints>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDJ-OI-42E" userLabel="backgroundOverlay">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" name="aviBlue"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Al0-fH-akk">
+                                <rect key="frame" x="38.000000000000007" y="441" width="105.66666666666669" height="30"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IR-uM-jO0">
+                                <rect key="frame" x="38" y="487" width="338" height="37.666666666666629"/>
+                                <string key="text">We’ve got all the questions to help you 
+pass your aviation exam in flying colours.</string>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hyt-AJ-MBj" customClass="CustomDesignableButton" customModule="AV_TEST_AID" customModuleProvider="target">
+                                <rect key="frame" x="38" y="621.66666666666663" width="338" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="1Qp-jg-HmI"/>
+                                    <constraint firstAttribute="height" constant="50" id="sAX-dD-euN"/>
+                                </constraints>
+                                <state key="normal" title="SIGN IN"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signINTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ln-FM-0U1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvH-LZ-Vgo" customClass="CustomDesignableButton" customModule="AV_TEST_AID" customModuleProvider="target">
+                                <rect key="frame" x="38" y="552.66666666666663" width="338" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="alE-Pi-RZZ"/>
+                                    <constraint firstAttribute="height" constant="50" id="ujt-e8-QK2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="14"/>
+                                <state key="normal" title="CREATE ACCOUNT">
+                                    <color key="titleColor" name="darkBlueTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createAccountTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CgN-Qp-ehS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95331488715277779" green="0.95331488715277779" blue="0.95331488715277779" alpha="1" colorSpace="calibratedRGB"/>
                         <accessibility key="accessibilityConfiguration" identifier="StartView"/>
                         <constraints>
+                            <constraint firstItem="nvH-LZ-Vgo" firstAttribute="top" secondItem="8IR-uM-jO0" secondAttribute="bottom" constant="28" id="2f5-ng-rHb"/>
+                            <constraint firstItem="8IR-uM-jO0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="38" id="2yN-ba-efq"/>
                             <constraint firstItem="3tH-aZ-SVJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="4Q6-JG-odc"/>
-                            <constraint firstItem="spQ-n7-OBb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-30" id="5sL-Vt-FXJ"/>
-                            <constraint firstItem="spQ-n7-OBb" firstAttribute="trailing" secondItem="3tH-aZ-SVJ" secondAttribute="trailing" id="8tw-Nr-pYA"/>
                             <constraint firstAttribute="trailing" secondItem="3tH-aZ-SVJ" secondAttribute="trailing" id="H5m-dk-GOE"/>
+                            <constraint firstItem="Hyt-AJ-MBj" firstAttribute="top" secondItem="nvH-LZ-Vgo" secondAttribute="bottom" constant="19" id="IDn-0E-b6i"/>
+                            <constraint firstAttribute="trailing" secondItem="nvH-LZ-Vgo" secondAttribute="trailing" constant="38" id="KQf-L6-eGs"/>
+                            <constraint firstAttribute="trailing" secondItem="Hyt-AJ-MBj" secondAttribute="trailing" constant="38" id="MRm-0B-wtZ"/>
+                            <constraint firstAttribute="trailing" secondItem="8IR-uM-jO0" secondAttribute="trailing" constant="38" id="Zon-5D-Bza"/>
                             <constraint firstItem="3tH-aZ-SVJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dPk-Fu-Wny"/>
+                            <constraint firstItem="8IR-uM-jO0" firstAttribute="top" secondItem="Al0-fH-akk" secondAttribute="bottom" constant="16" id="eOU-Bw-hst"/>
+                            <constraint firstItem="JDJ-OI-42E" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="emz-nY-02t"/>
                             <constraint firstItem="3tH-aZ-SVJ" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="fDR-hf-apn"/>
-                            <constraint firstItem="spQ-n7-OBb" firstAttribute="top" secondItem="3tH-aZ-SVJ" secondAttribute="top" id="nql-d3-6JQ"/>
-                            <constraint firstItem="spQ-n7-OBb" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="nvD-Sg-XeE"/>
+                            <constraint firstItem="nvH-LZ-Vgo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="38" id="slO-lg-qh5"/>
+                            <constraint firstItem="JDJ-OI-42E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tMw-B8-fz4"/>
+                            <constraint firstAttribute="trailing" secondItem="JDJ-OI-42E" secondAttribute="trailing" id="tTU-ms-UHc"/>
+                            <constraint firstItem="Al0-fH-akk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="8" id="vdq-aK-giq"/>
+                            <constraint firstItem="Al0-fH-akk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="38" id="w92-8R-4DF"/>
+                            <constraint firstItem="Hyt-AJ-MBj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="38" id="x7O-4c-qqY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JDJ-OI-42E" secondAttribute="bottom" id="ziQ-ev-jKE"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
@@ -179,7 +168,7 @@ pass your aviation exam in flying colours.</string>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue To Your Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1q-34-khR">
-                                <rect key="frame" x="97.666666666666686" y="181" width="219" height="22.333333333333343"/>
+                                <rect key="frame" x="98.000000000000014" y="180.66666666666666" width="218.33333333333337" height="22.666666666666657"/>
                                 <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -227,7 +216,7 @@ pass your aviation exam in flying colours.</string>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="mci-QR-H29" firstAttribute="leading" secondItem="jmj-pi-nEk" secondAttribute="leading" id="19G-zd-6hS"/>
                                     <constraint firstItem="Ivc-Wq-cDh" firstAttribute="leading" secondItem="eT0-Hc-Mbx" secondAttribute="leading" constant="30" id="2Xa-ia-lqx"/>
@@ -252,7 +241,7 @@ pass your aviation exam in flying colours.</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="MZl-uH-lag">
-                                <rect key="frame" x="170" y="108" width="74" height="49"/>
+                                <rect key="frame" x="170" y="107.66666666666669" width="74" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="74" id="9hk-El-7Lr"/>
                                     <constraint firstAttribute="height" constant="49.000000000000014" id="nJJ-Cp-Bu3"/>
@@ -384,7 +373,7 @@ pass your aviation exam in flying colours.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="XoH-Hn-C7k" secondAttribute="trailing" constant="30" id="5dH-g6-3yy"/>
                                     <constraint firstAttribute="bottom" secondItem="6dC-5s-Cie" secondAttribute="bottom" constant="146" id="7Rc-M0-SVy"/>
@@ -451,7 +440,7 @@ pass your aviation exam in flying colours.</string>
                     <view key="view" contentMode="scaleToFill" id="ekY-1e-zqv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NPO-fB-ano" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -459,9 +448,32 @@ pass your aviation exam in flying colours.</string>
             <point key="canvasLocation" x="1554" y="2077"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Hyt-AJ-MBj">
+            <size key="intrinsicContentSize" width="63" height="34"/>
+        </designable>
+        <designable name="XoH-Hn-C7k">
+            <size key="intrinsicContentSize" width="44" height="30"/>
+        </designable>
+        <designable name="mci-QR-H29">
+            <size key="intrinsicContentSize" width="44" height="30"/>
+        </designable>
+        <designable name="nvH-LZ-Vgo">
+            <size key="intrinsicContentSize" width="122" height="30"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Logo" width="89" height="70"/>
         <image name="bgImage" width="375" height="667"/>
         <image name="bg_blue_shape" width="360" height="419"/>
+        <namedColor name="aviBlue">
+            <color red="0.0039215686274509803" green="0.49411764705882355" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkBlueTextColor">
+            <color red="0.0078431372549019607" green="0.16862745098039217" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
