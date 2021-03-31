@@ -19,6 +19,7 @@ class OutlinedTextInputController: MDCTextInputControllerOutlined {
         super.init(textInput: input)
         borderFillColor = UIColor.clear
         input?.clearButtonMode = .never
+        // TODO Set inoput font
 //        textInputFont = R.font.muliMedium(size: 16.0)
     }
     

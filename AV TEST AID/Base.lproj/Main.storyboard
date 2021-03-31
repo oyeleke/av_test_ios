@@ -165,8 +165,8 @@ pass your aviation exam in flying colours.</string>
                                 <rect key="frame" x="0.0" y="44" width="414" height="537.66666666666663"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eT0-Hc-Mbx" customClass="CustomDesignableView" customModule="AV_TEST_AID" customModuleProvider="target">
-                                <rect key="frame" x="24" y="431.66666666666663" width="366" height="270.66666666666663"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eT0-Hc-Mbx" customClass="CustomDesignableView" customModule="AV_TEST_AID" customModuleProvider="target">
+                                <rect key="frame" x="24" y="431.66666666666669" width="366" height="270.66666666666657"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BrG-7X-J6d" customClass="MDCTextField">
                                         <rect key="frame" x="30" y="32" width="306" height="33"/>
@@ -268,7 +268,7 @@ pass your aviation exam in flying colours.</string>
                             <constraint firstAttribute="trailing" secondItem="eT0-Hc-Mbx" secondAttribute="trailing" constant="24" id="bKc-Xb-3Ie"/>
                             <constraint firstItem="cDs-j9-Uar" firstAttribute="leading" secondItem="NDI-Z9-Roh" secondAttribute="leading" constant="24" id="cWE-Zb-JPp"/>
                             <constraint firstItem="rGU-OB-jkk" firstAttribute="leading" secondItem="NDI-Z9-Roh" secondAttribute="leading" id="drF-3z-dFn"/>
-                            <constraint firstItem="eT0-Hc-Mbx" firstAttribute="top" secondItem="rGU-OB-jkk" secondAttribute="bottom" priority="750" constant="-150" id="hG4-Ac-Fve"/>
+                            <constraint firstItem="eT0-Hc-Mbx" firstAttribute="top" relation="lessThanOrEqual" secondItem="rGU-OB-jkk" secondAttribute="bottom" priority="750" constant="-150" id="hG4-Ac-Fve"/>
                             <constraint firstAttribute="trailing" secondItem="cDs-j9-Uar" secondAttribute="trailing" constant="24" id="r4V-pL-uPJ"/>
                             <constraint firstItem="eT0-Hc-Mbx" firstAttribute="leading" secondItem="NDI-Z9-Roh" secondAttribute="leading" constant="24" id="rJR-bo-YvS"/>
                             <constraint firstItem="cDs-j9-Uar" firstAttribute="centerY" secondItem="rGU-OB-jkk" secondAttribute="centerY" constant="-100" id="zXg-8z-aDc"/>
@@ -320,60 +320,63 @@ pass your aviation exam in flying colours.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_blue_shape" translatesAutoresizingMaskIntoConstraints="NO" id="MlJ-Wl-f6q">
-                                <rect key="frame" x="4" y="44" width="375" height="551"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="537.66666666666663"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Create Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObR-9k-C9v">
-                                <rect key="frame" x="121" y="110" width="132" height="23"/>
-                                <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="gBd-oQ-p3f">
-                                <rect key="frame" x="154.66666666666666" y="88" width="74" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="leu-DO-hYz"/>
-                                    <constraint firstAttribute="width" constant="74" id="tIt-E3-0QO"/>
-                                </constraints>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1d-td-sH3" customClass="CustomDesignableView" customModule="AV_TEST_AID" customModuleProvider="target">
-                                <rect key="frame" x="20" y="220" width="343" height="552"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IKE-J9-vuI">
+                                <rect key="frame" x="141.33333333333331" y="177" width="131.33333333333331" height="71.666666666666686"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yda-GZ-koA">
-                                        <rect key="frame" x="30" y="38" width="127" height="44"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6dC-5s-Cie">
-                                        <rect key="frame" x="30" y="362" width="283" height="44"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="gBd-oQ-p3f">
+                                        <rect key="frame" x="28.666666666666657" y="0.0" width="74" height="49"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="pBb-We-8kh"/>
+                                            <constraint firstAttribute="height" constant="49" id="leu-DO-hYz"/>
+                                            <constraint firstAttribute="width" constant="74" id="tIt-E3-0QO"/>
                                         </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObR-9k-C9v">
+                                        <rect key="frame" x="0.0" y="49" width="131.33333333333334" height="22.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S1d-td-sH3" customClass="CustomDesignableView" customModule="AV_TEST_AID" customModuleProvider="target">
+                                <rect key="frame" x="24" y="431.66666666666669" width="366" height="230.66666666666657"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="hxj-uv-0px">
+                                        <rect key="frame" x="30" y="22" width="306" height="28.666666666666671"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yda-GZ-koA" customClass="MDCTextField">
+                                                <rect key="frame" x="0.0" y="0.0" width="146" height="28.666666666666668"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N8K-39-xwC" customClass="MDCTextField">
+                                                <rect key="frame" x="160" y="0.0" width="146" height="28.666666666666668"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oWm-MF-Dc9" customClass="MDCTextField">
+                                        <rect key="frame" x="30" y="50.666666666666622" width="306" height="28.666666666666664"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N8K-39-xwC">
-                                        <rect key="frame" x="186" y="38" width="127" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="Ax7-we-ziU"/>
-                                            <constraint firstAttribute="width" constant="127" id="FAa-bq-Wrb"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oWm-MF-Dc9">
-                                        <rect key="frame" x="30" y="133" width="283" height="195"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6dC-5s-Cie" customClass="PasswordToggleTextField" customModule="AV_TEST_AID" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="79.333333333333314" width="306" height="28.666666666666671"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoH-Hn-C7k" customClass="CustomDesignableButton" customModule="AV_TEST_AID" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="426" width="283" height="50"/>
+                                        <rect key="frame" x="30" y="115.99999999999994" width="306" height="50"/>
                                         <color key="backgroundColor" red="0.0039215686269999999" green="0.4941176471" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="gOG-QZ-fxn"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="14"/>
-                                        <state key="normal" title="Sign In">
+                                        <state key="normal" title="Sign Up">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -383,7 +386,7 @@ pass your aviation exam in flying colours.</string>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login Instead" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqe-rm-VXA">
-                                        <rect key="frame" x="126" y="498" width="90" height="18"/>
+                                        <rect key="frame" x="138" y="183.99999999999994" width="90" height="17.666666666666657"/>
                                         <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="14"/>
                                         <color key="textColor" red="0.0078431372550000003" green="0.16862745100000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -391,34 +394,28 @@ pass your aviation exam in flying colours.</string>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="XoH-Hn-C7k" secondAttribute="trailing" constant="30" id="5dH-g6-3yy"/>
-                                    <constraint firstAttribute="bottom" secondItem="6dC-5s-Cie" secondAttribute="bottom" constant="146" id="7Rc-M0-SVy"/>
-                                    <constraint firstItem="N8K-39-xwC" firstAttribute="leading" secondItem="Yda-GZ-koA" secondAttribute="trailing" constant="29" id="7c3-Ii-rn8"/>
-                                    <constraint firstItem="6dC-5s-Cie" firstAttribute="leading" secondItem="XoH-Hn-C7k" secondAttribute="leading" id="7wT-dm-5Jp"/>
-                                    <constraint firstItem="oWm-MF-Dc9" firstAttribute="top" secondItem="N8K-39-xwC" secondAttribute="bottom" constant="51" id="8n3-jq-nOG"/>
-                                    <constraint firstItem="XoH-Hn-C7k" firstAttribute="leading" secondItem="S1d-td-sH3" secondAttribute="leading" constant="30" id="Cua-r7-wKS"/>
-                                    <constraint firstItem="N8K-39-xwC" firstAttribute="baseline" secondItem="Yda-GZ-koA" secondAttribute="baseline" id="DFx-0r-0zi"/>
-                                    <constraint firstItem="6dC-5s-Cie" firstAttribute="width" secondItem="XoH-Hn-C7k" secondAttribute="width" id="EHL-AW-vUr"/>
-                                    <constraint firstItem="6dC-5s-Cie" firstAttribute="trailing" secondItem="oWm-MF-Dc9" secondAttribute="trailing" id="FEr-nd-5FW"/>
-                                    <constraint firstItem="N8K-39-xwC" firstAttribute="bottom" secondItem="Yda-GZ-koA" secondAttribute="bottom" id="IXG-XQ-9ez"/>
-                                    <constraint firstItem="6dC-5s-Cie" firstAttribute="leading" secondItem="Yda-GZ-koA" secondAttribute="leading" id="RT8-hM-lQK"/>
-                                    <constraint firstItem="jqe-rm-VXA" firstAttribute="leading" secondItem="S1d-td-sH3" secondAttribute="leading" constant="126" id="SYR-q1-YnD"/>
-                                    <constraint firstItem="6dC-5s-Cie" firstAttribute="top" secondItem="oWm-MF-Dc9" secondAttribute="bottom" constant="34" id="Zap-k7-wug"/>
-                                    <constraint firstItem="jqe-rm-VXA" firstAttribute="top" secondItem="XoH-Hn-C7k" secondAttribute="bottom" constant="22" id="f1C-X0-6Tv"/>
-                                    <constraint firstItem="6dC-5s-Cie" firstAttribute="trailing" secondItem="XoH-Hn-C7k" secondAttribute="trailing" id="h91-54-dzI"/>
-                                    <constraint firstAttribute="bottom" secondItem="jqe-rm-VXA" secondAttribute="bottom" constant="36" id="mE9-U4-0DZ"/>
-                                    <constraint firstItem="N8K-39-xwC" firstAttribute="top" secondItem="S1d-td-sH3" secondAttribute="top" constant="38" id="trI-rm-gcg"/>
-                                    <constraint firstItem="XoH-Hn-C7k" firstAttribute="top" secondItem="6dC-5s-Cie" secondAttribute="bottom" constant="20" id="vTn-YT-CeW"/>
-                                    <constraint firstItem="6dC-5s-Cie" firstAttribute="leading" secondItem="oWm-MF-Dc9" secondAttribute="leading" id="wXk-Vm-0uX"/>
-                                    <constraint firstAttribute="trailing" secondItem="jqe-rm-VXA" secondAttribute="trailing" constant="127" id="wrj-7k-C8x"/>
-                                    <constraint firstItem="6dC-5s-Cie" firstAttribute="trailing" secondItem="N8K-39-xwC" secondAttribute="trailing" id="xN3-Nw-ea5"/>
+                                    <constraint firstItem="6dC-5s-Cie" firstAttribute="top" secondItem="oWm-MF-Dc9" secondAttribute="bottom" id="9UC-Fo-aAs"/>
+                                    <constraint firstAttribute="trailing" secondItem="hxj-uv-0px" secondAttribute="trailing" constant="30" id="9hz-45-P4A"/>
+                                    <constraint firstAttribute="trailing" secondItem="oWm-MF-Dc9" secondAttribute="trailing" constant="30" id="BJI-rH-wDn"/>
+                                    <constraint firstItem="jqe-rm-VXA" firstAttribute="top" secondItem="XoH-Hn-C7k" secondAttribute="bottom" constant="18" id="GEz-ze-MZr"/>
+                                    <constraint firstAttribute="trailing" secondItem="XoH-Hn-C7k" secondAttribute="trailing" constant="30" id="JSO-Py-SzP"/>
+                                    <constraint firstItem="XoH-Hn-C7k" firstAttribute="leading" secondItem="S1d-td-sH3" secondAttribute="leading" constant="30" id="Rxa-iI-Jgn"/>
+                                    <constraint firstItem="jqe-rm-VXA" firstAttribute="centerX" secondItem="S1d-td-sH3" secondAttribute="centerX" id="UJX-8b-Nj4"/>
+                                    <constraint firstItem="hxj-uv-0px" firstAttribute="leading" secondItem="S1d-td-sH3" secondAttribute="leading" constant="30" id="b3z-Np-ZDz"/>
+                                    <constraint firstItem="6dC-5s-Cie" firstAttribute="leading" secondItem="S1d-td-sH3" secondAttribute="leading" constant="30" id="dzN-RS-l3W"/>
+                                    <constraint firstAttribute="trailing" secondItem="6dC-5s-Cie" secondAttribute="trailing" constant="30" id="fdN-xP-0FA"/>
+                                    <constraint firstItem="hxj-uv-0px" firstAttribute="top" secondItem="S1d-td-sH3" secondAttribute="top" constant="22" id="hSx-Jd-Rs0"/>
+                                    <constraint firstItem="XoH-Hn-C7k" firstAttribute="top" secondItem="6dC-5s-Cie" secondAttribute="bottom" constant="8" id="s8k-H8-OR3"/>
+                                    <constraint firstItem="oWm-MF-Dc9" firstAttribute="top" secondItem="hxj-uv-0px" secondAttribute="bottom" id="t7m-fy-8ze"/>
+                                    <constraint firstItem="oWm-MF-Dc9" firstAttribute="leading" secondItem="S1d-td-sH3" secondAttribute="leading" constant="30" id="umd-C6-qWa"/>
+                                    <constraint firstAttribute="bottom" secondItem="jqe-rm-VXA" secondAttribute="bottom" constant="29" id="xfr-6s-t8l"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="12"/>
+                                        <integer key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -426,24 +423,29 @@ pass your aviation exam in flying colours.</string>
                         <color key="backgroundColor" red="0.95331488720000002" green="0.95331488720000002" blue="0.95331488720000002" alpha="1" colorSpace="calibratedRGB"/>
                         <accessibility key="accessibilityConfiguration" identifier="SignUpView"/>
                         <constraints>
-                            <constraint firstItem="S1d-td-sH3" firstAttribute="top" secondItem="XMA-3Z-CBb" secondAttribute="bottom" constant="176" id="27C-SW-cmW"/>
-                            <constraint firstItem="MlJ-Wl-f6q" firstAttribute="top" secondItem="fOd-E6-qfR" secondAttribute="topMargin" id="EfZ-hb-QFe"/>
-                            <constraint firstItem="gBd-oQ-p3f" firstAttribute="centerX" secondItem="MlJ-Wl-f6q" secondAttribute="centerX" id="Fkk-LY-vgA"/>
-                            <constraint firstItem="S1d-td-sH3" firstAttribute="centerX" secondItem="MlJ-Wl-f6q" secondAttribute="centerX" id="JaJ-oo-Fxr"/>
-                            <constraint firstItem="sxg-nY-nv5" firstAttribute="top" secondItem="MlJ-Wl-f6q" secondAttribute="bottom" constant="267" id="NA9-Lx-ccS"/>
-                            <constraint firstItem="sxg-nY-nv5" firstAttribute="top" secondItem="S1d-td-sH3" secondAttribute="bottom" constant="90" id="Q44-Br-Bhe"/>
-                            <constraint firstItem="gBd-oQ-p3f" firstAttribute="top" secondItem="XMA-3Z-CBb" secondAttribute="bottom" constant="44" id="gfD-2b-l7z"/>
-                            <constraint firstItem="gBd-oQ-p3f" firstAttribute="centerX" secondItem="ObR-9k-C9v" secondAttribute="centerX" id="iCP-00-Omq"/>
-                            <constraint firstItem="S1d-td-sH3" firstAttribute="leading" secondItem="fOd-E6-qfR" secondAttribute="leadingMargin" id="mVw-vS-pw3"/>
-                            <constraint firstItem="MlJ-Wl-f6q" firstAttribute="leading" secondItem="fOd-E6-qfR" secondAttribute="leadingMargin" constant="-16" id="mX7-C1-gDH"/>
-                            <constraint firstItem="ObR-9k-C9v" firstAttribute="top" secondItem="gBd-oQ-p3f" secondAttribute="bottom" constant="22" id="n5A-DO-fIl"/>
+                            <constraint firstItem="sxg-nY-nv5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="S1d-td-sH3" secondAttribute="bottom" constant="74" id="529-qh-qwR"/>
+                            <constraint firstItem="S1d-td-sH3" firstAttribute="leading" secondItem="fOd-E6-qfR" secondAttribute="leading" constant="24" id="8VG-L7-WbO"/>
+                            <constraint firstAttribute="trailing" secondItem="MlJ-Wl-f6q" secondAttribute="trailing" id="9An-dS-lKa"/>
+                            <constraint firstAttribute="trailing" secondItem="S1d-td-sH3" secondAttribute="trailing" constant="24" id="HD5-af-bbG"/>
+                            <constraint firstItem="MlJ-Wl-f6q" firstAttribute="leading" secondItem="fOd-E6-qfR" secondAttribute="leading" id="YMb-h7-bFk"/>
+                            <constraint firstItem="IKE-J9-vuI" firstAttribute="centerY" secondItem="MlJ-Wl-f6q" secondAttribute="centerY" constant="-100" id="eG7-fs-Esq"/>
+                            <constraint firstItem="S1d-td-sH3" firstAttribute="top" relation="lessThanOrEqual" secondItem="MlJ-Wl-f6q" secondAttribute="bottom" priority="750" constant="-150" id="klO-1b-HJO"/>
+                            <constraint firstItem="MlJ-Wl-f6q" firstAttribute="top" secondItem="XMA-3Z-CBb" secondAttribute="bottom" id="r7k-32-DXp"/>
+                            <constraint firstItem="MlJ-Wl-f6q" firstAttribute="height" secondItem="fOd-E6-qfR" secondAttribute="height" multiplier="0.6" id="srm-EX-ZHf"/>
+                            <constraint firstItem="IKE-J9-vuI" firstAttribute="centerX" secondItem="MlJ-Wl-f6q" secondAttribute="centerX" id="u02-JY-1VE"/>
                         </constraints>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="emailAddressField" destination="oWm-MF-Dc9" id="HbC-N2-x6B"/>
+                        <outlet property="firstNameField" destination="Yda-GZ-koA" id="RHz-Dw-GGF"/>
+                        <outlet property="lastNameField" destination="N8K-39-xwC" id="htg-h1-4Lm"/>
+                        <outlet property="passwordField" destination="6dC-5s-Cie" id="YHm-Tr-JpP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YWL-0F-Lip" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1970" y="428"/>
+            <point key="canvasLocation" x="1969.5652173913045" y="427.90178571428572"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="86r-vE-S3g">
@@ -469,7 +471,7 @@ pass your aviation exam in flying colours.</string>
             <size key="intrinsicContentSize" width="51" height="29"/>
         </designable>
         <designable name="XoH-Hn-C7k">
-            <size key="intrinsicContentSize" width="44" height="30"/>
+            <size key="intrinsicContentSize" width="51" height="30"/>
         </designable>
         <designable name="mci-QR-H29">
             <size key="intrinsicContentSize" width="44" height="30"/>
