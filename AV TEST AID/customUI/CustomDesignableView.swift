@@ -10,19 +10,18 @@ import UIKit
 
 class CustomDesignableView: UIView {
 
-   @IBInspectable var cornerRadius : CGFloat = 0{
-       didSet{
-           layer.cornerRadius = cornerRadius
-       }
-   }
-    
-    @IBInspectable var shadowRadius : CGFloat = 0{
+    @IBInspectable var cornerRadius : CGFloat = 0 {
         didSet{
-            layer.shadowColor = UIColor.black.cgColor
+            layer.cornerRadius = cornerRadius
+        }
+    }
+    
+    @IBInspectable var shadowRadius : CGFloat = 0 {
+        didSet{
+            layer.shadowColor = UIColor.gray.cgColor
             layer.shadowOpacity = 1
             layer.shadowOffset = .zero
             layer.shadowRadius = shadowRadius
-            layer.shadowPath = UIBezierPath(rect: bounds).cgPath
         }
     }
 

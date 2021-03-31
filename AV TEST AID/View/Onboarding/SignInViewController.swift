@@ -9,30 +9,37 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import MaterialComponents
 
 class SignInViewController: UIViewController {
   
-  // MARK: - Outlets
+    // MARK: - Outlets
+    
+    @IBOutlet weak var emailField: MDCTextField!
+    private var emailController: OutlinedTextInputController!
+    
+    @IBOutlet weak var passwordField: MDCTextField!
+    private var passwordController: OutlinedTextInputController!
+    
+    @IBOutlet weak var forgotPasswordLabel: UILabel!
+    @IBOutlet weak var signUpInsteadLabel: UILabel!
+    
+    // MARK: - Lifecycle Events
+    
+    var viewModel: SignInViewModel!
+    let disposeBag = DisposeBag()
   
-  @IBOutlet weak var logIn: UIButton!
-  @IBOutlet weak var emailField: UITextField!
-  @IBOutlet weak var passwordField: UITextField!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        emailController = OutlinedTextInputController(textInput: emailField)
+        passwordController = OutlinedTextInputController(textInput: passwordField)
+        bindToViewModel()
+    }
   
-  var viewModel: SignInViewModelWithCredentials!
-
-  let disposeBag = DisposeBag()
-  
-  // MARK: - Lifecycle Events
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    bindToViewModel()
-  }
-  
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    navigationController?.setNavigationBarHidden(true, animated: true)
-  }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
 
   private func bindToViewModel() {
 //    viewModel.hasValidCredentials.asObservable()
@@ -53,24 +60,18 @@ class SignInViewController: UIViewController {
   
   // MARK: - Actions
   
-  @IBAction func tapOnSignInButton(_ sender: Any) {
-    viewModel.login()
-  }
-  
-  func setLoginButton(enabled: Bool) {
-//    logIn.alpha = enabled ? 1 : 0.5
-//    logIn.isEnabled = enabled
-  }
-
-  private func handleStateChange(state: ViewModelState) {
-    switch state {
-    case .loading:
-      UIApplication.showNetworkActivity()
-    case .error(let errorDescription):
-      UIApplication.hideNetworkActivity()
-      showMessage(title: "Error", message: errorDescription)
-    case .idle:
-      UIApplication.hideNetworkActivity()
+    @IBAction func onSignInClicked(_ sender: UIButton) {
     }
-  }
+    
+    private func handleStateChange(state: ViewModelState) {
+        switch state {
+        case .loading:
+            UIApplication.showNetworkActivity()
+        case .error(let errorDescription):
+            UIApplication.hideNetworkActivity()
+            showMessage(title: "Error", message: errorDescription)
+        case .idle:
+            UIApplication.hideNetworkActivity()
+        }
+    }
 }

@@ -32,7 +32,7 @@ enum OnboardingRoutes: Route {
       else {
         return UIViewController()
     }
-    signIn.viewModel = SignInViewModelWithCredentials()
+    signIn.viewModel = SignInViewModel()
     return signIn
   }
 

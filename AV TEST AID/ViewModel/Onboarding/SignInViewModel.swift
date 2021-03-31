@@ -10,7 +10,7 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-class SignInViewModelWithCredentials {
+class SignInViewModel {
   let disposeBag = DisposeBag()
   
   var state = BehaviorRelay(value: ViewModelState.idle)

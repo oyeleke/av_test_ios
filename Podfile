@@ -12,6 +12,7 @@ target 'AV TEST AID' do
   pod 'Crashlytics', '~> 3.12.0'
   pod 'RxSwift', '~> 4.5.0'
   pod 'RxCocoa', '~> 4.5.0'
+  pod 'MaterialComponents/TextFields', '~> 110.0.0'
 
   # FB SDK ---
   pod 'FBSDKCoreKit', '~> 4.33.0'

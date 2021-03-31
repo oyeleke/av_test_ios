@@ -66,6 +66,62 @@ PODS:
   - KIF/Core (3.7.15)
   - KIF/IdentifierTests (3.7.15):
     - KIF/Core
+  - MaterialComponents/AnimationTiming (110.0.0)
+  - MaterialComponents/Availability (110.0.0)
+  - MaterialComponents/Buttons (110.0.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/ShapeLibrary
+    - MaterialComponents/Shapes
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
+  - MaterialComponents/Elevation (110.0.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/Ink (110.0.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/Palettes (110.0.0)
+  - MaterialComponents/private/Application (110.0.0)
+  - MaterialComponents/private/Color (110.0.0):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/Math (110.0.0)
+  - MaterialComponents/Ripple (110.0.0):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/ShadowElevations (110.0.0)
+  - MaterialComponents/ShadowLayer (110.0.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/ShapeLibrary (110.0.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/Shapes
+  - MaterialComponents/Shapes (110.0.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
+  - MaterialComponents/TextFields (110.0.0):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Buttons
+    - MaterialComponents/Elevation
+    - MaterialComponents/Palettes
+    - MaterialComponents/private/Math
+    - MaterialComponents/Typography
+    - MDFInternationalization
+  - MaterialComponents/Typography (110.0.0):
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Math
+    - MDFTextAccessibility
+  - MDFInternationalization (2.0.0)
+  - MDFTextAccessibility (2.0.1)
   - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
@@ -108,6 +164,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift (~> 6.1.1)
   - KIF (~> 3.7.4)
   - KIF/IdentifierTests (~> 3.7.3)
+  - MaterialComponents/TextFields (~> 110.0.0)
   - Moya/RxSwift (~> 13.0)
   - OHHTTPStubs/Swift (~> 8.0.0)
   - RSFontSizes (~> 1.0.2)
@@ -131,6 +188,9 @@ SPEC REPOS:
     - GoogleUtilities
     - IQKeyboardManagerSwift
     - KIF
+    - MaterialComponents
+    - MDFInternationalization
+    - MDFTextAccessibility
     - Moya
     - nanopb
     - OHHTTPStubs
@@ -156,6 +216,9 @@ SPEC CHECKSUMS:
   GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
   IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
   KIF: c060ca8bf50986a9b236d0337affab573eacc152
+  MaterialComponents: 8de2f7a102ae37bf276a558ac88086780f6d1b5f
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+  MDFTextAccessibility: f4bb4cc2194286651b59a215fdeaa0e05dc90ba5
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   OHHTTPStubs: 9cbce6364bec557cc3439aa6bb7514670d780881
@@ -165,6 +228,6 @@ SPEC CHECKSUMS:
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
 
-PODFILE CHECKSUM: aafa30418795e7911363bdf4cbb591ad901daa85
+PODFILE CHECKSUM: 4e31a994f3a16e303742c35516ab1f8f7c48d445
 
 COCOAPODS: 1.10.1

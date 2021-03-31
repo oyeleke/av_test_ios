@@ -78,6 +78,7 @@ pass your aviation exam in flying colours.</string>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="1Qp-jg-HmI"/>
                                     <constraint firstAttribute="height" constant="50" id="sAX-dD-euN"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="SIGN IN"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -91,7 +92,7 @@ pass your aviation exam in flying colours.</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="signINTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ln-FM-0U1"/>
+                                    <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qN4-3u-L8j"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvH-LZ-Vgo" customClass="CustomDesignableButton" customModule="AV_TEST_AID" customModuleProvider="target">
@@ -161,46 +162,24 @@ pass your aviation exam in flying colours.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_blue_shape" translatesAutoresizingMaskIntoConstraints="NO" id="rGU-OB-jkk">
-                                <rect key="frame" x="0.0" y="44" width="414" height="551"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="551" id="T9e-Lf-3DD"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="44" width="414" height="537.66666666666663"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue To Your Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1q-34-khR">
-                                <rect key="frame" x="98.000000000000014" y="180.66666666666666" width="218.33333333333337" height="22.666666666666657"/>
-                                <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eT0-Hc-Mbx" customClass="CustomDesignableView" customModule="AV_TEST_AID" customModuleProvider="target">
-                                <rect key="frame" x="41" y="276" width="332" height="382"/>
+                                <rect key="frame" x="24" y="431.66666666666663" width="366" height="270.66666666666663"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BrG-7X-J6d" customClass="CustomTextField" customModule="AV_TEST_AID" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="44" width="283" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BrG-7X-J6d" customClass="MDCTextField">
+                                        <rect key="frame" x="30" y="32" width="306" height="33"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0n-Z3-BwL">
-                                        <rect key="frame" x="184" y="323.33333333333337" width="123" height="12.666666666666686"/>
-                                        <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="14"/>
-                                        <color key="textColor" red="0.0078431372549019607" green="0.16862745098039217" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up instead" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivc-Wq-cDh">
-                                        <rect key="frame" x="30" y="323.33333333333337" width="102" height="13"/>
-                                        <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="14"/>
-                                        <color key="textColor" red="0.0039215686269999999" green="0.4941176471" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jmj-pi-nEk" customClass="CustomTextField" customModule="AV_TEST_AID" customModuleProvider="target">
-                                        <rect key="frame" x="25" y="122" width="283" height="44"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jmj-pi-nEk" customClass="MDCTextField">
+                                        <rect key="frame" x="30" y="65" width="306" height="33"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" textContentType="password"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mci-QR-H29" customClass="CustomDesignableButton" customModule="AV_TEST_AID" customModuleProvider="target">
-                                        <rect key="frame" x="25" y="227" width="283" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mci-QR-H29" customClass="CustomDesignableButton" customModule="AV_TEST_AID" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="105.99999999999994" width="306" height="50"/>
                                         <color key="backgroundColor" red="0.0039215686274509803" green="0.49411764705882355" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="fXs-fG-Gdu"/>
@@ -214,59 +193,96 @@ pass your aviation exam in flying colours.</string>
                                                 <real key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onSignInClicked:" destination="8qd-iW-5fg" eventType="touchUpInside" id="Hhg-3H-RDa"/>
+                                        </connections>
                                     </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="WFC-VD-zob">
+                                        <rect key="frame" x="30" y="181.99999999999994" width="306" height="17.666666666666657"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0n-Z3-BwL">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.33333333333333" height="17.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="14"/>
+                                                <color key="textColor" name="aviBlue"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up instead" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivc-Wq-cDh">
+                                                <rect key="frame" x="204" y="0.0" width="102" height="17.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="14"/>
+                                                <color key="textColor" name="darkBlueTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="mci-QR-H29" firstAttribute="leading" secondItem="jmj-pi-nEk" secondAttribute="leading" id="19G-zd-6hS"/>
-                                    <constraint firstItem="Ivc-Wq-cDh" firstAttribute="leading" secondItem="eT0-Hc-Mbx" secondAttribute="leading" constant="30" id="2Xa-ia-lqx"/>
-                                    <constraint firstAttribute="bottom" secondItem="mci-QR-H29" secondAttribute="bottom" constant="105" id="GEz-Jg-I66"/>
-                                    <constraint firstItem="mci-QR-H29" firstAttribute="leading" secondItem="eT0-Hc-Mbx" secondAttribute="leading" constant="25" id="GHi-ss-Y6b"/>
-                                    <constraint firstItem="mci-QR-H29" firstAttribute="trailing" secondItem="jmj-pi-nEk" secondAttribute="trailing" id="Jvl-iA-rF0"/>
-                                    <constraint firstItem="mci-QR-H29" firstAttribute="top" secondItem="jmj-pi-nEk" secondAttribute="bottom" constant="61" id="NN9-5C-t7U"/>
-                                    <constraint firstItem="P0n-Z3-BwL" firstAttribute="top" secondItem="mci-QR-H29" secondAttribute="bottom" constant="46.329999999999998" id="Sq4-30-gpf"/>
-                                    <constraint firstAttribute="bottom" secondItem="Ivc-Wq-cDh" secondAttribute="bottom" constant="45.670000000000002" id="Yvm-h8-uPc"/>
-                                    <constraint firstItem="mci-QR-H29" firstAttribute="centerX" secondItem="eT0-Hc-Mbx" secondAttribute="centerX" id="hNO-wA-myQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="P0n-Z3-BwL" secondAttribute="trailing" constant="25" id="qxD-oA-Fa1"/>
-                                    <constraint firstItem="Ivc-Wq-cDh" firstAttribute="top" secondItem="mci-QR-H29" secondAttribute="bottom" constant="46.329999999999998" id="rlq-aq-RgE"/>
-                                    <constraint firstAttribute="bottom" secondItem="P0n-Z3-BwL" secondAttribute="bottom" constant="46" id="ykf-WS-TJg"/>
+                                    <constraint firstAttribute="trailing" secondItem="mci-QR-H29" secondAttribute="trailing" constant="30" id="1mk-K9-X9L"/>
+                                    <constraint firstAttribute="trailing" secondItem="BrG-7X-J6d" secondAttribute="trailing" constant="30" id="JQX-sL-ELi"/>
+                                    <constraint firstItem="WFC-VD-zob" firstAttribute="top" secondItem="mci-QR-H29" secondAttribute="bottom" constant="26" id="KOr-hd-GIY"/>
+                                    <constraint firstAttribute="bottom" secondItem="WFC-VD-zob" secondAttribute="bottom" constant="71" id="Q9o-AH-in3"/>
+                                    <constraint firstItem="mci-QR-H29" firstAttribute="leading" secondItem="eT0-Hc-Mbx" secondAttribute="leading" constant="30" id="So9-ZV-RRH"/>
+                                    <constraint firstAttribute="trailing" secondItem="jmj-pi-nEk" secondAttribute="trailing" constant="30" id="TnT-Cw-2To"/>
+                                    <constraint firstItem="BrG-7X-J6d" firstAttribute="leading" secondItem="eT0-Hc-Mbx" secondAttribute="leading" constant="30" id="VAX-pZ-iVG"/>
+                                    <constraint firstAttribute="trailing" secondItem="WFC-VD-zob" secondAttribute="trailing" constant="30" id="b3L-40-8wD"/>
+                                    <constraint firstItem="jmj-pi-nEk" firstAttribute="leading" secondItem="eT0-Hc-Mbx" secondAttribute="leading" constant="30" id="bNY-96-RiB"/>
+                                    <constraint firstItem="mci-QR-H29" firstAttribute="top" secondItem="jmj-pi-nEk" secondAttribute="bottom" constant="8" id="h4x-5W-9Qa"/>
+                                    <constraint firstItem="BrG-7X-J6d" firstAttribute="top" secondItem="eT0-Hc-Mbx" secondAttribute="top" constant="32" id="iR4-FM-kab"/>
+                                    <constraint firstItem="WFC-VD-zob" firstAttribute="leading" secondItem="eT0-Hc-Mbx" secondAttribute="leading" constant="30" id="nYq-Bs-HeM"/>
+                                    <constraint firstItem="jmj-pi-nEk" firstAttribute="top" secondItem="BrG-7X-J6d" secondAttribute="bottom" id="uA3-kx-eWu"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="12"/>
+                                        <integer key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="MZl-uH-lag">
-                                <rect key="frame" x="170" y="107.66666666666669" width="74" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="74" id="9hk-El-7Lr"/>
-                                    <constraint firstAttribute="height" constant="49.000000000000014" id="nJJ-Cp-Bu3"/>
-                                </constraints>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="cDs-j9-Uar">
+                                <rect key="frame" x="24" y="169" width="366" height="87.666666666666686"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="MZl-uH-lag">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49.000000000000014" id="nJJ-Cp-Bu3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue To Your Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1q-34-khR">
+                                        <rect key="frame" x="0.0" y="65" width="366" height="22.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <accessibility key="accessibilityConfiguration" identifier="SignInView"/>
                         <constraints>
-                            <constraint firstItem="eT0-Hc-Mbx" firstAttribute="leading" secondItem="NDI-Z9-Roh" secondAttribute="leadingMargin" constant="21" id="INl-Er-E6j"/>
-                            <constraint firstItem="eT0-Hc-Mbx" firstAttribute="top" secondItem="G1q-34-khR" secondAttribute="bottom" constant="72.666666666666657" id="ZPZ-CI-rqM"/>
-                            <constraint firstItem="eT0-Hc-Mbx" firstAttribute="centerX" secondItem="rGU-OB-jkk" secondAttribute="centerX" id="euQ-vv-Akb"/>
-                            <constraint firstItem="G1q-34-khR" firstAttribute="top" secondItem="MZl-uH-lag" secondAttribute="bottom" constant="24" id="gE5-AW-O1l"/>
-                            <constraint firstItem="uJs-A0-SPi" firstAttribute="top" secondItem="eT0-Hc-Mbx" secondAttribute="bottom" constant="204" id="gFc-9G-L0h"/>
-                            <constraint firstItem="eT0-Hc-Mbx" firstAttribute="centerX" secondItem="MZl-uH-lag" secondAttribute="centerX" id="ixc-8i-MbQ"/>
-                            <constraint firstItem="eT0-Hc-Mbx" firstAttribute="centerX" secondItem="G1q-34-khR" secondAttribute="centerX" id="lKB-jZ-bkE"/>
-                            <constraint firstItem="rGU-OB-jkk" firstAttribute="top" secondItem="Dm9-Bd-t2A" secondAttribute="bottom" id="lUa-q1-zMj"/>
-                            <constraint firstItem="eT0-Hc-Mbx" firstAttribute="top" secondItem="NDI-Z9-Roh" secondAttribute="top" constant="276" id="oFZ-KM-eWG"/>
-                            <constraint firstAttribute="trailing" secondItem="rGU-OB-jkk" secondAttribute="trailing" id="pUx-je-FeT"/>
-                            <constraint firstItem="rGU-OB-jkk" firstAttribute="leading" secondItem="NDI-Z9-Roh" secondAttribute="leading" id="va6-e9-A2W"/>
+                            <constraint firstItem="rGU-OB-jkk" firstAttribute="top" secondItem="Dm9-Bd-t2A" secondAttribute="bottom" id="B9P-c2-gym"/>
+                            <constraint firstItem="rGU-OB-jkk" firstAttribute="height" secondItem="NDI-Z9-Roh" secondAttribute="height" multiplier="0.6" id="Dpf-5v-4kM"/>
+                            <constraint firstAttribute="trailing" secondItem="rGU-OB-jkk" secondAttribute="trailing" id="EJx-Lj-HV5"/>
+                            <constraint firstItem="uJs-A0-SPi" firstAttribute="top" relation="greaterThanOrEqual" secondItem="eT0-Hc-Mbx" secondAttribute="bottom" constant="81" id="YHT-rM-lOH"/>
+                            <constraint firstAttribute="trailing" secondItem="eT0-Hc-Mbx" secondAttribute="trailing" constant="24" id="bKc-Xb-3Ie"/>
+                            <constraint firstItem="cDs-j9-Uar" firstAttribute="leading" secondItem="NDI-Z9-Roh" secondAttribute="leading" constant="24" id="cWE-Zb-JPp"/>
+                            <constraint firstItem="rGU-OB-jkk" firstAttribute="leading" secondItem="NDI-Z9-Roh" secondAttribute="leading" id="drF-3z-dFn"/>
+                            <constraint firstItem="eT0-Hc-Mbx" firstAttribute="top" secondItem="rGU-OB-jkk" secondAttribute="bottom" priority="750" constant="-150" id="hG4-Ac-Fve"/>
+                            <constraint firstAttribute="trailing" secondItem="cDs-j9-Uar" secondAttribute="trailing" constant="24" id="r4V-pL-uPJ"/>
+                            <constraint firstItem="eT0-Hc-Mbx" firstAttribute="leading" secondItem="NDI-Z9-Roh" secondAttribute="leading" constant="24" id="rJR-bo-YvS"/>
+                            <constraint firstItem="cDs-j9-Uar" firstAttribute="centerY" secondItem="rGU-OB-jkk" secondAttribute="centerY" constant="-100" id="zXg-8z-aDc"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="emailField" destination="BrG-7X-J6d" id="Kpd-AM-xFP"/>
+                        <outlet property="forgotPasswordLabel" destination="P0n-Z3-BwL" id="m4w-Rb-60z"/>
+                        <outlet property="passwordField" destination="jmj-pi-nEk" id="Vb8-ro-BCe"/>
+                        <outlet property="signUpInsteadLabel" destination="Ivc-Wq-cDh" id="6BY-mC-srY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZMa-tk-i2M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -450,7 +466,7 @@ pass your aviation exam in flying colours.</string>
     </scenes>
     <designables>
         <designable name="Hyt-AJ-MBj">
-            <size key="intrinsicContentSize" width="63" height="34"/>
+            <size key="intrinsicContentSize" width="51" height="29"/>
         </designable>
         <designable name="XoH-Hn-C7k">
             <size key="intrinsicContentSize" width="44" height="30"/>

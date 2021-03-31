@@ -13,21 +13,15 @@ import RxSwift
 class FirstViewController: UIViewController {
   
   // MARK: - Outlets
-  
-  @IBOutlet weak var facebookSign: UIButton!
-  @IBOutlet weak var signIn: UIButton!
-  @IBOutlet weak var signUp: UIButton!
-  
-  var viewModel: FirstViewModel!
-
-  let disposeBag = DisposeBag()
 
   // MARK: - Lifecycle
+  
+  var viewModel: FirstViewModel!
+  let disposeBag = DisposeBag()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     bindToViewModel()
-    [signIn, facebookSign].forEach({ $0?.setRoundBorders(22) })
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -47,23 +41,13 @@ class FirstViewController: UIViewController {
   }
 
   // MARK: - Actions
-  
-  @IBAction func facebookLogin() {
-    viewModel.facebookLogin()
-  }
 
     @IBAction func createAccountTapped(_ sender: Any) {
+        viewModel.signUp()
+    }
+
+    @IBAction func signInTapped(_ sender: Any) {
         viewModel.signIn()
     }
     
-    @IBAction func signInTapped() {
-    viewModel.signIn()
-  }
-    @IBAction func signINTapped(_ sender: Any) {
-        viewModel.signIn()
-    }
-    
-  @IBAction func signUpTapped() {
-    viewModel.signUp()
-  }
 }
