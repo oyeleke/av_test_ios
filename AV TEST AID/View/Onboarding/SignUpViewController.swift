@@ -76,4 +76,9 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    @IBAction func signUpTapped(_ sender: UIButton) {
+        viewModel.sendOTP()
+    }
+    
+    
 }

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		064459572614799200177F2F /* OutlinedTextInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064459562614799200177F2F /* OutlinedTextInputController.swift */; };
 		06A4EF072614A3D400C29BB6 /* PasswordToggleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A4EF062614A3D400C29BB6 /* PasswordToggleTextField.swift */; };
+		06EE43B126152078000B86D2 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EE43B026152078000B86D2 /* OTPViewController.swift */; };
+		06EE43BD26152215000B86D2 /* OTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EE43BC26152215000B86D2 /* OTPViewModel.swift */; };
+		06EE43C12615227E000B86D2 /* Onboarding in Resources */ = {isa = PBXBuildFile; fileRef = 06EE43C02615227E000B86D2 /* Onboarding */; };
 		071CD2622228544700E6D385 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CD2612228544700E6D385 /* FontExtension.swift */; };
 		07741D72218CDED600DB3B97 /* FirstViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07741D71218CDED600DB3B97 /* FirstViewModel.swift */; };
 		0A6990351F9F82A300F4BAC7 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6990341F9F82A300F4BAC7 /* UIApplicationExtension.swift */; };
@@ -91,6 +94,9 @@
 /* Begin PBXFileReference section */
 		064459562614799200177F2F /* OutlinedTextInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedTextInputController.swift; sourceTree = "<group>"; };
 		06A4EF062614A3D400C29BB6 /* PasswordToggleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordToggleTextField.swift; sourceTree = "<group>"; };
+		06EE43B026152078000B86D2 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		06EE43BC26152215000B86D2 /* OTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewModel.swift; sourceTree = "<group>"; };
+		06EE43C02615227E000B86D2 /* Onboarding */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Onboarding; sourceTree = "<group>"; };
 		071CD2612228544700E6D385 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 		07741D71218CDED600DB3B97 /* FirstViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewModel.swift; sourceTree = "<group>"; };
 		0A6990341F9F82A300F4BAC7 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
@@ -323,6 +329,7 @@
 				FA54D5871E11C59600F0DBEA /* FirstViewController.swift */,
 				9B3AA3981ED35007005A4D26 /* SignInViewController.swift */,
 				9B3AA39A1ED35013005A4D26 /* SignUpViewController.swift */,
+				06EE43B026152078000B86D2 /* OTPViewController.swift */,
 				FE4D636122B2CBB000685161 /* OnboardingRoutes.swift */,
 			);
 			path = Onboarding;
@@ -389,6 +396,8 @@
 				9BAFB7C22114E3CD0099DC61 /* SignInViewModel.swift */,
 				9B8574D6212C81950063A3E2 /* SignUpViewModel.swift */,
 				07741D71218CDED600DB3B97 /* FirstViewModel.swift */,
+				06EE43BC26152215000B86D2 /* OTPViewModel.swift */,
+				06EE43C02615227E000B86D2 /* Onboarding */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -646,6 +655,7 @@
 				0ABFB8901FA366D90098F751 /* Main.storyboard in Resources */,
 				A90D575A2602ABCD00857269 /* Quicksand-Light.ttf in Resources */,
 				A90D57582602ABCD00857269 /* Quicksand-Medium.ttf in Resources */,
+				06EE43C12615227E000B86D2 /* Onboarding in Resources */,
 				A90D575C2602ABCD00857269 /* Quicksand-Bold.ttf in Resources */,
 				9B8D306B20AB456C0050697F /* Localization.strings in Resources */,
 				A90D574F2602A08200857269 /* LaunchScreen.storyboard in Resources */,
@@ -861,6 +871,7 @@
 				9B0C72711C738D3400BAF3B1 /* AppDelegate.swift in Sources */,
 				FEE8080C22A6AE9900743D1B /* TargetType+Base.swift in Sources */,
 				FEE8080A22A6ACFF00743D1B /* APIService.swift in Sources */,
+				06EE43B126152078000B86D2 /* OTPViewController.swift in Sources */,
 				FE4D635C22B2C75400685161 /* Navigator.swift in Sources */,
 				FEE8081222A6D3FA00743D1B /* UserResource.swift in Sources */,
 				FE251D0722A7FE0F00E0DE90 /* DataExtension.swift in Sources */,
@@ -872,6 +883,7 @@
 				9B88CC671CAB305900AE60C5 /* Constants.swift in Sources */,
 				9BAFB7BF2114D9910099DC61 /* HomeViewModel.swift in Sources */,
 				9B715A461E28083600C0C039 /* PlaceholderTextView.swift in Sources */,
+				06EE43BD26152215000B86D2 /* OTPViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,16 +12,16 @@ import RxCocoa
 import RxSwift
 
 class FirstViewModel {
-  let disposeBag = DisposeBag()
-
-  var state = BehaviorRelay(value: ViewModelState.idle)
-  
-  func signIn() {
-    AppNavigator.shared.navigate(to: OnboardingRoutes.signIn, with: .push)
-  }
-
-  func signUp() {
-    AppNavigator.shared.navigate(to: OnboardingRoutes.signUp, with: .push)
-  }
-  
+    let disposeBag = DisposeBag()
+    
+    var state = BehaviorRelay(value: ViewModelState.idle)
+    
+    func signIn() {
+        AppNavigator.shared.navigate(to: OnboardingRoutes.signIn, with: .push)
+    }
+    
+    func signUp() {
+        AppNavigator.shared.navigate(to: OnboardingRoutes.signUp, with: .push)
+    }
+    
 }

@@ -11,48 +11,62 @@ import UIKit
 
 enum OnboardingRoutes: Route {
     
-  case firstScreen
-  case signIn
-  case signUp
-
-  var screen: UIViewController {
-    switch self {
-    case .firstScreen:
-      return buildFirstViewController()
-    case .signIn:
-      return buildSignInViewController()
-    case .signUp:
-      return buildSignUpViewController()
+    case firstScreen
+    case signIn
+    case signUp
+    case otp
+    
+    var screen: UIViewController {
+        switch self {
+        case .firstScreen:
+            return buildFirstViewController()
+        case .signIn:
+            return buildSignInViewController()
+        case .signUp:
+            return buildSignUpViewController()
+        case .otp:
+            return buildOTPViewController()
+        }
     }
-  }
-
-  private func buildSignInViewController() -> UIViewController {
-    guard let signIn = UIStoryboard
-      .instantiateViewController(SignInViewController.self)
-      else {
-        return UIViewController()
+    
+    private func buildSignInViewController() -> UIViewController {
+        guard let signIn = UIStoryboard
+                .instantiateViewController(SignInViewController.self)
+        else {
+            return UIViewController()
+        }
+        signIn.viewModel = SignInViewModel()
+        return signIn
     }
-    signIn.viewModel = SignInViewModel()
-    return signIn
-  }
-
-  private func buildSignUpViewController() -> UIViewController {
-    guard let signUp = UIStoryboard
-      .instantiateViewController(SignUpViewController.self)
-      else {
-        return UIViewController()
+    
+    private func buildSignUpViewController() -> UIViewController {
+        guard let signUp = UIStoryboard
+                .instantiateViewController(SignUpViewController.self)
+        else {
+            return UIViewController()
+        }
+        signUp.viewModel = SignUpViewModelWithEmail()
+        return signUp
     }
-    signUp.viewModel = SignUpViewModelWithEmail()
-    return signUp
-  }
-
-  private func buildFirstViewController() -> UIViewController {
-    guard let first = UIStoryboard
-      .instantiateViewController(FirstViewController.self)
-      else {
-        return UIViewController()
+    
+    private func buildFirstViewController() -> UIViewController {
+        guard let first = UIStoryboard
+                .instantiateViewController(FirstViewController.self)
+        else {
+            return UIViewController()
+        }
+        first.viewModel = FirstViewModel()
+        return first
     }
-    first.viewModel = FirstViewModel()
-    return first
-  }
+    
+    private func buildOTPViewController() -> UIViewController {
+        guard let otp = UIStoryboard
+                .instantiateViewController(OTPViewController.self)
+        else {
+            return UIViewController()
+        }
+        otp.viewModel = OTPViewModel()
+        return otp
+    }
+    
 }
