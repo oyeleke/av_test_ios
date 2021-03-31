@@ -18,9 +18,7 @@ class OutlinedTextInputController: MDCTextInputControllerOutlined {
     required init(textInput input: (UIView & MDCTextInput)?) {
         super.init(textInput: input)
         borderFillColor = UIColor.clear
-//        activeColor = R.color.colorAccent()
-//        floatingPlaceholderNormalColor = R.color.greyText()
-//        floatingPlaceholderActiveColor = R.color.colorAccent()
+        input?.clearButtonMode = .never
 //        textInputFont = R.font.muliMedium(size: 16.0)
     }
     

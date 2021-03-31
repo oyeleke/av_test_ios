@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		064459572614799200177F2F /* OutlinedTextInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064459562614799200177F2F /* OutlinedTextInputController.swift */; };
+		06A4EF072614A3D400C29BB6 /* PasswordToggleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A4EF062614A3D400C29BB6 /* PasswordToggleTextField.swift */; };
 		071CD2622228544700E6D385 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CD2612228544700E6D385 /* FontExtension.swift */; };
 		07741D72218CDED600DB3B97 /* FirstViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07741D71218CDED600DB3B97 /* FirstViewModel.swift */; };
 		0A6990351F9F82A300F4BAC7 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6990341F9F82A300F4BAC7 /* UIApplicationExtension.swift */; };
@@ -89,6 +90,7 @@
 
 /* Begin PBXFileReference section */
 		064459562614799200177F2F /* OutlinedTextInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedTextInputController.swift; sourceTree = "<group>"; };
+		06A4EF062614A3D400C29BB6 /* PasswordToggleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordToggleTextField.swift; sourceTree = "<group>"; };
 		071CD2612228544700E6D385 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 		07741D71218CDED600DB3B97 /* FirstViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewModel.swift; sourceTree = "<group>"; };
 		0A6990341F9F82A300F4BAC7 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
@@ -484,6 +486,7 @@
 				A9F65CED26080505004E9A1F /* CustomDesignableButton.swift */,
 				A9C6A248260937500065CA70 /* CustomDesignableView.swift */,
 				064459562614799200177F2F /* OutlinedTextInputController.swift */,
+				06A4EF062614A3D400C29BB6 /* PasswordToggleTextField.swift */,
 			);
 			path = customUI;
 			sourceTree = "<group>";
@@ -836,6 +839,7 @@
 				FE4D636222B2CBB000685161 /* OnboardingRoutes.swift in Sources */,
 				071CD2622228544700E6D385 /* FontExtension.swift in Sources */,
 				9B8D307020AB47E90050697F /* JSONEncodingExtension.swift in Sources */,
+				06A4EF072614A3D400C29BB6 /* PasswordToggleTextField.swift in Sources */,
 				FE4D636422B2CDF700685161 /* ViewModelState.swift in Sources */,
 				E81171921DE5EFB7003D3DF5 /* UIViewControllerExtension.swift in Sources */,
 				9B3AA3991ED35007005A4D26 /* SignInViewController.swift in Sources */,

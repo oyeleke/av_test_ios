@@ -173,7 +173,7 @@ pass your aviation exam in flying colours.</string>
                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jmj-pi-nEk" customClass="MDCTextField">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jmj-pi-nEk" customClass="PasswordToggleTextField" customModule="AV_TEST_AID" customModuleProvider="target">
                                         <rect key="frame" x="30" y="65" width="306" height="33"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" textContentType="password"/>
