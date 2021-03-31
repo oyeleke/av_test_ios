@@ -20,7 +20,7 @@ class OutlinedTextInputController: MDCTextInputControllerOutlined {
         borderFillColor = UIColor.clear
         input?.clearButtonMode = .never
         borderFillColor = UIColor.clear
-        textInputFont = UIFont(name: "Quicksand-Regular.ttf", size: CGFloat(14))
+        textInputFont = UIFont(name: "Quicksand-Regular", size: CGFloat(14))
         borderStrokeColor = UIColor(named: "textFieldHintColor")
         inlinePlaceholderColor = UIColor(named: "textFieldHintColor")
     }

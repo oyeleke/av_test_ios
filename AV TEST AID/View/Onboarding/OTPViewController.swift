@@ -45,7 +45,8 @@ class OTPViewController: UIViewController {
         otpView.fieldSize = 45
         otpView.separatorSpace = 16
         otpView.shouldAllowIntermediateEditing = false
-        otpView.secureEntry = true
+        otpView.fieldFont = UIFont(name: "Quicksand-Regular", size: CGFloat(17))!
+        otpView.secureEntry = false
         otpView.delegate = self
         otpView.initializeUI()
     }
