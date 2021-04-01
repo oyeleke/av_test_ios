@@ -52,6 +52,7 @@ class OTPViewController: UIViewController {
     }
     
     @IBAction func verifyNowTapped(_ sender: Any) {
+        viewModel.goToWelcomeScreen()
     }
     
 }
