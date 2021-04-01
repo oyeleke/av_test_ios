@@ -54,6 +54,7 @@ class PasswordOTPViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func verifyNowTapped(_ sender: Any) {
+        viewModel.goToResetPassword()
     }
     
 }

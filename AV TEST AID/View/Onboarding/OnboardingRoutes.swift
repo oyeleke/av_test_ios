@@ -17,6 +17,7 @@ enum OnboardingRoutes: Route {
     case otp
     case forgotPassword
     case passwordOtp
+    case resetPassword
     
     var screen: UIViewController {
         switch self {
@@ -32,6 +33,8 @@ enum OnboardingRoutes: Route {
             return buildForgotPasswordViewController()
         case .passwordOtp:
             return buildPasswordOtpViewController()
+        case .resetPassword:
+            return buildResetPasswordViewController()
         }
     }
     
@@ -93,6 +96,16 @@ enum OnboardingRoutes: Route {
         }
         passwordOtp.viewModel = PasswordOTPViewModel()
         return passwordOtp
+    }
+    
+    private func buildResetPasswordViewController() -> UIViewController {
+        guard let resetPassword = UIStoryboard
+                .instantiateViewController(ResetPasswordViewController.self)
+        else {
+            return UIViewController()
+        }
+        resetPassword.viewModel = ResetPasswordViewModel()
+        return resetPassword
     }
     
 }

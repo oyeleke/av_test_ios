@@ -1,5 +1,5 @@
 //
-//  PasswordOTPViewModel.swift
+//  ResetPasswordViewModel.swift
 //  AV TEST AID
 //
 //  Created by Efe Ejemudaro on 01/04/2021.
@@ -10,14 +10,10 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-class PasswordOTPViewModel {
+class ResetPasswordViewModel {
     
     let disposeBag = DisposeBag()
     
     let state = BehaviorRelay(value: ViewModelState.idle)
-    
-    func goToResetPassword() {
-        AppNavigator.shared.navigate(to: OnboardingRoutes.resetPassword, with: .push)
-    }
     
 }

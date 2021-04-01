@@ -10,6 +10,8 @@
 		064459572614799200177F2F /* OutlinedTextInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064459562614799200177F2F /* OutlinedTextInputController.swift */; };
 		0697F2092615D2DF00B63569 /* PasswordOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697F2082615D2DF00B63569 /* PasswordOTPViewController.swift */; };
 		0697F20D2615D39C00B63569 /* PasswordOTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697F20C2615D39C00B63569 /* PasswordOTPViewModel.swift */; };
+		0697F2132615DA4000B63569 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697F2122615DA4000B63569 /* ResetPasswordViewController.swift */; };
+		0697F2172615DA9300B63569 /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697F2162615DA9300B63569 /* ResetPasswordViewModel.swift */; };
 		06A4EF072614A3D400C29BB6 /* PasswordToggleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A4EF062614A3D400C29BB6 /* PasswordToggleTextField.swift */; };
 		06DAB73C2615BACC004DA693 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DAB73B2615BACC004DA693 /* ForgotPasswordViewController.swift */; };
 		06DAB7402615BB5E004DA693 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DAB73F2615BB5E004DA693 /* ForgotPasswordViewModel.swift */; };
@@ -98,6 +100,8 @@
 		064459562614799200177F2F /* OutlinedTextInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedTextInputController.swift; sourceTree = "<group>"; };
 		0697F2082615D2DF00B63569 /* PasswordOTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordOTPViewController.swift; sourceTree = "<group>"; };
 		0697F20C2615D39C00B63569 /* PasswordOTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordOTPViewModel.swift; sourceTree = "<group>"; };
+		0697F2122615DA4000B63569 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		0697F2162615DA9300B63569 /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
 		06A4EF062614A3D400C29BB6 /* PasswordToggleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordToggleTextField.swift; sourceTree = "<group>"; };
 		06DAB73B2615BACC004DA693 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		06DAB73F2615BB5E004DA693 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
@@ -338,6 +342,7 @@
 				06EE43B026152078000B86D2 /* OTPViewController.swift */,
 				06DAB73B2615BACC004DA693 /* ForgotPasswordViewController.swift */,
 				0697F2082615D2DF00B63569 /* PasswordOTPViewController.swift */,
+				0697F2122615DA4000B63569 /* ResetPasswordViewController.swift */,
 				FE4D636122B2CBB000685161 /* OnboardingRoutes.swift */,
 			);
 			path = Onboarding;
@@ -407,6 +412,7 @@
 				06EE43BC26152215000B86D2 /* OTPViewModel.swift */,
 				06DAB73F2615BB5E004DA693 /* ForgotPasswordViewModel.swift */,
 				0697F20C2615D39C00B63569 /* PasswordOTPViewModel.swift */,
+				0697F2162615DA9300B63569 /* ResetPasswordViewModel.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -848,6 +854,7 @@
 				064459572614799200177F2F /* OutlinedTextInputController.swift in Sources */,
 				FE583F0C22AFC9EA00EF3CDA /* AnalyticsService.swift in Sources */,
 				9BD409101CE9F19E005223C9 /* UIHelper.swift in Sources */,
+				0697F2172615DA9300B63569 /* ResetPasswordViewModel.swift in Sources */,
 				FEE8080E22A6BB4F00743D1B /* APIError.swift in Sources */,
 				E8B30E021E72FF8000131DCF /* UIStoryboardExtension.swift in Sources */,
 				FE583F0E22AFC9F300EF3CDA /* FirebaseAnalyticsService.swift in Sources */,
@@ -888,6 +895,7 @@
 				FEE8081222A6D3FA00743D1B /* UserResource.swift in Sources */,
 				FE251D0722A7FE0F00E0DE90 /* DataExtension.swift in Sources */,
 				FE583F1022AFC9FA00EF3CDA /* AnalyticsEvent.swift in Sources */,
+				0697F2132615DA4000B63569 /* ResetPasswordViewController.swift in Sources */,
 				FE4D635E22B2CAFF00685161 /* AppNavigator.swift in Sources */,
 				E8FBB1C11DD21D18000D6740 /* SessionManager.swift in Sources */,
 				9BE3669F1F10175E007CAECD /* Base64Media.swift in Sources */,
