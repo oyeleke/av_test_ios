@@ -26,6 +26,11 @@ class WelcomeViewController: UIViewController {
         bindToViewModel()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
     private func bindToViewModel() {
         
     }
@@ -33,6 +38,7 @@ class WelcomeViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func letsDoItTapped(_ sender: UIButton) {
+        viewModel.goToProfilePicture()
     }
     
 }
