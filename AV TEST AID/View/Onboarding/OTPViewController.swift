@@ -37,7 +37,7 @@ class OTPViewController: UIViewController {
     
     private func setupOTPView() {
         otpView.fieldsCount = 4
-        otpView.fieldBorderWidth = 1 // TODO
+        otpView.fieldBorderWidth = 1
         otpView.defaultBorderColor = UIColor(named: "textFieldHintColor")!
         otpView.filledBorderColor = UIColor(named: "aviBlue")!
         otpView.cursorColor = UIColor(named: "textFieldHintColor")!

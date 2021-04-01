@@ -40,6 +40,7 @@ class ForgotPasswordViewController: UIViewController {
     }
     
     @IBAction func resetPasswordTapped(_ sender: Any) {
+        viewModel.goToPasswordOtp()
     }
     
 }
