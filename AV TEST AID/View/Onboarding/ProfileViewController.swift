@@ -1,5 +1,5 @@
 //
-//  ProfilePictureViewController.swift
+//  ProfileViewController.swift
 //  AV TEST AID
 //
 //  Created by Efe Ejemudaro on 01/04/2021.
@@ -10,21 +10,19 @@ import Foundation
 import UIKit
 import RxCocoa
 import RxSwift
+import MaterialComponents
 
-class ProfilePictureViewController: UIViewController {
+class ProfileViewController: UIViewController {
     
     // MARK: - Outlets
-    @IBOutlet weak var pictureImageView: UIImageView!
+    @IBOutlet weak var licenseNumberField: MDCTextField!
+    private var licenseNumberController: OutlinedTextInputController!
+    
     
     // MARK: - LifeCycle Events
     
-    var viewModel: ProfilePictureViewModel!
+    var viewModel: ProfileViewModel!
     let disposeBag = DisposeBag()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        bindToViewModel()
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -32,18 +30,24 @@ class ProfilePictureViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Skip", style: .plain, target: self, action: #selector(skipTapped))
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        bindToViewModel()
+        setupViews()
+    }
+    
     private func bindToViewModel() {
         
+    }
+    
+    private func setupViews() {
+        licenseNumberController = OutlinedTextInputController(textInput: licenseNumberField)
     }
     
     // MARK: - Actions
     
     @objc func skipTapped() {
-        viewModel.goToProfile()
-    }
-    
-    @IBAction func addPhotoTapped(_ sender: UIButton) {
-        viewModel.goToProfile()
+        
     }
     
 }

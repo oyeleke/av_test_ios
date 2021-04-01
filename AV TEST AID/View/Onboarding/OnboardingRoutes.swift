@@ -20,6 +20,7 @@ enum OnboardingRoutes: Route {
     case resetPassword
     case welcome
     case profilePicture
+    case profile
     
     var screen: UIViewController {
         switch self {
@@ -41,6 +42,8 @@ enum OnboardingRoutes: Route {
             return buildWelcomeViewController()
         case .profilePicture:
             return buildProfilePictureViewController()
+        case .profile:
+            return buildProfileViewController()
         }
     }
     
@@ -132,6 +135,16 @@ enum OnboardingRoutes: Route {
         }
         profilePicture.viewModel = ProfilePictureViewModel()
         return profilePicture
+    }
+    
+    private func buildProfileViewController() -> UIViewController {
+        guard let profile = UIStoryboard
+                .instantiateViewController(ProfileViewController.self)
+        else {
+            return UIViewController()
+        }
+        profile.viewModel = ProfileViewModel()
+        return profile
     }
     
 }

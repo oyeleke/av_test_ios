@@ -1,5 +1,5 @@
 //
-//  ProfilePictureViewModel.swift
+//  ProfileViewModel.swift
 //  AV TEST AID
 //
 //  Created by Efe Ejemudaro on 01/04/2021.
@@ -10,14 +10,10 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-class ProfilePictureViewModel {
+class ProfileViewModel {
     
     let disposeBag = DisposeBag()
     
     let state = BehaviorRelay(value: ViewModelState.idle)
-    
-    func goToProfile() {
-        AppNavigator.shared.navigate(to: OnboardingRoutes.profile, with: .push)
-    }
     
 }
