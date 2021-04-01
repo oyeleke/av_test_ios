@@ -31,9 +31,14 @@ class SignInViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
+        bindToViewModel()
+    }
+    
+    private func setupViews() {
         emailController = OutlinedTextInputController(textInput: emailField)
         passwordController = OutlinedTextInputController(textInput: passwordField)
-        bindToViewModel()
+        forgotPasswordLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.forgotPasswordTapped(_:))))
     }
   
     override func viewWillAppear(_ animated: Bool) {
@@ -60,6 +65,10 @@ class SignInViewController: UIViewController {
   
   // MARK: - Actions
   
+    @objc func forgotPasswordTapped(_ sender: UITapGestureRecognizer) {
+        viewModel.forgotPassword()
+    }
+    
     @IBAction func onSignInClicked(_ sender: UIButton) {
     }
     
