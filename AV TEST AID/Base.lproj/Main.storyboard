@@ -1169,17 +1169,25 @@ pass your aviation exam in flying colours.</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0af-Hj-blX" userLabel="Profession Container" customClass="CustomDesignableView" customModule="AV_TEST_AID" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0af-Hj-blX" userLabel="Profession Container" customClass="CustomDropDownView" customModule="AV_TEST_AID" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28.666666666666686" width="351" height="44"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="wBv-vq-xTe">
                                                 <rect key="frame" x="318" y="17.666666666666657" width="15" height="8.6666666666666643"/>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGx-Kf-7fF" userLabel="Selected Profession Label">
+                                                <rect key="frame" x="16" y="22" width="0.0" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="17"/>
+                                                <color key="textColor" name="aviBlue"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="wBv-vq-xTe" firstAttribute="centerY" secondItem="0af-Hj-blX" secondAttribute="centerY" id="Epb-lU-VW9"/>
                                             <constraint firstAttribute="trailing" secondItem="wBv-vq-xTe" secondAttribute="trailing" constant="18" id="Rnj-ZH-rTl"/>
+                                            <constraint firstItem="UGx-Kf-7fF" firstAttribute="leading" secondItem="0af-Hj-blX" secondAttribute="leading" constant="16" id="daa-OJ-LzR"/>
+                                            <constraint firstItem="UGx-Kf-7fF" firstAttribute="centerY" secondItem="0af-Hj-blX" secondAttribute="centerY" id="o9a-tf-Jvf"/>
                                             <constraint firstAttribute="height" constant="44" id="tkf-pm-L07"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -1228,16 +1236,24 @@ pass your aviation exam in flying colours.</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2UI-Bw-dXa" userLabel="Nationality Container" customClass="CustomDesignableView" customModule="AV_TEST_AID" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2UI-Bw-dXa" userLabel="Nationality Container" customClass="CustomDropDownView" customModule="AV_TEST_AID" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28.666666666666686" width="351" height="44"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="fW7-QO-oNy">
                                                 <rect key="frame" x="318" y="17.666666666666629" width="15" height="8.6666666666666643"/>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtB-4J-Zzn" userLabel="Selected Nationality Label">
+                                                <rect key="frame" x="16" y="22" width="0.0" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="17"/>
+                                                <color key="textColor" name="aviBlue"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="fW7-QO-oNy" secondAttribute="trailing" constant="18" id="9he-uY-iQN"/>
+                                            <constraint firstItem="mtB-4J-Zzn" firstAttribute="leading" secondItem="2UI-Bw-dXa" secondAttribute="leading" constant="16" id="eZL-Za-LkH"/>
+                                            <constraint firstItem="mtB-4J-Zzn" firstAttribute="centerY" secondItem="2UI-Bw-dXa" secondAttribute="centerY" id="o2b-dB-qH5"/>
                                             <constraint firstAttribute="height" constant="44" id="r9n-7A-w1y"/>
                                             <constraint firstItem="fW7-QO-oNy" firstAttribute="centerY" secondItem="2UI-Bw-dXa" secondAttribute="centerY" id="tCq-nf-WhX"/>
                                         </constraints>
@@ -1323,6 +1339,8 @@ pass your aviation exam in flying colours.</string>
                         <outlet property="licenseNumberField" destination="dJn-Fg-obF" id="ez1-lo-frC"/>
                         <outlet property="nationalityView" destination="2UI-Bw-dXa" id="QXH-yf-oxU"/>
                         <outlet property="professionView" destination="0af-Hj-blX" id="Our-nh-ssk"/>
+                        <outlet property="selectedNationalityLabel" destination="mtB-4J-Zzn" id="haH-wk-7qS"/>
+                        <outlet property="selectedProfessionLabel" destination="UGx-Kf-7fF" id="cZo-Vo-BcR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ca1-vA-u5l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

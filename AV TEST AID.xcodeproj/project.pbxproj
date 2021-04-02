@@ -20,6 +20,7 @@
 		0697F23B2616106A00B63569 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697F23A2616106A00B63569 /* ProfileViewController.swift */; };
 		0697F2472616115800B63569 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697F2462616115800B63569 /* ProfileViewModel.swift */; };
 		06A4EF072614A3D400C29BB6 /* PasswordToggleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A4EF062614A3D400C29BB6 /* PasswordToggleTextField.swift */; };
+		06D45C6D2617AF68007520D7 /* CustomDropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D45C6C2617AF68007520D7 /* CustomDropDownView.swift */; };
 		06DAB73C2615BACC004DA693 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DAB73B2615BACC004DA693 /* ForgotPasswordViewController.swift */; };
 		06DAB7402615BB5E004DA693 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DAB73F2615BB5E004DA693 /* ForgotPasswordViewModel.swift */; };
 		06EE43B126152078000B86D2 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EE43B026152078000B86D2 /* OTPViewController.swift */; };
@@ -117,6 +118,7 @@
 		0697F23A2616106A00B63569 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0697F2462616115800B63569 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		06A4EF062614A3D400C29BB6 /* PasswordToggleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordToggleTextField.swift; sourceTree = "<group>"; };
+		06D45C6C2617AF68007520D7 /* CustomDropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropDownView.swift; sourceTree = "<group>"; };
 		06DAB73B2615BACC004DA693 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		06DAB73F2615BB5E004DA693 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		06EE43B026152078000B86D2 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
@@ -523,6 +525,7 @@
 				064459562614799200177F2F /* OutlinedTextInputController.swift */,
 				06A4EF062614A3D400C29BB6 /* PasswordToggleTextField.swift */,
 				0697F2362616061B00B63569 /* CircleView.swift */,
+				06D45C6C2617AF68007520D7 /* CustomDropDownView.swift */,
 			);
 			path = customUI;
 			sourceTree = "<group>";
@@ -915,6 +918,7 @@
 				9B3AA39B1ED35013005A4D26 /* SignUpViewController.swift in Sources */,
 				9B0C72711C738D3400BAF3B1 /* AppDelegate.swift in Sources */,
 				FEE8080C22A6AE9900743D1B /* TargetType+Base.swift in Sources */,
+				06D45C6D2617AF68007520D7 /* CustomDropDownView.swift in Sources */,
 				FEE8080A22A6ACFF00743D1B /* APIService.swift in Sources */,
 				06DAB73C2615BACC004DA693 /* ForgotPasswordViewController.swift in Sources */,
 				0697F2232615E4FF00B63569 /* WelcomeViewController.swift in Sources */,
