@@ -14,6 +14,7 @@ target 'AV TEST AID' do
   pod 'RxCocoa', '~> 4.5.0'
   pod 'MaterialComponents/TextFields', '~> 110.0.0'
   pod 'OTPFieldView', '~> 1.0.1'
+  pod 'DropDown', '~> 2.3.13'
 
   # FB SDK ---
   pod 'FBSDKCoreKit', '~> 4.33.0'

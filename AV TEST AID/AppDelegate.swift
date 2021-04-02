@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import Firebase
 import IQKeyboardManagerSwift
+import DropDown
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -34,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let rootVC = AppNavigator.shared.rootViewController
     window?.rootViewController = rootVC
+    
+    DropDown.startListeningToKeyboard()
 
     return true
   }

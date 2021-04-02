@@ -9,6 +9,7 @@ PODS:
   - Crashlytics (3.12.0):
     - Fabric (~> 1.9.0)
   - Device (3.1.2)
+  - DropDown (2.3.13)
   - Fabric (1.9.0)
   - FBSDKCoreKit (4.33.0):
     - Bolts (~> 1.7)
@@ -158,6 +159,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.8.1)
   - Crashlytics (~> 3.12.0)
+  - DropDown (~> 2.3.13)
   - Fabric (~> 1.9.0)
   - FBSDKCoreKit (~> 4.33.0)
   - FBSDKLoginKit (~> 4.33.0)
@@ -179,6 +181,7 @@ SPEC REPOS:
     - Bolts
     - Crashlytics
     - Device
+    - DropDown
     - Fabric
     - FBSDKCoreKit
     - FBSDKLoginKit
@@ -208,6 +211,7 @@ SPEC CHECKSUMS:
   Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
   Crashlytics: a33af323773f73904037dc2e684cd2f0d29f4fe2
   Device: 62242076214c30fb5760174b3601cefafa70a481
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   Fabric: 09ef2d9b99b104702bede1acaf469fb8f20a9146
   FBSDKCoreKit: 572b047a7e029bc44542bcf8a59414e7ff2b543e
   FBSDKLoginKit: 88cb456349cfb3b554427ce4f8b43729d85dfb40
@@ -232,6 +236,6 @@ SPEC CHECKSUMS:
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
 
-PODFILE CHECKSUM: 014fd5267309d535d431894c8e15cdac2dc8d7de
+PODFILE CHECKSUM: 0814b7a984409be331c381415a319745f05bdf17
 
 COCOAPODS: 1.10.1
