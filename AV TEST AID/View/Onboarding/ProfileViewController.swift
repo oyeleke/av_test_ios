@@ -49,7 +49,7 @@ class ProfileViewController: UIViewController {
         licenseNumberController = OutlinedTextInputController(textInput: licenseNumberField)
         professionView.setDropDownData(["Pilot", "Flight Attendant", "Flight Disparcher", "Air Traffic Controller", "Engineer"])
         professionView.setLabelView(label: selectedProfessionLabel)
-        nationalityView.setDropDownData(["Here", "Is", "Some", "Sample", "Data"])
+        nationalityView.setDropDownData(["Here", "Is", "A", "List", "Of", "Countries", "Where", "You", "Are", "Required", "To", "Select", "Just", "One", ".", "It", "Is", "Going", "To", "Be", "A", "Very", "Long", "List"])
         nationalityView.setLabelView(label: selectedNationalityLabel)
     }
     
