@@ -12,42 +12,42 @@ import RxSwift
 import MaterialComponents
 
 class SignUpViewController: UIViewController {
-    
+
     // MARK: - Outlets
-    
+
     @IBOutlet weak var firstNameField: MDCTextField!
     @IBOutlet weak var lastNameField: MDCTextField!
     @IBOutlet weak var emailAddressField: MDCTextField!
     @IBOutlet weak var passwordField: MDCTextField!
-    
+
     private var firstNameController: OutlinedTextInputController!
     private var lastNameController: OutlinedTextInputController!
     private var emailAddressController: OutlinedTextInputController!
     private var passwordController: OutlinedTextInputController!
-    
+
     // MARK: - Lifecycle Events
-    
+
     var viewModel: SignUpViewModelWithEmail!
     let disposeBag = DisposeBag()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         bindToViewModel()
         setupViews()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
-    
+
     private func setupViews() {
         firstNameController = OutlinedTextInputController(textInput: firstNameField)
         lastNameController = OutlinedTextInputController(textInput: lastNameField)
         emailAddressController = OutlinedTextInputController(textInput: emailAddressField)
         passwordController = OutlinedTextInputController(textInput: passwordField)
     }
-    
+
     private func bindToViewModel() {
 //        viewModel.hasValidData.asObservable()
 //            .subscribe(onNext: { [weak self] isValid in
@@ -63,7 +63,7 @@ class SignUpViewController: UIViewController {
 //        passwordField.rx.text.bind(to: viewModel.password).disposed(by: disposeBag)
 //        passwordConfirmationField.rx.text.bind(to: viewModel.passwordConfirmation).disposed(by: disposeBag)
     }
-    
+
     private func handleStateChange(state: ViewModelState) {
         switch state {
         case .loading:
@@ -75,10 +75,10 @@ class SignUpViewController: UIViewController {
             UIApplication.hideNetworkActivity()
         }
     }
-    
+
     @IBAction func signUpTapped(_ sender: UIButton) {
         viewModel.sendOTP()
     }
-    
-    
+
+
 }

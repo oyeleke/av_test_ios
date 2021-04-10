@@ -13,24 +13,26 @@ import RxSwift
 import OTPFieldView
 
 class PasswordOTPViewController: UIViewController {
-    
+
     // MARK: - Outlets
     @IBOutlet weak var otpFieldView: OTPFieldView! {
-        didSet { setupOTPView() }
+        didSet {
+            setupOTPView()
+        }
     }
     @IBOutlet weak var tryAgainlabel: UILabel!
-    
-    
+
+
     // MARK: - Lifecycle Events
-    
+
     var viewModel: PasswordOTPViewModel!
     let disposeBag = DisposeBag()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         bindToViewModel()
     }
-    
+
     private func setupOTPView() {
         otpFieldView.fieldsCount = 4
         otpFieldView.fieldBorderWidth = 1
@@ -46,17 +48,17 @@ class PasswordOTPViewController: UIViewController {
         otpFieldView.delegate = self
         otpFieldView.initializeUI()
     }
-    
+
     private func bindToViewModel() {
-        
+
     }
-    
+
     // MARK: - Actions
-    
+
     @IBAction func verifyNowTapped(_ sender: Any) {
         viewModel.goToResetPassword()
     }
-    
+
 }
 
 extension PasswordOTPViewController: OTPFieldViewDelegate {
@@ -64,15 +66,15 @@ extension PasswordOTPViewController: OTPFieldViewDelegate {
         print(index)
         return true
     }
-    
+
     func enteredOTP(otp: String) {
         print(otp)
     }
-    
+
     func hasEnteredAllOTP(hasEnteredAll: Bool) -> Bool {
         print(hasEnteredAll)
         return hasEnteredAll
     }
-    
-    
+
+
 }

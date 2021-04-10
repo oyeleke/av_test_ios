@@ -14,10 +14,10 @@ import Foundation
  them to a specific analytics platform.
  */
 protocol AnalyticsEvent {
-  /// The event name, usually used to identify itself.
-  var name: String { get }
-  /// Payload sent to the analytics service as extra information for the event.
-  var parameters: [String: Any] { get }
+    /// The event name, usually used to identify itself.
+    var name: String { get }
+    /// Payload sent to the analytics service as extra information for the event.
+    var parameters: [String: Any] { get }
 }
 
 /**
@@ -26,24 +26,24 @@ protocol AnalyticsEvent {
  Any data structure that conforms to the AnalyticsEvent protocol will work though.
 */
 enum Event: AnalyticsEvent {
-  case login
-  case registerSuccess(email: String)
+    case login
+    case registerSuccess(email: String)
 
-  public var name: String {
-    switch self {
-    case .login:
-      return "login"
-    case .registerSuccess:
-      return "register_success"
+    public var name: String {
+        switch self {
+        case .login:
+            return "login"
+        case .registerSuccess:
+            return "register_success"
+        }
     }
-  }
 
-  var parameters: [String: Any] {
-    switch self {
-    case .registerSuccess(let email):
-      return ["user_email": email]
-    default:
-      return [:]
+    var parameters: [String: Any] {
+        switch self {
+        case .registerSuccess(let email):
+            return ["user_email": email]
+        default:
+            return [:]
+        }
     }
-  }
 }

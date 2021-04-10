@@ -12,41 +12,41 @@ import RxSwift
 import MaterialComponents
 
 class SignInViewController: UIViewController {
-  
+
     // MARK: - Outlets
-    
+
     @IBOutlet weak var emailField: MDCTextField!
     private var emailController: OutlinedTextInputController!
-    
+
     @IBOutlet weak var passwordField: MDCTextField!
     private var passwordController: OutlinedTextInputController!
-    
+
     @IBOutlet weak var forgotPasswordLabel: UILabel!
     @IBOutlet weak var signUpInsteadLabel: UILabel!
-    
+
     // MARK: - Lifecycle Events
-    
+
     var viewModel: SignInViewModel!
     let disposeBag = DisposeBag()
-  
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         bindToViewModel()
     }
-    
+
     private func setupViews() {
         emailController = OutlinedTextInputController(textInput: emailField)
         passwordController = OutlinedTextInputController(textInput: passwordField)
         forgotPasswordLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.forgotPasswordTapped(_:))))
     }
-  
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
-  private func bindToViewModel() {
+    private func bindToViewModel() {
 //    viewModel.hasValidCredentials.asObservable()
 //      .subscribe(onNext: { [weak self] isValid in
 //        self?.setLoginButton(enabled: isValid)
@@ -61,17 +61,17 @@ class SignInViewController: UIViewController {
 //      .disposed(by: disposeBag)
 //    passwordField.rx.text.bind(to: viewModel.password)
 //      .disposed(by: disposeBag)
-  }
-  
-  // MARK: - Actions
-  
+    }
+
+    // MARK: - Actions
+
     @objc func forgotPasswordTapped(_ sender: UITapGestureRecognizer) {
         viewModel.forgotPassword()
     }
-    
+
     @IBAction func onSignInClicked(_ sender: UIButton) {
     }
-    
+
     private func handleStateChange(state: ViewModelState) {
         switch state {
         case .loading:

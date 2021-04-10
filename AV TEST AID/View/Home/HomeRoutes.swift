@@ -10,18 +10,18 @@ import Foundation
 import UIKit
 
 enum HomeRoutes: Route {
-  case home
+    case home
 
-  var screen: UIViewController {
-    switch self {
-    case .home:
-      guard let home = UIStoryboard
-        .instantiateViewController(HomeViewController.self)
-      else {
-        return UIViewController()
-      }
-      home.viewModel = HomeViewModel()
-      return home
+    var screen: UIViewController {
+        switch self {
+        case .home:
+            guard let home = UIStoryboard
+                    .instantiateViewController(HomeViewController.self)
+                    else {
+                return UIViewController()
+            }
+            home.viewModel = HomeViewModel()
+            return home
+        }
     }
-  }
 }

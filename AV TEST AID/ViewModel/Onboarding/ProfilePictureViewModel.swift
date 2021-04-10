@@ -11,13 +11,13 @@ import RxCocoa
 import RxSwift
 
 class ProfilePictureViewModel {
-    
+
     let disposeBag = DisposeBag()
-    
+
     let state = BehaviorRelay(value: ViewModelState.idle)
-    
+
     func goToProfile() {
         AppNavigator.shared.navigate(to: OnboardingRoutes.profile, with: .push)
     }
-    
+
 }

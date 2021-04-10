@@ -11,20 +11,20 @@ import UIKit
 import DropDown
 
 class CustomDropDownView: CustomDesignableView {
-    
+
     private var dropDown: DropDown!
     private var selectedLabel: UILabel? = nil
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initDropdown()
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         initDropdown()
     }
-    
+
     private func initDropdown() {
         dropDown = DropDown()
         dropDown.anchorView = self
@@ -34,7 +34,7 @@ class CustomDropDownView: CustomDesignableView {
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.viewTapped(_:))))
         styleDropDown()
     }
-    
+
     private func styleDropDown() {
         DropDown.appearance().textColor = UIColor(named: "darkBlueTextColor")!
         DropDown.appearance().selectedTextColor = UIColor(named: "aviBlue")!
@@ -42,21 +42,21 @@ class CustomDropDownView: CustomDesignableView {
         DropDown.appearance().backgroundColor = UIColor.white
         DropDown.appearance().selectionBackgroundColor = UIColor.white
     }
-    
+
     @objc func viewTapped(_ sender: UITapGestureRecognizer) {
         dropDown.show()
     }
-    
+
     func setLabelView(label labelView: UILabel) {
         selectedLabel = labelView
     }
-    
+
     func setDropDownData(_ options: [String]) {
         dropDown.dataSource = options
     }
-    
+
     func getSelectedItem() -> String? {
         dropDown.selectedItem
     }
-    
+
 }

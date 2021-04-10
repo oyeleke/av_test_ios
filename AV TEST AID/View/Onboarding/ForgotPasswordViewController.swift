@@ -13,34 +13,34 @@ import RxSwift
 import MaterialComponents
 
 class ForgotPasswordViewController: UIViewController {
-    
+
     // MARK: - Outlets
     @IBOutlet weak var emailAddressField: MDCTextField!
     private var emailController: OutlinedTextInputController!
-    
+
     @IBOutlet weak var signUpNowLabel: UILabel!
-    
+
     // MARK: - Lifecycle Events
-    
+
     var viewModel: ForgotPasswordViewModel!
     let disposeBag = DisposeBag()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         bindToViewModel()
         setupViews()
     }
-    
+
     private func setupViews() {
         emailController = OutlinedTextInputController(textInput: emailAddressField)
     }
-    
+
     private func bindToViewModel() {
-        
+
     }
-    
+
     @IBAction func resetPasswordTapped(_ sender: Any) {
         viewModel.goToPasswordOtp()
     }
-    
+
 }

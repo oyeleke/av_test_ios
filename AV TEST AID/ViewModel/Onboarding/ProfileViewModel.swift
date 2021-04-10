@@ -11,9 +11,9 @@ import RxCocoa
 import RxSwift
 
 class ProfileViewModel {
-    
+
     let disposeBag = DisposeBag()
-    
+
     let state = BehaviorRelay(value: ViewModelState.idle)
-    
+
 }

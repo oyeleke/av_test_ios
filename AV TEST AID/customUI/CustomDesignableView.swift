@@ -10,29 +10,29 @@ import UIKit
 
 class CustomDesignableView: UIView {
 
-    @IBInspectable var cornerRadius : CGFloat = 0 {
-        didSet{
+    @IBInspectable var cornerRadius: CGFloat = 0 {
+        didSet {
             layer.cornerRadius = cornerRadius
         }
     }
-    
-    @IBInspectable var shadowRadius : CGFloat = 0 {
-        didSet{
+
+    @IBInspectable var shadowRadius: CGFloat = 0 {
+        didSet {
             layer.shadowColor = UIColor.gray.cgColor
             layer.shadowOpacity = 1
             layer.shadowOffset = .zero
             layer.shadowRadius = shadowRadius
         }
     }
-    
-    @IBInspectable var borderColor : UIColor = UIColor.clear{
-        didSet{
+
+    @IBInspectable var borderColor: UIColor = UIColor.clear {
+        didSet {
             layer.borderColor = borderColor.cgColor
         }
     }
-    
-    @IBInspectable var borderWidth : CGFloat = 0{
-        didSet{
+
+    @IBInspectable var borderWidth: CGFloat = 0 {
+        didSet {
             layer.borderWidth = borderWidth
         }
     }

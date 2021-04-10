@@ -12,33 +12,33 @@ import RxSwift
 import RxCocoa
 
 class WelcomeViewController: UIViewController {
-    
+
     // MARK: - Outlets
     @IBOutlet weak var welcomeUserLabel: UILabel!
-    
+
     // MARK: - Lifecycle Events
-    
+
     var viewModel: WelcomeViewModel!
     let disposeBag = DisposeBag()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         bindToViewModel()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
-    
+
     private func bindToViewModel() {
-        
+
     }
-    
+
     // MARK: - Actions
-    
+
     @IBAction func letsDoItTapped(_ sender: UIButton) {
         viewModel.goToProfilePicture()
     }
-    
+
 }

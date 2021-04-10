@@ -11,13 +11,13 @@ import RxCocoa
 import RxSwift
 
 class OTPViewModel {
-    
+
     let disposeBag = DisposeBag()
-    
+
     let state = BehaviorRelay(value: ViewModelState.idle)
-    
+
     func goToWelcomeScreen() {
         AppNavigator.shared.navigate(to: OnboardingRoutes.welcome, with: .push)
     }
-    
+
 }

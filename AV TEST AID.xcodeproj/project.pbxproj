@@ -29,6 +29,9 @@
 		07741D72218CDED600DB3B97 /* FirstViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07741D71218CDED600DB3B97 /* FirstViewModel.swift */; };
 		0A6990351F9F82A300F4BAC7 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6990341F9F82A300F4BAC7 /* UIApplicationExtension.swift */; };
 		0ABFB8901FA366D90098F751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ABFB8921FA366D90098F751 /* Main.storyboard */; };
+		71BC211332EA6C55BA92B7DE /* VerifyOtpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC217694E41A7C3F85C000 /* VerifyOtpRequest.swift */; };
+		71BC264E5A91971F62DD0E67 /* SignInUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC2FF113593551547A1AB3 /* SignInUserRequest.swift */; };
+		71BC298FF39A278BA7424528 /* RegisterUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC28D7E4E195AC0D45BE1F /* RegisterUserRequest.swift */; };
 		9B0C72711C738D3400BAF3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0C72691C738D3400BAF3B1 /* AppDelegate.swift */; };
 		9B0C72721C738D3400BAF3B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0C726A1C738D3400BAF3B1 /* Assets.xcassets */; };
 		9B12AF6C1F269B03005FD465 /* ThirdPartyKeys.example.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B12AF6B1F269B03005FD465 /* ThirdPartyKeys.example.plist */; };
@@ -132,6 +135,9 @@
 		1A6C3258D04CE51AA87A1ED8 /* Pods-AcceptanceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcceptanceTests.debug.xcconfig"; path = "Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		313936BC5EB74BF0F5540D72 /* Pods-AV TEST AID.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AV TEST AID.staging.xcconfig"; path = "Target Support Files/Pods-AV TEST AID/Pods-AV TEST AID.staging.xcconfig"; sourceTree = "<group>"; };
 		4C9A120A9EF1F88FB804CAA2 /* Pods-AV TEST AID.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AV TEST AID.release.xcconfig"; path = "Target Support Files/Pods-AV TEST AID/Pods-AV TEST AID.release.xcconfig"; sourceTree = "<group>"; };
+		71BC217694E41A7C3F85C000 /* VerifyOtpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyOtpRequest.swift; sourceTree = "<group>"; };
+		71BC28D7E4E195AC0D45BE1F /* RegisterUserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUserRequest.swift; sourceTree = "<group>"; };
+		71BC2FF113593551547A1AB3 /* SignInUserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUserRequest.swift; sourceTree = "<group>"; };
 		9B0C72691C738D3400BAF3B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 2; };
 		9B0C726A1C738D3400BAF3B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B0C726D1C738D3400BAF3B1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -237,6 +243,23 @@
 				C749F75EBAAE0E0B21B44AB4 /* Pods-AcceptanceTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		71BC249402B198229AC6D393 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		71BC2F40D53324BA59107DF3 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				71BC28D7E4E195AC0D45BE1F /* RegisterUserRequest.swift */,
+				71BC2FF113593551547A1AB3 /* SignInUserRequest.swift */,
+				71BC217694E41A7C3F85C000 /* VerifyOtpRequest.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 		9B0C72511C738C3100BAF3B1 /* AV TEST AID */ = {
@@ -483,6 +506,8 @@
 			children = (
 				E8FBB1BE1DD21A32000D6740 /* Session.swift */,
 				9B77E0721E2FB6350020E450 /* User.swift */,
+				71BC2F40D53324BA59107DF3 /* Request */,
+				71BC249402B198229AC6D393 /* Response */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -938,6 +963,9 @@
 				9B715A461E28083600C0C039 /* PlaceholderTextView.swift in Sources */,
 				0697F2272615E57B00B63569 /* WelcomeViewModel.swift in Sources */,
 				06EE43BD26152215000B86D2 /* OTPViewModel.swift in Sources */,
+				71BC298FF39A278BA7424528 /* RegisterUserRequest.swift in Sources */,
+				71BC264E5A91971F62DD0E67 /* SignInUserRequest.swift in Sources */,
+				71BC211332EA6C55BA92B7DE /* VerifyOtpRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

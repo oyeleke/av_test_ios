@@ -10,11 +10,11 @@ import Foundation
 import MaterialComponents
 
 class OutlinedTextInputController: MDCTextInputControllerOutlined {
-    
+
     override init() {
         super.init()
     }
-    
+
     required init(textInput input: (UIView & MDCTextInput)?) {
         super.init(textInput: input)
         borderFillColor = UIColor.clear
@@ -24,5 +24,5 @@ class OutlinedTextInputController: MDCTextInputControllerOutlined {
         borderStrokeColor = UIColor(named: "textFieldHintColor")
         inlinePlaceholderColor = UIColor(named: "textFieldHintColor")
     }
-    
+
 }

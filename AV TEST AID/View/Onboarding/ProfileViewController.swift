@@ -14,37 +14,37 @@ import MaterialComponents
 import DropDown
 
 class ProfileViewController: UIViewController {
-    
+
     // MARK: - Outlets
     @IBOutlet weak var licenseNumberField: MDCTextField!
     @IBOutlet weak var professionView: CustomDropDownView!
     @IBOutlet weak var nationalityView: CustomDropDownView!
     @IBOutlet weak var selectedProfessionLabel: UILabel!
     @IBOutlet weak var selectedNationalityLabel: UILabel!
-    
+
     private var licenseNumberController: OutlinedTextInputController!
-    
+
     // MARK: - LifeCycle Events
-    
+
     var viewModel: ProfileViewModel!
     let disposeBag = DisposeBag()
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Skip", style: .plain, target: self, action: #selector(skipTapped))
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         bindToViewModel()
         setupViews()
     }
-    
+
     private func bindToViewModel() {
-        
+
     }
-    
+
     private func setupViews() {
         licenseNumberController = OutlinedTextInputController(textInput: licenseNumberField)
         professionView.setDropDownData(["Pilot", "Flight Attendant", "Flight Disparcher", "Air Traffic Controller", "Engineer"])
@@ -52,15 +52,15 @@ class ProfileViewController: UIViewController {
         nationalityView.setDropDownData(["Here", "Is", "A", "List", "Of", "Countries", "Where", "You", "Are", "Required", "To", "Select", "Just", "One", ".", "It", "Is", "Going", "To", "Be", "A", "Very", "Long", "List"])
         nationalityView.setLabelView(label: selectedNationalityLabel)
     }
-    
+
     // MARK: - Actions
-    
+
     @objc func skipTapped() {
-        
+
     }
-    
+
     @IBAction func doneTapped(_ sender: UIButton) {
-        
+
     }
-    
+
 }

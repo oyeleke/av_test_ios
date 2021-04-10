@@ -11,13 +11,13 @@ import RxCocoa
 import RxSwift
 
 class ForgotPasswordViewModel {
-    
+
     let disposeBag = DisposeBag()
-    
+
     let state = BehaviorRelay(value: ViewModelState.idle)
-    
+
     func goToPasswordOtp() {
         AppNavigator.shared.navigate(to: OnboardingRoutes.passwordOtp, with: .push)
     }
-    
+
 }

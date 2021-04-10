@@ -13,28 +13,30 @@ import RxSwift
 import OTPFieldView
 
 class OTPViewController: UIViewController {
-    
+
     // MARK: - Outlets
     @IBOutlet weak var otpView: OTPFieldView! {
-        didSet { setupOTPView() }
+        didSet {
+            setupOTPView()
+        }
     }
     @IBOutlet weak var codeExpiresLabel: UILabel!
     @IBOutlet weak var resendOtpLabel: UILabel!
-    
+
     // MARK: - Lifecycle Events
-    
+
     var viewModel: OTPViewModel!
     let disposeBag = DisposeBag()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         bindToViewModel()
     }
-    
+
     private func bindToViewModel() {
-        
+
     }
-    
+
     private func setupOTPView() {
         otpView.fieldsCount = 4
         otpView.fieldBorderWidth = 1
@@ -50,11 +52,11 @@ class OTPViewController: UIViewController {
         otpView.delegate = self
         otpView.initializeUI()
     }
-    
+
     @IBAction func verifyNowTapped(_ sender: Any) {
         viewModel.goToWelcomeScreen()
     }
-    
+
 }
 
 extension OTPViewController: OTPFieldViewDelegate {
@@ -62,15 +64,15 @@ extension OTPViewController: OTPFieldViewDelegate {
         print(index)
         return true
     }
-    
+
     func enteredOTP(otp: String) {
         print(otp)
     }
-    
+
     func hasEnteredAllOTP(hasEnteredAll: Bool) -> Bool {
         print(hasEnteredAll)
         return hasEnteredAll
     }
-    
-    
+
+
 }

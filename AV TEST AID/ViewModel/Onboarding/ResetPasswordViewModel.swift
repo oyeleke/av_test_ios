@@ -11,9 +11,9 @@ import RxCocoa
 import RxSwift
 
 class ResetPasswordViewModel {
-    
+
     let disposeBag = DisposeBag()
-    
+
     let state = BehaviorRelay(value: ViewModelState.idle)
-    
+
 }
