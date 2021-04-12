@@ -11,7 +11,7 @@ import RxCocoa
 import RxSwift
 import MaterialComponents
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: BaseViewController {
 
     // MARK: - Outlets
 
@@ -27,8 +27,7 @@ class SignUpViewController: UIViewController {
 
     // MARK: - Lifecycle Events
 
-    var viewModel: SignUpViewModelWithEmail!
-    let disposeBag = DisposeBag()
+    var viewModel: SignUpViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,35 +48,26 @@ class SignUpViewController: UIViewController {
     }
 
     private func bindToViewModel() {
-//        viewModel.hasValidData.asObservable()
-//            .subscribe(onNext: { [weak self] isValid in
-//                self?.setSignUpButton(enabled: isValid)
-//            }).disposed(by: disposeBag)
-//
-//        viewModel.state.asObservable()
-//            .subscribe(onNext: { [weak self] state in
-//                self?.handleStateChange(state: state)
-//            }).disposed(by: disposeBag)
-//
-//        emailField.rx.text.bind(to: viewModel.email).disposed(by: disposeBag)
-//        passwordField.rx.text.bind(to: viewModel.password).disposed(by: disposeBag)
-//        passwordConfirmationField.rx.text.bind(to: viewModel.passwordConfirmation).disposed(by: disposeBag)
+
     }
 
-    private func handleStateChange(state: ViewModelState) {
-        switch state {
-        case .loading:
-            UIApplication.showNetworkActivity()
-        case .error(let errorDescription):
-            UIApplication.hideNetworkActivity()
-            showMessage(title: "Error", message: errorDescription)
-        case .idle:
-            UIApplication.hideNetworkActivity()
-        }
+    override func getViewModel() -> BaseViewModel {
+        viewModel
     }
+
+    // MARK: - Actions
 
     @IBAction func signUpTapped(_ sender: UIButton) {
-        viewModel.sendOTP()
+        Validator.clearErrors(textControllers: firstNameController, lastNameController, emailAddressController,
+                passwordController)
+
+        if !Validator.validate(textControllers: firstNameController, lastNameController, emailAddressController,
+                passwordController) {
+            return
+        }
+
+        viewModel.signup(withDetails: RegisterUserRequest(email: emailAddressField.text!,
+                firstName: firstNameField.text!, lastName: lastNameField.text!, password: passwordField.text!))
     }
 
 

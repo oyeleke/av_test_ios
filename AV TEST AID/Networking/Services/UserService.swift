@@ -70,7 +70,7 @@ class UserService: BaseApiService<UserResource> {
     }
 
     func logout() -> Observable<Void> {
-        return request(for: UserResource.logout)
+        return requestWithNoResponse(for: UserResource.logout)
                 .map { _ in
                     UserDataManager.deleteUser()
                     SessionManager.deleteSession()

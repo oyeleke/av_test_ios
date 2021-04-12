@@ -10,59 +10,25 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-class SignUpViewModelWithEmail {
-    let disposeBag = DisposeBag()
+class SignUpViewModel: BaseViewModel {
 
-    var state = BehaviorRelay(value: ViewModelState.idle)
-
-    var email = BehaviorRelay<String?>(value: "")
-
-    var password = BehaviorRelay<String?>(value: "")
-
-    var passwordConfirmation = BehaviorRelay<String?>(value: "")
-
-    var hasValidData = BehaviorRelay(value: false)
-
-    init() {
-        Observable
-                .combineLatest(email, password, passwordConfirmation)
-                .map { email, password, passwordConfirmation in
-                    guard
-                            let email = email,
-                            let password = password,
-                            let passwordConfirmation = passwordConfirmation
-                            else {
-                        return false
-                    }
-                    return email.isEmailFormatted() && !password.isEmpty && password == passwordConfirmation
-                }
-                .bind(to: hasValidData)
-                .disposed(by: disposeBag)
-    }
-
-    func signup() {
-        guard let email = email.value, let password = password.value else {
-            return
-        }
+    func signup(withDetails registerRequest: RegisterUserRequest) {
         state.accept(.loading)
 
-        UserService.sharedInstance
-                .signup(email, password: password, avatar64: UIImage.random())
+        AVTestService.sharedInstance
+                .registerUser(user: registerRequest)
                 .subscribe(onNext: { user in
                     self.state.accept(.idle)
-                    AnalyticsManager.shared.identifyUser(with: user.email)
-                    AnalyticsManager.shared.log(event: Event.registerSuccess(email: user.email))
-                    AppNavigator.shared.navigate(to: HomeRoutes.home, with: .changeRoot)
+                    print("user is \(user)")
+                    AppNavigator.shared.navigate(to: OnboardingRoutes.otp, with: .push)
                 }, onError: { [weak self] error in
+                    print("error is \(error)")
                     if let apiError = error as? APIError {
-                        self?.state.accept(.error(apiError.firstError ?? "")) // show the first error
+                        self?.state.accept(.error(apiError.errorMessage))
                     } else {
                         self?.state.accept(.error(error.localizedDescription))
                     }
                 }).disposed(by: disposeBag)
     }
 
-    func sendOTP() {
-        AppNavigator.shared.navigate(to: OnboardingRoutes.otp, with: .push)
-    }
 }

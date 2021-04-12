@@ -15,6 +15,7 @@ target 'AV TEST AID' do
   pod 'MaterialComponents/TextFields', '~> 110.0.0'
   pod 'OTPFieldView', '~> 1.0.1'
   pod 'DropDown', '~> 2.3.13'
+  pod 'MBProgressHUD', '~> 1.2.0'
 
   # FB SDK ---
   pod 'FBSDKCoreKit', '~> 4.33.0'

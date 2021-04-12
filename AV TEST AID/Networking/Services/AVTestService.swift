@@ -22,7 +22,7 @@ class AVTestService: BaseApiService<AVTestResource> {
     static let sharedInstance = AVTestService()
 
     func registerUser(user: RegisterUserRequest) -> Observable<User> {
-        request(for: .register(user), at: "data")
+        request(for: .register(user))
                 .map { [weak self] (registerResponse: RegisterUserResponse, response: Response) in
                     // TODO Save session Data like token
                     return registerResponse.user

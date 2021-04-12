@@ -91,7 +91,7 @@ open class BaseApiService<T>: APIService where T: TargetType {
      - target: The TargetType used to make the request.
      - keyPath: The keypath used to decode from JSON (if passed nil, it will try to decode from the root).
      */
-    open func request<T>(for target: ProviderType, at keyPath: String? = nil) -> Observable<(T, Response)> where T: Codable {
+    open func request<T>(for target: ProviderType, at keyPath: String? = "data") -> Observable<(T, Response)> where T: Codable {
         return provider.rx.request(target)
                 .filterSuccessfulStatusCodes()
                 .flatMap { [weak self] response in
@@ -111,11 +111,11 @@ open class BaseApiService<T>: APIService where T: TargetType {
     }
 
     /**
-     Makes a request to the provided target and returns as an Obserbable
+     Makes a request to the provided target and returns as an Observable
      - Parameters:
      - target: The TargetType used to make the request.
      */
-    open func request(for target: ProviderType) -> Observable<Response> {
+    open func requestWithNoResponse(for target: ProviderType) -> Observable<Response> {
         return provider.rx.request(target)
                 .filterSuccessfulStatusCodes()
                 .asObservable()

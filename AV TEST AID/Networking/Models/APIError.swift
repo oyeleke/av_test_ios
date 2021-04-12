@@ -9,38 +9,21 @@
 import Foundation
 import Moya
 
+let genericErrorMessage = "An error occurred, please try again."
+
 struct APIError: Error {
     let statusCode: Int
     let error: RailsError
 
-    /// Returns the first error returned by the API
-    var firstError: String? {
-        if let errors = error.errors, let firstMessage = errors.first {
-            return "\(firstMessage.key) \(firstMessage.value.first ?? "")"
-        } else if let errorString = error.error {
-            return errorString
+    /// Returns the error message from the API
+    var errorMessage: String {
+        if let errorMessage = error.message {
+            return errorMessage
         }
-
-        return nil
+        return genericErrorMessage
     }
 
-    /// Returns an array containing all error values returned from the API
-    var errors: [String] {
-        var flattenedErrors = error.errors?
-                .compactMap {
-                    $0.value
-                }
-                .flatMap {
-                    $0
-                }
-
-        if let errorString = error.error {
-            flattenedErrors?.append(errorString)
-        }
-
-        return flattenedErrors ?? []
-    }
-
+    // Returns an array containing all error values returned from the API
     static func from(response: Response) -> APIError? {
         guard let decodedError = try? response.map(RailsError.self) else {
             return nil
@@ -50,25 +33,24 @@ struct APIError: Error {
 }
 
 struct RailsError: Decodable {
-    let errors: [String: [String]]?
-    let error: String?
+    let success: Bool
+    let message: String?
 
     enum CodingKeys: String, CodingKey {
-        case errors
-        case error
+        case success, message
     }
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        if let errors = try? values.decode([String: [String]].self, forKey: .errors) {
-            self.errors = errors
-            self.error = nil
-        } else if let error = try? values.decode(String.self, forKey: .errors) {
-            self.error = error
-            self.errors = nil
+        if let errorMessage = try? values.decode(String.self, forKey: .message) {
+            message = errorMessage
         } else {
-            error = try? values.decode(String.self, forKey: .error)
-            errors = nil
+            message = nil
+        }
+        if let success = try? values.decode(Bool.self, forKey: .success) {
+            self.success = success
+        } else {
+            success = false
         }
     }
 }

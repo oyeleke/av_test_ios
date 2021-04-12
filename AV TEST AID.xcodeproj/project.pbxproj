@@ -34,9 +34,14 @@
 		71BC2132BFC934891633B26D /* AVTestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC27193F17E0D900FBC93B /* AVTestService.swift */; };
 		71BC2154B4907477756E2D40 /* TokenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC2ADA3C27375A06C8E464 /* TokenData.swift */; };
 		71BC264E5A91971F62DD0E67 /* SignInUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC2FF113593551547A1AB3 /* SignInUserRequest.swift */; };
+		71BC26F549CE9E967A3C6146 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC23493C66059ADEBDE82B /* BaseViewController.swift */; };
+		71BC28165DF1B722CA19EE12 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC2CE1023C120FBD5100CF /* Validator.swift */; };
+		71BC2915AA5C16A1430F73A2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC2B0565F91BABE6D31827 /* Result.swift */; };
 		71BC2954D2674614700F24CB /* AVTestResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC26EC374FD218D4E6BA5E /* AVTestResource.swift */; };
 		71BC298FF39A278BA7424528 /* RegisterUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC28D7E4E195AC0D45BE1F /* RegisterUserRequest.swift */; };
 		71BC2BBD94BED25812C01429 /* RegisterUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC2004362C7E30320E8696 /* RegisterUserResponse.swift */; };
+		71BC2C9AAF4FAF154D252F39 /* BaseApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC2DD2ABFFEA2E4CBF02CF /* BaseApiResponse.swift */; };
+		71BC2F8051CEAB61758A5206 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC2D8BC8733ECB1C82BD49 /* BaseViewModel.swift */; };
 		9B0C72711C738D3400BAF3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0C72691C738D3400BAF3B1 /* AppDelegate.swift */; };
 		9B0C72721C738D3400BAF3B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0C726A1C738D3400BAF3B1 /* Assets.xcassets */; };
 		9B12AF6C1F269B03005FD465 /* ThirdPartyKeys.example.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B12AF6B1F269B03005FD465 /* ThirdPartyKeys.example.plist */; };
@@ -143,10 +148,15 @@
 		4C9A120A9EF1F88FB804CAA2 /* Pods-AV TEST AID.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AV TEST AID.release.xcconfig"; path = "Target Support Files/Pods-AV TEST AID/Pods-AV TEST AID.release.xcconfig"; sourceTree = "<group>"; };
 		71BC2004362C7E30320E8696 /* RegisterUserResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUserResponse.swift; sourceTree = "<group>"; };
 		71BC217694E41A7C3F85C000 /* VerifyOtpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyOtpRequest.swift; sourceTree = "<group>"; };
+		71BC23493C66059ADEBDE82B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		71BC26EC374FD218D4E6BA5E /* AVTestResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVTestResource.swift; sourceTree = "<group>"; };
 		71BC27193F17E0D900FBC93B /* AVTestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVTestService.swift; sourceTree = "<group>"; };
 		71BC28D7E4E195AC0D45BE1F /* RegisterUserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUserRequest.swift; sourceTree = "<group>"; };
 		71BC2ADA3C27375A06C8E464 /* TokenData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenData.swift; sourceTree = "<group>"; };
+		71BC2B0565F91BABE6D31827 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		71BC2CE1023C120FBD5100CF /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		71BC2D8BC8733ECB1C82BD49 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		71BC2DD2ABFFEA2E4CBF02CF /* BaseApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseApiResponse.swift; sourceTree = "<group>"; };
 		71BC2FF113593551547A1AB3 /* SignInUserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUserRequest.swift; sourceTree = "<group>"; };
 		9B0C72691C738D3400BAF3B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 2; };
 		9B0C726A1C738D3400BAF3B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -264,6 +274,23 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
+		71BC25A60BD045436D5B8D23 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				71BC2CE1023C120FBD5100CF /* Validator.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		71BC267F24E04E9F32217723 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				71BC23493C66059ADEBDE82B /* BaseViewController.swift */,
+				71BC2D8BC8733ECB1C82BD49 /* BaseViewModel.swift */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
 		71BC2F40D53324BA59107DF3 /* Request */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +321,8 @@
 				A90D574E2602A08200857269 /* LaunchScreen.storyboard */,
 				9B0C726D1C738D3400BAF3B1 /* Info.plist */,
 				0ABFB8921FA366D90098F751 /* Main.storyboard */,
+				71BC25A60BD045436D5B8D23 /* Utils */,
+				71BC267F24E04E9F32217723 /* base */,
 			);
 			path = "AV TEST AID";
 			sourceTree = "<group>";
@@ -510,6 +539,8 @@
 				9BE3669E1F10175E007CAECD /* Base64Media.swift */,
 				9BE3669C1F101736007CAECD /* MultipartMedia.swift */,
 				FEE8080D22A6BB4F00743D1B /* APIError.swift */,
+				71BC2DD2ABFFEA2E4CBF02CF /* BaseApiResponse.swift */,
+				71BC2B0565F91BABE6D31827 /* Result.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -838,6 +869,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
 				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
 				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
@@ -860,6 +892,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
@@ -986,6 +1019,11 @@
 				71BC2132BFC934891633B26D /* AVTestService.swift in Sources */,
 				71BC2BBD94BED25812C01429 /* RegisterUserResponse.swift in Sources */,
 				71BC2154B4907477756E2D40 /* TokenData.swift in Sources */,
+				71BC28165DF1B722CA19EE12 /* Validator.swift in Sources */,
+				71BC26F549CE9E967A3C6146 /* BaseViewController.swift in Sources */,
+				71BC2F8051CEAB61758A5206 /* BaseViewModel.swift in Sources */,
+				71BC2C9AAF4FAF154D252F39 /* BaseApiResponse.swift in Sources */,
+				71BC2915AA5C16A1430F73A2 /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

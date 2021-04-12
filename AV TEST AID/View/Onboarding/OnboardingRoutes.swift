@@ -63,7 +63,7 @@ enum OnboardingRoutes: Route {
                 else {
             return UIViewController()
         }
-        signUp.viewModel = SignUpViewModelWithEmail()
+        signUp.viewModel = SignUpViewModel()
         return signUp
     }
 
