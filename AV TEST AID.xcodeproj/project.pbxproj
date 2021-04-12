@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06146B992624585C00D764B3 /* ApiUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06146B982624585C00D764B3 /* ApiUtils.swift */; };
 		064459572614799200177F2F /* OutlinedTextInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064459562614799200177F2F /* OutlinedTextInputController.swift */; };
 		0697F2092615D2DF00B63569 /* PasswordOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697F2082615D2DF00B63569 /* PasswordOTPViewController.swift */; };
 		0697F20D2615D39C00B63569 /* PasswordOTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697F20C2615D39C00B63569 /* PasswordOTPViewModel.swift */; };
@@ -30,8 +31,12 @@
 		0A6990351F9F82A300F4BAC7 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6990341F9F82A300F4BAC7 /* UIApplicationExtension.swift */; };
 		0ABFB8901FA366D90098F751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ABFB8921FA366D90098F751 /* Main.storyboard */; };
 		71BC211332EA6C55BA92B7DE /* VerifyOtpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC217694E41A7C3F85C000 /* VerifyOtpRequest.swift */; };
+		71BC2132BFC934891633B26D /* AVTestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC27193F17E0D900FBC93B /* AVTestService.swift */; };
+		71BC2154B4907477756E2D40 /* TokenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC2ADA3C27375A06C8E464 /* TokenData.swift */; };
 		71BC264E5A91971F62DD0E67 /* SignInUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC2FF113593551547A1AB3 /* SignInUserRequest.swift */; };
+		71BC2954D2674614700F24CB /* AVTestResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC26EC374FD218D4E6BA5E /* AVTestResource.swift */; };
 		71BC298FF39A278BA7424528 /* RegisterUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC28D7E4E195AC0D45BE1F /* RegisterUserRequest.swift */; };
+		71BC2BBD94BED25812C01429 /* RegisterUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC2004362C7E30320E8696 /* RegisterUserResponse.swift */; };
 		9B0C72711C738D3400BAF3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0C72691C738D3400BAF3B1 /* AppDelegate.swift */; };
 		9B0C72721C738D3400BAF3B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0C726A1C738D3400BAF3B1 /* Assets.xcassets */; };
 		9B12AF6C1F269B03005FD465 /* ThirdPartyKeys.example.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B12AF6B1F269B03005FD465 /* ThirdPartyKeys.example.plist */; };
@@ -108,6 +113,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06146B982624585C00D764B3 /* ApiUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUtils.swift; sourceTree = "<group>"; };
 		064459562614799200177F2F /* OutlinedTextInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedTextInputController.swift; sourceTree = "<group>"; };
 		0697F2082615D2DF00B63569 /* PasswordOTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordOTPViewController.swift; sourceTree = "<group>"; };
 		0697F20C2615D39C00B63569 /* PasswordOTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordOTPViewModel.swift; sourceTree = "<group>"; };
@@ -135,8 +141,12 @@
 		1A6C3258D04CE51AA87A1ED8 /* Pods-AcceptanceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcceptanceTests.debug.xcconfig"; path = "Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		313936BC5EB74BF0F5540D72 /* Pods-AV TEST AID.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AV TEST AID.staging.xcconfig"; path = "Target Support Files/Pods-AV TEST AID/Pods-AV TEST AID.staging.xcconfig"; sourceTree = "<group>"; };
 		4C9A120A9EF1F88FB804CAA2 /* Pods-AV TEST AID.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AV TEST AID.release.xcconfig"; path = "Target Support Files/Pods-AV TEST AID/Pods-AV TEST AID.release.xcconfig"; sourceTree = "<group>"; };
+		71BC2004362C7E30320E8696 /* RegisterUserResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUserResponse.swift; sourceTree = "<group>"; };
 		71BC217694E41A7C3F85C000 /* VerifyOtpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyOtpRequest.swift; sourceTree = "<group>"; };
+		71BC26EC374FD218D4E6BA5E /* AVTestResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVTestResource.swift; sourceTree = "<group>"; };
+		71BC27193F17E0D900FBC93B /* AVTestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVTestService.swift; sourceTree = "<group>"; };
 		71BC28D7E4E195AC0D45BE1F /* RegisterUserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUserRequest.swift; sourceTree = "<group>"; };
+		71BC2ADA3C27375A06C8E464 /* TokenData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenData.swift; sourceTree = "<group>"; };
 		71BC2FF113593551547A1AB3 /* SignInUserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUserRequest.swift; sourceTree = "<group>"; };
 		9B0C72691C738D3400BAF3B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 2; };
 		9B0C726A1C738D3400BAF3B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -248,6 +258,8 @@
 		71BC249402B198229AC6D393 /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				71BC2004362C7E30320E8696 /* RegisterUserResponse.swift */,
+				71BC2ADA3C27375A06C8E464 /* TokenData.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -477,6 +489,7 @@
 				9BFA84F11C776817009F64E4 /* Services */,
 				FEE8080922A6ACFF00743D1B /* APIService.swift */,
 				FEE8080B22A6AE9900743D1B /* TargetType+Base.swift */,
+				06146B982624585C00D764B3 /* ApiUtils.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -526,6 +539,8 @@
 			children = (
 				FEE8080F22A6C10900743D1B /* UserService.swift */,
 				FEE8081122A6D3FA00743D1B /* UserResource.swift */,
+				71BC26EC374FD218D4E6BA5E /* AVTestResource.swift */,
+				71BC27193F17E0D900FBC93B /* AVTestService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -920,6 +935,7 @@
 				FE4D636222B2CBB000685161 /* OnboardingRoutes.swift in Sources */,
 				071CD2622228544700E6D385 /* FontExtension.swift in Sources */,
 				9B8D307020AB47E90050697F /* JSONEncodingExtension.swift in Sources */,
+				06146B992624585C00D764B3 /* ApiUtils.swift in Sources */,
 				0697F20D2615D39C00B63569 /* PasswordOTPViewModel.swift in Sources */,
 				06A4EF072614A3D400C29BB6 /* PasswordToggleTextField.swift in Sources */,
 				0697F23B2616106A00B63569 /* ProfileViewController.swift in Sources */,
@@ -966,6 +982,10 @@
 				71BC298FF39A278BA7424528 /* RegisterUserRequest.swift in Sources */,
 				71BC264E5A91971F62DD0E67 /* SignInUserRequest.swift in Sources */,
 				71BC211332EA6C55BA92B7DE /* VerifyOtpRequest.swift in Sources */,
+				71BC2954D2674614700F24CB /* AVTestResource.swift in Sources */,
+				71BC2132BFC934891633B26D /* AVTestService.swift in Sources */,
+				71BC2BBD94BED25812C01429 /* RegisterUserResponse.swift in Sources */,
+				71BC2154B4907477756E2D40 /* TokenData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1186,7 +1206,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				BASE_URL = "https://rails5-api-base.herokuapp.com/api/v1";
+				BASE_URL = "https://avtest-staging.herokuapp.com/api/v1/";
 				BUNDLE_DOMAIN = com.avtest.aid;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1215,7 +1235,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				BASE_URL = "https://rails5-api-base.herokuapp.com/api/v1";
+				BASE_URL = "https://not_set";
 				BUNDLE_DOMAIN = com.avtest.aid;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1300,7 +1320,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				BASE_URL = "https://rails5-api-base.herokuapp.com/api/v1";
+				BASE_URL = "https://avtest-staging.herokuapp.com/api/v1/";
 				BUNDLE_DOMAIN = com.avtest.aid;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

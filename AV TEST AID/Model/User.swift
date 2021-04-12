@@ -9,15 +9,22 @@
 import Foundation
 
 struct User: Codable {
-    var id: Int
-    var username: String
-    var email: String
-    var image: URL?
+
+    let id: String
+    let email: String
+    let isVerified: Bool
+    let firstName: String
+    let lastName: String
+    let createdAt: String
+    let profession: String?
 
     private enum CodingKeys: String, CodingKey {
-        case id
-        case username
+        case id = "_id"
         case email
-        case image = "profile_picture"
+        case isVerified = "verified"
+        case firstName
+        case lastName
+        case createdAt
+        case profession
     }
 }

@@ -6,10 +6,11 @@
 import Foundation
 
 struct RegisterUserRequest: Codable {
-    var email: String
-    var firstName: String
-    var lastName: String
-    var password: String
+
+    let email: String
+    let firstName: String
+    let lastName: String
+    let password: String
 
     private enum CodingKeys: String, CodingKey {
         case email
