@@ -23,15 +23,17 @@ class AVTestService: BaseApiService<AVTestResource> {
 
     func registerUser(user: RegisterUserRequest) -> Observable<User> {
         request(for: .register(user))
-                .map { [weak self] (registerResponse: RegisterUserResponse, response: Response) in
-                    SessionManager.start(session: Session(accessToken: registerResponse.tokenData.token))
-                    return registerResponse.user
-                }
+            .map { (registerResponse: RegisterUserResponse, response: Response) in
+                SessionManager.start(session: Session(accessToken: registerResponse.tokenData.token))
+                UserDataManager.set(user: registerResponse.user)
+                return registerResponse.user
+            }
     }
 
     func verifyOtp(verifyRequest: VerifyUserRequest) -> Observable<User> {
         request(for: .verifyUser(verifyRequest))
-            .map {  [weak self] (user: User, response: Response) in
+            .map { (user: User, response: Response) in
+                UserDataManager.set(user: user)
                 return user
             }
     }

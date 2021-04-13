@@ -25,11 +25,15 @@ class UserDataManager: NSObject {
         }
     }
 
+    class func set(user: User) {
+        currentUser = user
+    }
+
     class func deleteUser() {
         UserDefaults.standard.removeObject(forKey: "AV TEST AID-user")
     }
 
     static var isUserLogged: Bool {
-        return currentUser != nil
+        currentUser != nil
     }
 }
