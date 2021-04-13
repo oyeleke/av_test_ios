@@ -23,8 +23,8 @@ class BaseViewController: UIViewController {
 
     private func handleStateChange(state: ViewModelState) {
         switch state {
-        case .loading:
-            showProgressIndicator(withMessage: "")
+        case .loading(let message):
+            showProgressIndicator(withMessage: message)
         case .error(let errorDescription):
             dismissProgressIndicator()
             showMessage(title: "Error", message: errorDescription)
@@ -42,7 +42,7 @@ class BaseViewController: UIViewController {
 extension BaseViewController {
 
     @objc func showProgressIndicator(withMessage message: String) {
-        self.view.endEditing(true)
+        view.endEditing(true)
         let hud = MBProgressHUD.showAdded(to: view, animated: true)
         hud.label.numberOfLines = 0
         hud.label.text = message

@@ -12,7 +12,7 @@ import RxCocoa
 import RxSwift
 import OTPFieldView
 
-class OTPViewController: UIViewController {
+class OTPViewController: BaseViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var otpView: OTPFieldView! {
@@ -26,15 +26,14 @@ class OTPViewController: UIViewController {
     // MARK: - Lifecycle Events
 
     var viewModel: OTPViewModel!
-    let disposeBag = DisposeBag()
+    var enteredOtp: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        bindToViewModel()
     }
 
-    private func bindToViewModel() {
-
+    override func getViewModel() -> BaseViewModel {
+        viewModel
     }
 
     private func setupOTPView() {
@@ -54,23 +53,27 @@ class OTPViewController: UIViewController {
     }
 
     @IBAction func verifyNowTapped(_ sender: Any) {
-        viewModel.goToWelcomeScreen()
+        if enteredOtp.count == 4 {
+            viewModel.verifyUser(withOtp: enteredOtp)
+        }
     }
 
 }
 
 extension OTPViewController: OTPFieldViewDelegate {
     func shouldBecomeFirstResponderForOTP(otpTextFieldIndex index: Int) -> Bool {
-        print(index)
-        return true
+        true
     }
 
     func enteredOTP(otp: String) {
         print(otp)
+        enteredOtp = otp
     }
 
     func hasEnteredAllOTP(hasEnteredAll: Bool) -> Bool {
-        print(hasEnteredAll)
+        if hasEnteredAll {
+            viewModel.verifyUser(withOtp: enteredOtp)
+        }
         return hasEnteredAll
     }
 

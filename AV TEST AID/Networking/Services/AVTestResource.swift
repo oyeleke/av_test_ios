@@ -9,6 +9,7 @@ import Moya
 enum AVTestResource {
 
     case register(RegisterUserRequest)
+    case verifyUser(VerifyUserRequest)
 
 }
 
@@ -18,12 +19,14 @@ extension AVTestResource: TargetType {
         switch self {
         case .register:
             return "register"
+        case .verifyUser:
+            return "user/verify"
         }
     }
 
     public var method: Moya.Method {
         switch self {
-        case .register:
+        case .register, .verifyUser:
             return .post
         }
     }
@@ -32,9 +35,18 @@ extension AVTestResource: TargetType {
         switch self {
         case .register(let registerUserRequest):
             return .requestData(registerUserRequest.asData())
+        case .verifyUser(let verifyUserRequest):
+            return .requestData(verifyUserRequest.asData())
         }
     }
 
-    // TODO do we have to set headers
+    var headers: [String: String]? {
+        switch self {
+        case .register:
+            return getBaseHeaders()
+        default:
+            return getHeaders()
+        }
+    }
 
 }

@@ -17,10 +17,7 @@ struct APIError: Error {
 
     /// Returns the error message from the API
     var errorMessage: String {
-        if let errorMessage = error.message {
-            return errorMessage
-        }
-        return genericErrorMessage
+        error.message
     }
 
     // Returns an array containing all error values returned from the API
@@ -34,7 +31,7 @@ struct APIError: Error {
 
 struct RailsError: Decodable {
     let success: Bool
-    let message: String?
+    let message: String
 
     enum CodingKeys: String, CodingKey {
         case success, message
@@ -45,7 +42,7 @@ struct RailsError: Decodable {
         if let errorMessage = try? values.decode(String.self, forKey: .message) {
             message = errorMessage
         } else {
-            message = nil
+            message = genericErrorMessage
         }
         if let success = try? values.decode(Bool.self, forKey: .success) {
             self.success = success

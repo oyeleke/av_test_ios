@@ -25,18 +25,18 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         bindToViewModel()
-        logOut.setRoundBorders(22)
+//        logOut.setRoundBorders(22)
     }
 
     private func bindToViewModel() {
-        viewModel.state.asObservable()
-                .subscribe(onNext: { state in
-                    if state == .loading {
-                        UIApplication.showNetworkActivity()
-                    } else {
-                        UIApplication.hideNetworkActivity()
-                    }
-                }).disposed(by: disposeBag)
+//        viewModel.state.asObservable()
+//                .subscribe(onNext: { state in
+//                    if state == .loading {
+//                        UIApplication.showNetworkActivity()
+//                    } else {
+//                        UIApplication.hideNetworkActivity()
+//                    }
+//                }).disposed(by: disposeBag)
 
         viewModel.userEmail.asObservable()
                 .subscribe(onNext: { [weak self] email in

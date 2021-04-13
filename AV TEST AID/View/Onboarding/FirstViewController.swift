@@ -30,14 +30,14 @@ class FirstViewController: UIViewController {
     }
 
     private func bindToViewModel() {
-        viewModel.state.asObservable()
-                .subscribe(onNext: { state in
-                    if state == .loading {
-                        UIApplication.showNetworkActivity()
-                    } else {
-                        UIApplication.hideNetworkActivity()
-                    }
-                }).disposed(by: disposeBag)
+//        viewModel.state.asObservable()
+//                .subscribe(onNext: { state in
+//                    if state == .loading {
+//                        UIApplication.showNetworkActivity()
+//                    } else {
+//                        UIApplication.hideNetworkActivity()
+//                    }
+//                }).disposed(by: disposeBag)
     }
 
     // MARK: - Actions

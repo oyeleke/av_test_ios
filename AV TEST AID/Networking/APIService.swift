@@ -11,10 +11,7 @@ import Moya
 import RxSwift
 
 enum HTTPHeader: String {
-    case uid = "uid"
-    case client = "client"
-    case token = "access-token"
-    case expiry = "expiry"
+    case authorization = "Authorization"
     case accept = "Accept"
     case contentType = "Content-Type"
 }

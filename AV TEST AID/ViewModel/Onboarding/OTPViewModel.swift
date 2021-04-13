@@ -10,14 +10,23 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-class OTPViewModel {
+class OTPViewModel: BaseViewModel {
 
-    let disposeBag = DisposeBag()
+    func verifyUser(withOtp otp: String) {
+        state.accept(.loading("Verifying..."))
 
-    let state = BehaviorRelay(value: ViewModelState.idle)
-
-    func goToWelcomeScreen() {
-        AppNavigator.shared.navigate(to: OnboardingRoutes.welcome, with: .push)
+        AVTestService.sharedInstance
+                .verifyOtp(verifyRequest: VerifyUserRequest(verificationCode: otp))
+                .subscribe(onNext: { user in
+                    self.state.accept(.idle)
+                    AppNavigator.shared.navigate(to: OnboardingRoutes.welcome, with: .push)
+                }, onError: { [weak self] error in
+                    if let apiError = error as? APIError {
+                        self?.state.accept(.error(apiError.errorMessage))
+                    } else {
+                        self?.state.accept(.error(error.localizedDescription))
+                    }
+                }).disposed(by: disposeBag)
     }
 
 }

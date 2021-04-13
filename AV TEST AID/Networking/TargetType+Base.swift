@@ -37,12 +37,14 @@ extension TargetType {
         ]
     }
 
+    public func getBaseHeaders() -> [String: String]? {
+        Self.baseHeaders
+    }
+
     public func getHeaders() -> [String: String]? {
         if let session = SessionManager.currentSession {
             return Self.baseHeaders + [
-                HTTPHeader.uid.rawValue: session.uid ?? "",
-                HTTPHeader.client.rawValue: session.client ?? "",
-                HTTPHeader.token.rawValue: session.accessToken ?? ""
+                HTTPHeader.authorization.rawValue: "Bearer \(session.accessToken  ?? "")"
             ]
         }
         return Self.baseHeaders

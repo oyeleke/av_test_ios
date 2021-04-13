@@ -18,7 +18,7 @@ class HomeViewModel {
     let disposeBag = DisposeBag()
 
     func loadUserProfile() {
-        state.accept(.loading)
+        state.accept(.loading(""))
         UserService.sharedInstance.getMyProfile()
                 .subscribe(onNext: { [weak self] user in
                     self?.userEmail.accept(user.email)
@@ -29,7 +29,7 @@ class HomeViewModel {
     }
 
     func logoutUser() {
-        state.accept(.loading)
+        state.accept(.loading(""))
         UserService.sharedInstance.logout()
                 .subscribe(onNext: { [weak self] in
                     self?.state.accept(.idle)

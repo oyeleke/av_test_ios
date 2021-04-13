@@ -28,7 +28,6 @@ class UserService: BaseApiService<UserResource> {
                     guard let headers = response.response?.allHeaderFields else {
                         throw UserServiceError.noResponse
                     }
-                    self?.saveUserSession(user: user, headers: headers)
                     return user
                 }
     }
@@ -39,7 +38,6 @@ class UserService: BaseApiService<UserResource> {
                     guard let headers = response.response?.allHeaderFields else {
                         throw UserServiceError.noResponse
                     }
-                    self?.saveUserSession(user: user, headers: headers)
                     return user
                 }
     }
@@ -57,16 +55,8 @@ class UserService: BaseApiService<UserResource> {
                     guard let headers = response.response?.allHeaderFields else {
                         throw UserServiceError.noResponse
                     }
-                    self?.saveUserSession(user: user, headers: headers)
                     return user
                 }
-    }
-
-    func saveUserSession(user: User, headers: [AnyHashable: Any]) {
-        UserDataManager.currentUser = user
-        if let headers = headers as? [String: Any] {
-            SessionManager.currentSession = Session(headers: headers)
-        }
     }
 
     func logout() -> Observable<Void> {
