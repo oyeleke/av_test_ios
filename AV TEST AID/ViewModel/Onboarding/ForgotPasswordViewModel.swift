@@ -10,14 +10,23 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-class ForgotPasswordViewModel {
+class ForgotPasswordViewModel: BaseViewModel {
 
-    let disposeBag = DisposeBag()
+    func initiatePasswordReset(emailAddress: String) {
+        state.accept(.loading(""))
 
-    let state = BehaviorRelay(value: ViewModelState.idle)
-
-    func goToPasswordOtp() {
-        AppNavigator.shared.navigate(to: OnboardingRoutes.passwordOtp, with: .push)
+        AVTestService.sharedInstance
+                .initiatePasswordReset(initiateRequest: InitiateResetPasswordRequest(email: emailAddress))
+                .subscribe(onNext: { user in
+                    self.state.accept(.idle)
+                    AppNavigator.shared.navigate(to: OnboardingRoutes.passwordOtp, with: .push)
+                }, onError: { [weak self] error in
+                    if let apiError = error as? APIError {
+                        self?.state.accept(.error(apiError.errorMessage))
+                    } else {
+                        self?.state.accept(.error(error.localizedDescription))
+                    }
+                }).disposed(by: disposeBag)
     }
 
 }

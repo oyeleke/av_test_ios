@@ -18,4 +18,5 @@ struct RegisterUserRequest: Codable {
         case lastName
         case password
     }
+
 }
