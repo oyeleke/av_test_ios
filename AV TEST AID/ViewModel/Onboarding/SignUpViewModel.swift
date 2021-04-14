@@ -12,6 +12,11 @@ import RxSwift
 
 class SignUpViewModel: BaseViewModel {
 
+    func navigateToSignIn() {
+        AppNavigator.shared.popToRoot()
+        AppNavigator.shared.navigate(to: OnboardingRoutes.signIn, with: .push)
+    }
+
     func signup(withDetails registerRequest: RegisterUserRequest) {
         state.accept(.loading("Signing up..."))
 

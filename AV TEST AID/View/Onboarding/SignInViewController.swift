@@ -11,7 +11,7 @@ import RxCocoa
 import RxSwift
 import MaterialComponents
 
-class SignInViewController: UIViewController {
+class SignInViewController: BaseViewController {
 
     // MARK: - Outlets
 
@@ -27,18 +27,18 @@ class SignInViewController: UIViewController {
     // MARK: - Lifecycle Events
 
     var viewModel: SignInViewModel!
-    let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        bindToViewModel()
     }
 
     private func setupViews() {
         emailController = OutlinedTextInputController(textInput: emailField)
         passwordController = OutlinedTextInputController(textInput: passwordField)
-        forgotPasswordLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.forgotPasswordTapped(_:))))
+
+        forgotPasswordLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(forgotPasswordTapped(_:))))
+        signUpInsteadLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(signUpInsteadTapped(_:))))
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -46,21 +46,8 @@ class SignInViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
-    private func bindToViewModel() {
-//    viewModel.hasValidCredentials.asObservable()
-//      .subscribe(onNext: { [weak self] isValid in
-//        self?.setLoginButton(enabled: isValid)
-//      }).disposed(by: disposeBag)
-//
-//    viewModel.state.asObservable()
-//      .subscribe(onNext: { [weak self] state in
-//        self?.handleStateChange(state: state)
-//      }).disposed(by: disposeBag)
-//
-//    emailField.rx.text.bind(to: viewModel.email)
-//      .disposed(by: disposeBag)
-//    passwordField.rx.text.bind(to: viewModel.password)
-//      .disposed(by: disposeBag)
+    override func getViewModel() -> BaseViewModel {
+        viewModel
     }
 
     // MARK: - Actions
@@ -69,18 +56,11 @@ class SignInViewController: UIViewController {
         viewModel.forgotPassword()
     }
 
+    @objc func signUpInsteadTapped(_ sender: UITapGestureRecognizer) {
+        viewModel.navigateToSignUp()
+    }
+
     @IBAction func onSignInClicked(_ sender: UIButton) {
     }
 
-    private func handleStateChange(state: ViewModelState) {
-        switch state {
-        case .loading:
-            UIApplication.showNetworkActivity()
-        case .error(let errorDescription):
-            UIApplication.hideNetworkActivity()
-            showMessage(title: "Error", message: errorDescription)
-        case .idle:
-            UIApplication.hideNetworkActivity()
-        }
-    }
 }

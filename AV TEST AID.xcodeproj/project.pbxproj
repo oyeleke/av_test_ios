@@ -32,6 +32,7 @@
 		0ABFB8901FA366D90098F751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ABFB8921FA366D90098F751 /* Main.storyboard */; };
 		71BC2132BFC934891633B26D /* AVTestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC27193F17E0D900FBC93B /* AVTestService.swift */; };
 		71BC2154B4907477756E2D40 /* TokenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC2ADA3C27375A06C8E464 /* TokenData.swift */; };
+		71BC21A632A1375EB07197F6 /* VerifyPasswordCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC28C48BCFC97220A47475 /* VerifyPasswordCodeRequest.swift */; };
 		71BC224B13F233DD62F91506 /* InititateResetPasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC202154FE9202C30F357B /* InititateResetPasswordRequest.swift */; };
 		71BC264E5A91971F62DD0E67 /* SignInUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC2FF113593551547A1AB3 /* SignInUserRequest.swift */; };
 		71BC26F549CE9E967A3C6146 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC23493C66059ADEBDE82B /* BaseViewController.swift */; };
@@ -153,6 +154,7 @@
 		71BC23493C66059ADEBDE82B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		71BC26EC374FD218D4E6BA5E /* AVTestResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVTestResource.swift; sourceTree = "<group>"; };
 		71BC27193F17E0D900FBC93B /* AVTestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVTestService.swift; sourceTree = "<group>"; };
+		71BC28C48BCFC97220A47475 /* VerifyPasswordCodeRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyPasswordCodeRequest.swift; sourceTree = "<group>"; };
 		71BC28D7E4E195AC0D45BE1F /* RegisterUserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUserRequest.swift; sourceTree = "<group>"; };
 		71BC2ADA3C27375A06C8E464 /* TokenData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenData.swift; sourceTree = "<group>"; };
 		71BC2B0565F91BABE6D31827 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				71BC2FF113593551547A1AB3 /* SignInUserRequest.swift */,
 				71BC21AFC289BB051EB30532 /* VerifyUserRequest.swift */,
 				71BC202154FE9202C30F357B /* InititateResetPasswordRequest.swift */,
+				71BC28C48BCFC97220A47475 /* VerifyPasswordCodeRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -1028,6 +1031,7 @@
 				71BC2915AA5C16A1430F73A2 /* Result.swift in Sources */,
 				71BC2AA3D89707DF6964BE27 /* VerifyUserRequest.swift in Sources */,
 				71BC224B13F233DD62F91506 /* InititateResetPasswordRequest.swift in Sources */,
+				71BC21A632A1375EB07197F6 /* VerifyPasswordCodeRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

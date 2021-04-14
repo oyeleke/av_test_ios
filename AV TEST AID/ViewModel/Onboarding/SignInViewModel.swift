@@ -10,46 +10,15 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-class SignInViewModel {
-    let disposeBag = DisposeBag()
+class SignInViewModel: BaseViewModel {
 
-    var state = BehaviorRelay(value: ViewModelState.idle)
-
-    var email = BehaviorRelay<String?>(value: "")
-
-    var password = BehaviorRelay<String?>(value: "")
-
-    var hasValidCredentials = BehaviorRelay(value: false)
-
-    init() {
-        Observable.combineLatest(email, password)
-                .map { email, password in
-                    return (email ?? "").isEmailFormatted() && !(password ?? "").isEmpty
-                }
-                .bind(to: hasValidCredentials)
-                .disposed(by: disposeBag)
-    }
-
-    func login() {
-        guard let email = email.value, let password = password.value else {
-            return
-        }
-        state.accept(.loading(""))
-        UserService.sharedInstance.login(email, password: password)
-                .subscribe(onNext: { [weak self] user in
-                    guard let self = self else {
-                        return
-                    }
-                    self.state.accept(.idle)
-                    AnalyticsManager.shared.identifyUser(with: user.email)
-                    AnalyticsManager.shared.log(event: Event.login)
-                    AppNavigator.shared.navigate(to: HomeRoutes.home, with: .changeRoot)
-                }, onError: { [weak self] error in
-                    self?.state.accept(.error(error.localizedDescription))
-                }).disposed(by: disposeBag)
+    func navigateToSignUp() {
+        AppNavigator.shared.popToRoot( )
+        AppNavigator.shared.navigate(to: OnboardingRoutes.signUp, with: .push)
     }
 
     func forgotPassword() {
         AppNavigator.shared.navigate(to: OnboardingRoutes.forgotPassword, with: .push)
     }
+
 }

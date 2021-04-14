@@ -28,10 +28,6 @@ class OTPViewController: BaseViewController {
     var viewModel: OTPViewModel!
     var enteredOtp: String = ""
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     override func getViewModel() -> BaseViewModel {
         viewModel
     }
@@ -45,7 +41,7 @@ class OTPViewController: BaseViewController {
         otpView.displayType = .roundedCorner
         otpView.fieldSize = 45
         otpView.separatorSpace = 16
-        otpView.shouldAllowIntermediateEditing = false
+        otpView.shouldAllowIntermediateEditing = true
         otpView.fieldFont = UIFont(name: "Quicksand-Regular", size: CGFloat(17))!
         otpView.secureEntry = false
         otpView.delegate = self
@@ -58,6 +54,11 @@ class OTPViewController: BaseViewController {
         }
     }
 
+    override func handleErrorState(with errorMessage: String) {
+        super.handleErrorState(with: errorMessage)
+        otpView.initializeUI()
+        enteredOtp = ""
+    }
 }
 
 extension OTPViewController: OTPFieldViewDelegate {

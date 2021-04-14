@@ -46,5 +46,20 @@ class AVTestService: BaseApiService<AVTestResource> {
                 }
     }
 
+    func verifyPasswordCode(verifyRequest: VerifyPasswordCodeRequest) -> Observable<User> {
+        request(for: .verifyPasswordCode(verifyRequest)).map { (user: User, response: Response) in
+            UserDataManager.set(user: user)
+            return user
+        }
+    }
+
+    func resendPasswordCode(initiateRequest: InitiateResetPasswordRequest) -> Observable<User> {
+        request(for: .resendPasswordCode(initiateRequest))
+                .map { (user: User, response: Response) in
+                    UserDataManager.set(user: user)
+                    return user
+                }
+    }
+
 }
 

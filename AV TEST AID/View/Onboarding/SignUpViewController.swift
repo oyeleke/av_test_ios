@@ -25,6 +25,8 @@ class SignUpViewController: BaseViewController {
     private var emailAddressController: OutlinedTextInputController!
     private var passwordController: OutlinedTextInputController!
 
+    @IBOutlet weak var loginInsteadLabel: UILabel!
+    
     // MARK: - Lifecycle Events
 
     var viewModel: SignUpViewModel!
@@ -45,6 +47,9 @@ class SignUpViewController: BaseViewController {
         lastNameController = OutlinedTextInputController(textInput: lastNameField)
         emailAddressController = OutlinedTextInputController(textInput: emailAddressField)
         passwordController = OutlinedTextInputController(textInput: passwordField)
+
+        loginInsteadLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(loginInsteadTapped(_:))))
+        loginInsteadLabel.isUserInteractionEnabled = true
     }
 
     private func bindToViewModel() {
@@ -56,6 +61,10 @@ class SignUpViewController: BaseViewController {
     }
 
     // MARK: - Actions
+
+    @objc func loginInsteadTapped(_ sender: UITapGestureRecognizer) {
+        viewModel.navigateToSignIn()
+    }
 
     @IBAction func signUpTapped(_ sender: UIButton) {
         Validator.clearErrors(textControllers: firstNameController, lastNameController, emailAddressController,

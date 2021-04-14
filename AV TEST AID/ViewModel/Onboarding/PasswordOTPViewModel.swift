@@ -10,14 +10,41 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-class PasswordOTPViewModel {
+class PasswordOTPViewModel: BaseViewModel {
 
-    let disposeBag = DisposeBag()
+    func verifyPasswordCode(withOtp otp: String) {
+        state.accept(.loading("Verifying..."))
+        guard let user = UserDataManager.currentUser else { return }
 
-    let state = BehaviorRelay(value: ViewModelState.idle)
+        AVTestService.sharedInstance
+                .verifyPasswordCode(verifyRequest: VerifyPasswordCodeRequest(email: user.email, verificationCode: otp))
+                .subscribe(onNext: { user in
+                    self.state.accept(.idle)
+                    AppNavigator.shared.navigate(to: OnboardingRoutes.resetPassword, with: .push)
+                }, onError: { [weak self] error in
+                    if let apiError = error as? APIError {
+                        self?.state.accept(.error(apiError.errorMessage))
+                    } else {
+                        self?.state.accept(.error(error.localizedDescription))
+                    }
+                }).disposed(by: disposeBag)
+    }
 
-    func goToResetPassword() {
-        AppNavigator.shared.navigate(to: OnboardingRoutes.resetPassword, with: .push)
+    func resendPasswordCode() {
+        state.accept(.loading(""))
+        guard let user = UserDataManager.currentUser else { return }
+
+        AVTestService.sharedInstance
+                .resendPasswordCode(initiateRequest: InitiateResetPasswordRequest(email: user.email))
+                .subscribe(onNext: { user in
+                    self.state.accept(.idle)
+                }, onError: { [weak self] error in
+                    if let apiError = error as? APIError {
+                        self?.state.accept(.error(apiError.errorMessage))
+                    } else {
+                        self?.state.accept(.error(error.localizedDescription))
+                    }
+                }).disposed(by: disposeBag)
     }
 
 }

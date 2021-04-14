@@ -26,8 +26,7 @@ class BaseViewController: UIViewController {
         case .loading(let message):
             showProgressIndicator(withMessage: message)
         case .error(let errorDescription):
-            dismissProgressIndicator()
-            showMessage(title: "Error", message: errorDescription)
+            handleErrorState(with: errorDescription)
         case .idle:
             dismissProgressIndicator()
         }
@@ -56,6 +55,11 @@ extension BaseViewController {
         MBProgressHUD.hide(for: view, animated: true)
         UIApplication.hideNetworkActivity()
         view.isUserInteractionEnabled = true
+    }
+
+    @objc func handleErrorState(with errorMessage: String) {
+        dismissProgressIndicator()
+        showMessage(title: "Error", message: errorMessage)
     }
 
 }

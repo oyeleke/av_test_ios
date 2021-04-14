@@ -12,25 +12,27 @@ import RxCocoa
 import RxSwift
 import OTPFieldView
 
-class PasswordOTPViewController: UIViewController {
+class PasswordOTPViewController: BaseViewController {
 
     // MARK: - Outlets
-    @IBOutlet weak var otpFieldView: OTPFieldView! {
-        didSet {
-            setupOTPView()
-        }
-    }
+    @IBOutlet weak var otpFieldView: OTPFieldView!
     @IBOutlet weak var tryAgainlabel: UILabel!
-
 
     // MARK: - Lifecycle Events
 
     var viewModel: PasswordOTPViewModel!
-    let disposeBag = DisposeBag()
+    var enteredOtp: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        bindToViewModel()
+        setupViews()
+    }
+
+    private func setupViews() {
+        setupOTPView()
+
+        tryAgainlabel.isUserInteractionEnabled = true
+        tryAgainlabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tryAgainTapped(_:))))
     }
 
     private func setupOTPView() {
@@ -42,37 +44,51 @@ class PasswordOTPViewController: UIViewController {
         otpFieldView.displayType = .roundedCorner
         otpFieldView.fieldSize = 45
         otpFieldView.separatorSpace = 16
-        otpFieldView.shouldAllowIntermediateEditing = false
+        otpFieldView.shouldAllowIntermediateEditing = true
         otpFieldView.fieldFont = UIFont(name: "Quicksand-Regular", size: CGFloat(17))!
         otpFieldView.secureEntry = false
         otpFieldView.delegate = self
         otpFieldView.initializeUI()
     }
 
-    private func bindToViewModel() {
+    override func handleErrorState(with errorMessage: String) {
+        super.handleErrorState(with: errorMessage)
+        otpFieldView.initializeUI()
+        enteredOtp = ""
+    }
 
+    override func getViewModel() -> BaseViewModel {
+        viewModel
     }
 
     // MARK: - Actions
 
+    @objc func tryAgainTapped(_ sender: UITapGestureRecognizer) {
+        viewModel.resendPasswordCode()
+    }
+
     @IBAction func verifyNowTapped(_ sender: Any) {
-        viewModel.goToResetPassword()
+        if enteredOtp.count == 4 {
+            viewModel.verifyPasswordCode(withOtp: enteredOtp)
+        }
     }
 
 }
 
 extension PasswordOTPViewController: OTPFieldViewDelegate {
     func shouldBecomeFirstResponderForOTP(otpTextFieldIndex index: Int) -> Bool {
-        print(index)
-        return true
+        true
     }
 
     func enteredOTP(otp: String) {
         print(otp)
+        enteredOtp = otp
     }
 
     func hasEnteredAllOTP(hasEnteredAll: Bool) -> Bool {
-        print(hasEnteredAll)
+        if hasEnteredAll {
+            viewModel.verifyPasswordCode(withOtp: enteredOtp)
+        }
         return hasEnteredAll
     }
 
