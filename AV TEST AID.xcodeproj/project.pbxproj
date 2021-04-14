@@ -36,6 +36,7 @@
 		71BC224B13F233DD62F91506 /* InititateResetPasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC202154FE9202C30F357B /* InititateResetPasswordRequest.swift */; };
 		71BC264E5A91971F62DD0E67 /* SignInUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC2FF113593551547A1AB3 /* SignInUserRequest.swift */; };
 		71BC26F549CE9E967A3C6146 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC23493C66059ADEBDE82B /* BaseViewController.swift */; };
+		71BC27167F35AB5FB58456C9 /* ResetPasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC2F3BBBBACF39A2FF86DD /* ResetPasswordRequest.swift */; };
 		71BC28165DF1B722CA19EE12 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC2CE1023C120FBD5100CF /* Validator.swift */; };
 		71BC2915AA5C16A1430F73A2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC2B0565F91BABE6D31827 /* Result.swift */; };
 		71BC2954D2674614700F24CB /* AVTestResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC26EC374FD218D4E6BA5E /* AVTestResource.swift */; };
@@ -161,6 +162,7 @@
 		71BC2CE1023C120FBD5100CF /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		71BC2D8BC8733ECB1C82BD49 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		71BC2DD2ABFFEA2E4CBF02CF /* BaseApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseApiResponse.swift; sourceTree = "<group>"; };
+		71BC2F3BBBBACF39A2FF86DD /* ResetPasswordRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordRequest.swift; sourceTree = "<group>"; };
 		71BC2FF113593551547A1AB3 /* SignInUserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUserRequest.swift; sourceTree = "<group>"; };
 		9B0C72691C738D3400BAF3B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 2; };
 		9B0C726A1C738D3400BAF3B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				71BC21AFC289BB051EB30532 /* VerifyUserRequest.swift */,
 				71BC202154FE9202C30F357B /* InititateResetPasswordRequest.swift */,
 				71BC28C48BCFC97220A47475 /* VerifyPasswordCodeRequest.swift */,
+				71BC2F3BBBBACF39A2FF86DD /* ResetPasswordRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -1032,6 +1035,7 @@
 				71BC2AA3D89707DF6964BE27 /* VerifyUserRequest.swift in Sources */,
 				71BC224B13F233DD62F91506 /* InititateResetPasswordRequest.swift in Sources */,
 				71BC21A632A1375EB07197F6 /* VerifyPasswordCodeRequest.swift in Sources */,
+				71BC27167F35AB5FB58456C9 /* ResetPasswordRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

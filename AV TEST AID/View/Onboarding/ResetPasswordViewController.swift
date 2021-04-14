@@ -11,7 +11,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class ResetPasswordViewController: UIViewController {
+class ResetPasswordViewController: BaseViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var newPasswordField: PasswordToggleTextField!
@@ -23,16 +23,11 @@ class ResetPasswordViewController: UIViewController {
     // MARK: - Lifecycle Events
 
     var viewModel: ResetPasswordViewModel!
-    let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        bindToViewModel()
         setupViews()
-    }
-
-    private func bindToViewModel() {
-
+        bindToViewModel()
     }
 
     private func setupViews() {
@@ -40,9 +35,37 @@ class ResetPasswordViewController: UIViewController {
         confirmPasswordController = OutlinedTextInputController(textInput: confirmPasswordField)
     }
 
+    private func bindToViewModel() {
+        viewModel.passwordResetState.subscribe(onNext: { state in
+            if state {
+                let action = UIAlertAction(title: "Continue", style: .default) { [weak self] _ in
+                    self?.viewModel.popUpToSignIn()
+                }
+                self.showDialog(withMessage: "Your password has been reset successfully. Continue to sign in", action: action)
+            }
+        }).disposed(by: disposeBag)
+    }
+
+    override func getViewModel() -> BaseViewModel {
+        viewModel
+    }
+
     // MARK: - Actions
 
     @IBAction func doneTapped(_ sender: UIButton) {
+        Validator.clearErrors(textControllers: newPasswordController, confirmPasswordController)
+
+        if !Validator.validate(textControllers: newPasswordController) {
+            return
+        }
+
+        if newPasswordField.text != confirmPasswordField.text {
+            let errorMessage = "Passwords dont match"
+            confirmPasswordController.setErrorText(errorMessage, errorAccessibilityValue: errorMessage)
+            return
+        }
+
+        viewModel.resetPassword(newPassword: newPasswordField.text!)
     }
 
 }

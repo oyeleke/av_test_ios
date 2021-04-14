@@ -61,5 +61,13 @@ class AVTestService: BaseApiService<AVTestResource> {
                 }
     }
 
+    func resetPassword(resetRequest: ResetPasswordRequest) -> Observable<User> {
+        request(for: .resetPassword(resetRequest))
+            .map { (user: User, response: Response) in
+                UserDataManager.set(user: user)
+                return user
+            }
+    }
+
 }
 

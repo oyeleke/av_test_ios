@@ -13,8 +13,8 @@ import RxSwift
 class PasswordOTPViewModel: BaseViewModel {
 
     func verifyPasswordCode(withOtp otp: String) {
-        state.accept(.loading("Verifying..."))
         guard let user = UserDataManager.currentUser else { return }
+        state.accept(.loading("Verifying..."))
 
         AVTestService.sharedInstance
                 .verifyPasswordCode(verifyRequest: VerifyPasswordCodeRequest(email: user.email, verificationCode: otp))
@@ -31,8 +31,8 @@ class PasswordOTPViewModel: BaseViewModel {
     }
 
     func resendPasswordCode() {
-        state.accept(.loading(""))
         guard let user = UserDataManager.currentUser else { return }
+        state.accept(.loading(""))
 
         AVTestService.sharedInstance
                 .resendPasswordCode(initiateRequest: InitiateResetPasswordRequest(email: user.email))
