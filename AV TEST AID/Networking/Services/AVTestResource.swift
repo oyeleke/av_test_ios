@@ -14,6 +14,7 @@ enum AVTestResource {
     case verifyPasswordCode(VerifyPasswordCodeRequest)
     case resendPasswordCode(InitiateResetPasswordRequest)
     case resetPassword(ResetPasswordRequest)
+    case signIn(SignInUserRequest)
 
 }
 
@@ -33,12 +34,14 @@ extension AVTestResource: TargetType {
             return "user/password/resend-code"
         case .resetPassword:
             return "user/password/new"
+        case .signIn:
+            return "login"
         }
     }
 
     public var method: Moya.Method {
         switch self {
-        case .register, .verifyUser, .initiatePasswordReset, .verifyPasswordCode, .resendPasswordCode, .resetPassword:
+        case .register, .verifyUser, .initiatePasswordReset, .verifyPasswordCode, .resendPasswordCode, .resetPassword, .signIn:
             return .post
         }
     }
@@ -57,12 +60,14 @@ extension AVTestResource: TargetType {
             return .requestData(initiatePasswordRequest.asData())
         case .resetPassword(let resetRequest):
             return .requestData(resetRequest.asData())
+        case .signIn(let signInRequest):
+            return .requestData(signInRequest.asData())
         }
     }
 
     var headers: [String: String]? {
         switch self {
-        case .register, .initiatePasswordReset, .verifyPasswordCode, .resendPasswordCode, .resetPassword:
+        case .register, .initiatePasswordReset, .verifyPasswordCode, .resendPasswordCode, .resetPassword, .signIn:
             return getBaseHeaders()
         default:
             return getHeaders()

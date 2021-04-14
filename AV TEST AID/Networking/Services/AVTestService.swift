@@ -69,5 +69,13 @@ class AVTestService: BaseApiService<AVTestResource> {
             }
     }
 
+    func signIn(signInRequest: SignInUserRequest) -> Observable<User> {
+        request(for: .signIn(signInRequest))
+            .map { (user: User, response: Response) in
+                UserDataManager.set(user: user)
+                return user
+            }
+    }
+
 }
 

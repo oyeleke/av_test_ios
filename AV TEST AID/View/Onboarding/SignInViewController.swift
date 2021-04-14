@@ -53,7 +53,7 @@ class SignInViewController: BaseViewController {
     // MARK: - Actions
 
     @objc func forgotPasswordTapped(_ sender: UITapGestureRecognizer) {
-        viewModel.forgotPassword()
+        viewModel.navigateToForgotPassword()
     }
 
     @objc func signUpInsteadTapped(_ sender: UITapGestureRecognizer) {
@@ -61,6 +61,13 @@ class SignInViewController: BaseViewController {
     }
 
     @IBAction func onSignInClicked(_ sender: UIButton) {
+        Validator.clearErrors(textControllers: emailController, passwordController)
+
+        if !Validator.validate(textControllers: emailController, passwordController) {
+            return
+        }
+
+        viewModel.signIn(withEmail: emailField.text!, andPassword: passwordField.text!)
     }
 
 }
