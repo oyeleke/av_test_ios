@@ -22,14 +22,24 @@ class OTPViewController: BaseViewController {
     }
     @IBOutlet weak var codeExpiresLabel: UILabel!
     @IBOutlet weak var resendOtpLabel: UILabel!
-
+    @IBOutlet weak var verifyTappedButton: CustomDesignableButton!
+    
     // MARK: - Lifecycle Events
 
     var viewModel: OTPViewModel!
-    var enteredOtp: String = ""
+    var enteredOtp: String = "" {
+        didSet {
+            verifyTappedButton.setState(enteredOtp.count == 4)
+        }
+    }
 
     override func getViewModel() -> BaseViewModel {
         viewModel
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        verifyTappedButton.setState(false)
     }
 
     private func setupOTPView() {
@@ -41,7 +51,7 @@ class OTPViewController: BaseViewController {
         otpView.displayType = .roundedCorner
         otpView.fieldSize = 45
         otpView.separatorSpace = 16
-        otpView.shouldAllowIntermediateEditing = true
+        otpView.shouldAllowIntermediateEditing = false
         otpView.fieldFont = UIFont(name: "Quicksand-Regular", size: CGFloat(17))!
         otpView.secureEntry = false
         otpView.delegate = self
@@ -59,6 +69,7 @@ class OTPViewController: BaseViewController {
         otpView.initializeUI()
         enteredOtp = ""
     }
+
 }
 
 extension OTPViewController: OTPFieldViewDelegate {

@@ -86,5 +86,25 @@ class AVTestService: BaseApiService<AVTestResource> {
             })
     }
 
-}
+    func fetchProfessions() -> Observable<[Profession]> {
+        request(for: .fetchProfessions)
+            .map { (professions: [Profession], response: Response) in
+                professions
+            }
+    }
 
+    func updateProfession(professionKey: String) -> Observable<Profession> {
+        request(for: .updateProfession(professionKey))
+            .map { (profession: Profession, response: Response) in
+                profession
+            }
+    }
+
+    func onboardUser(onboardRequest: OnboardUserRequest) -> Observable<User> {
+        request(for: .onboardUser(onboardRequest))
+            .map { (user: User, response: Response) in
+                user
+            }
+    }
+
+}

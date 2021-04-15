@@ -42,6 +42,8 @@
 		71BC2954D2674614700F24CB /* AVTestResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC26EC374FD218D4E6BA5E /* AVTestResource.swift */; };
 		71BC298FF39A278BA7424528 /* RegisterUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC28D7E4E195AC0D45BE1F /* RegisterUserRequest.swift */; };
 		71BC2AA3D89707DF6964BE27 /* VerifyUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC21AFC289BB051EB30532 /* VerifyUserRequest.swift */; };
+		71BC2B594A58C3653C526EA1 /* OnboardUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC251DACA90C3C8273D420 /* OnboardUserRequest.swift */; };
+		71BC2B9B5D52D0F2859356F1 /* Profession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC297E43CA5B4E32003682 /* Profession.swift */; };
 		71BC2BBD94BED25812C01429 /* RegisterUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC2004362C7E30320E8696 /* RegisterUserResponse.swift */; };
 		71BC2C9AAF4FAF154D252F39 /* BaseApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC2DD2ABFFEA2E4CBF02CF /* BaseApiResponse.swift */; };
 		71BC2E01AAE5A70374834949 /* SignInUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC2488CD7D06E8DF10203D /* SignInUserResponse.swift */; };
@@ -155,10 +157,12 @@
 		71BC21AFC289BB051EB30532 /* VerifyUserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyUserRequest.swift; sourceTree = "<group>"; };
 		71BC23493C66059ADEBDE82B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		71BC2488CD7D06E8DF10203D /* SignInUserResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUserResponse.swift; sourceTree = "<group>"; };
+		71BC251DACA90C3C8273D420 /* OnboardUserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardUserRequest.swift; sourceTree = "<group>"; };
 		71BC26EC374FD218D4E6BA5E /* AVTestResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVTestResource.swift; sourceTree = "<group>"; };
 		71BC27193F17E0D900FBC93B /* AVTestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVTestService.swift; sourceTree = "<group>"; };
 		71BC28C48BCFC97220A47475 /* VerifyPasswordCodeRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyPasswordCodeRequest.swift; sourceTree = "<group>"; };
 		71BC28D7E4E195AC0D45BE1F /* RegisterUserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUserRequest.swift; sourceTree = "<group>"; };
+		71BC297E43CA5B4E32003682 /* Profession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profession.swift; sourceTree = "<group>"; };
 		71BC2ADA3C27375A06C8E464 /* TokenData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenData.swift; sourceTree = "<group>"; };
 		71BC2B0565F91BABE6D31827 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		71BC2CE1023C120FBD5100CF /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
@@ -279,6 +283,7 @@
 				71BC2004362C7E30320E8696 /* RegisterUserResponse.swift */,
 				71BC2ADA3C27375A06C8E464 /* TokenData.swift */,
 				71BC2488CD7D06E8DF10203D /* SignInUserResponse.swift */,
+				71BC297E43CA5B4E32003682 /* Profession.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 				71BC202154FE9202C30F357B /* InititateResetPasswordRequest.swift */,
 				71BC28C48BCFC97220A47475 /* VerifyPasswordCodeRequest.swift */,
 				71BC2F3BBBBACF39A2FF86DD /* ResetPasswordRequest.swift */,
+				71BC251DACA90C3C8273D420 /* OnboardUserRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -1046,6 +1052,8 @@
 				71BC21A632A1375EB07197F6 /* VerifyPasswordCodeRequest.swift in Sources */,
 				71BC27167F35AB5FB58456C9 /* ResetPasswordRequest.swift in Sources */,
 				71BC2E01AAE5A70374834949 /* SignInUserResponse.swift in Sources */,
+				71BC2B9B5D52D0F2859356F1 /* Profession.swift in Sources */,
+				71BC2B594A58C3653C526EA1 /* OnboardUserRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

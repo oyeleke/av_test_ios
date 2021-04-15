@@ -13,7 +13,7 @@ import RxSwift
 import MaterialComponents
 import DropDown
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: BaseViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var licenseNumberField: MDCTextField!
@@ -27,7 +27,6 @@ class ProfileViewController: UIViewController {
     // MARK: - LifeCycle Events
 
     var viewModel: ProfileViewModel!
-    let disposeBag = DisposeBag()
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -42,25 +41,45 @@ class ProfileViewController: UIViewController {
     }
 
     private func bindToViewModel() {
+        viewModel.professions.subscribe(onNext: { professions in
+            self.professionView.setDropDownData(professions: professions)
+        }).disposed(by: disposeBag)
 
+        viewModel.nations.subscribe(onNext: { nations in
+            self.nationalityView.setDropDownData(nations)
+        }).disposed(by: disposeBag)
     }
 
     private func setupViews() {
         licenseNumberController = OutlinedTextInputController(textInput: licenseNumberField)
-        professionView.setDropDownData(["Pilot", "Flight Attendant", "Flight Disparcher", "Air Traffic Controller", "Engineer"])
         professionView.setLabelView(label: selectedProfessionLabel)
-        nationalityView.setDropDownData(["Here", "Is", "A", "List", "Of", "Countries", "Where", "You", "Are", "Required", "To", "Select", "Just", "One", ".", "It", "Is", "Going", "To", "Be", "A", "Very", "Long", "List"])
         nationalityView.setLabelView(label: selectedNationalityLabel)
+    }
+
+    override func getViewModel() -> BaseViewModel {
+        viewModel
     }
 
     // MARK: - Actions
 
     @objc func skipTapped() {
-
+        viewModel.navigateToHome()
     }
 
     @IBAction func doneTapped(_ sender: UIButton) {
+        Validator.clearErrors(textControllers: licenseNumberController)
 
+        guard let selectedProfessionIndex = professionView.getSelectedIndex() else {
+            showMessage(title: "", message: "Please select your profession")
+            return
+        }
+        if !Validator.validate(textControllers: licenseNumberController) { return }
+        guard let selectedNationality = nationalityView.getSelectedItem() else {
+            showMessage(title: "", message: "Please select your nationality")
+            return
+        }
+
+        viewModel.onboardUser(professionIndex: selectedProfessionIndex, licenseNumber: licenseNumberField.text!, nationality: selectedNationality)
     }
 
 }

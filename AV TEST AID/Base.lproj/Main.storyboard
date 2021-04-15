@@ -705,6 +705,7 @@ pass your aviation exam in flying colours.</string>
                         <outlet property="codeExpiresLabel" destination="Bhv-Yy-gqK" id="jaY-1Y-vFX"/>
                         <outlet property="otpView" destination="Sh0-tp-DYF" id="3f3-RT-zmi"/>
                         <outlet property="resendOtpLabel" destination="0xO-gb-xuI" id="dce-di-pcS"/>
+                        <outlet property="verifyTappedButton" destination="3Av-ew-aze" id="52z-6N-bq1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ch3-53-Pwz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -852,6 +853,7 @@ pass your aviation exam in flying colours.</string>
                     <connections>
                         <outlet property="otpFieldView" destination="SK0-vW-xVd" id="hce-aC-dQn"/>
                         <outlet property="tryAgainlabel" destination="DuA-24-SqG" id="9Kd-Iz-iRN"/>
+                        <outlet property="verifyNowButton" destination="B3r-GH-Ube" id="fDM-rB-ZZI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zsp-ir-L6c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

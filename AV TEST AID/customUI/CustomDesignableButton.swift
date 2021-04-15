@@ -30,4 +30,9 @@ import UIKit
         }
     }
 
+    func setState(_ state: Bool) {
+        alpha = state ? 1 : 0.5
+        isEnabled = state
+    }
+
 }

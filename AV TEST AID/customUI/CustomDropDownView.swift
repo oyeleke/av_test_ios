@@ -59,4 +59,16 @@ class CustomDropDownView: CustomDesignableView {
         dropDown.selectedItem
     }
 
+    func getSelectedIndex() -> Int? {
+        dropDown.indexForSelectedRow
+    }
+
+    func setDropDownData(professions: [Profession]) {
+        var options = [String]()
+        for profession in professions {
+            options.append(profession.name)
+        }
+        setDropDownData(options)
+    }
+
 }

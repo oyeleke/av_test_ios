@@ -17,11 +17,16 @@ class PasswordOTPViewController: BaseViewController {
     // MARK: - Outlets
     @IBOutlet weak var otpFieldView: OTPFieldView!
     @IBOutlet weak var tryAgainlabel: UILabel!
-
+    @IBOutlet weak var verifyNowButton: CustomDesignableButton!
+    
     // MARK: - Lifecycle Events
 
     var viewModel: PasswordOTPViewModel!
-    var enteredOtp: String = ""
+    var enteredOtp: String = "" {
+        didSet {
+            verifyNowButton.setState(enteredOtp.count == 4)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +36,7 @@ class PasswordOTPViewController: BaseViewController {
     private func setupViews() {
         setupOTPView()
 
+        verifyNowButton.setState(false)
         tryAgainlabel.isUserInteractionEnabled = true
         tryAgainlabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tryAgainTapped(_:))))
     }
@@ -44,7 +50,7 @@ class PasswordOTPViewController: BaseViewController {
         otpFieldView.displayType = .roundedCorner
         otpFieldView.fieldSize = 45
         otpFieldView.separatorSpace = 16
-        otpFieldView.shouldAllowIntermediateEditing = true
+        otpFieldView.shouldAllowIntermediateEditing = false
         otpFieldView.fieldFont = UIFont(name: "Quicksand-Regular", size: CGFloat(17))!
         otpFieldView.secureEntry = false
         otpFieldView.delegate = self
