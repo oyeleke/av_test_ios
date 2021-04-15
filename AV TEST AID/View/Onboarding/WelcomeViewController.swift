@@ -11,7 +11,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class WelcomeViewController: UIViewController {
+class WelcomeViewController: BaseViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var welcomeUserLabel: UILabel!
@@ -19,7 +19,6 @@ class WelcomeViewController: UIViewController {
     // MARK: - Lifecycle Events
 
     var viewModel: WelcomeViewModel!
-    let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +31,19 @@ class WelcomeViewController: UIViewController {
     }
 
     private func bindToViewModel() {
+        viewModel.firstName.subscribe(onNext: { firstName in
+            self.welcomeUserLabel.text = "Welcome, \(firstName)"
+        }).disposed(by: disposeBag)
+    }
 
+    override func getViewModel() -> BaseViewModel {
+        viewModel
     }
 
     // MARK: - Actions
 
     @IBAction func letsDoItTapped(_ sender: UIButton) {
-        viewModel.goToProfilePicture()
+        viewModel.navigateToProfilePicture()
     }
 
 }

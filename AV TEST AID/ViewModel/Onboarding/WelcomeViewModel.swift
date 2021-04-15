@@ -10,13 +10,18 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-class WelcomeViewModel {
+class WelcomeViewModel: BaseViewModel {
 
-    let disposeBag = DisposeBag()
+    let firstName = BehaviorRelay(value: "")
 
-    let state = BehaviorRelay(value: ViewModelState.idle)
+    override init() {
+        super.init()
+        if let user = UserDataManager.currentUser {
+            firstName.accept(user.firstName)
+        }
+    }
 
-    func goToProfilePicture() {
+    func navigateToProfilePicture() {
         AppNavigator.shared.navigate(to: OnboardingRoutes.profilePicture, with: .push)
     }
 
