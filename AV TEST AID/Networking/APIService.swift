@@ -14,6 +14,7 @@ enum HTTPHeader: String {
     case authorization = "Authorization"
     case accept = "Accept"
     case contentType = "Content-Type"
+    case contentLength = "Content-Length"
 }
 
 struct StatusCode {

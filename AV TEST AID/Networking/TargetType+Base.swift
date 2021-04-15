@@ -40,6 +40,12 @@ extension TargetType {
     public func getBaseHeaders() -> [String: String]? {
         Self.baseHeaders
     }
+    
+    public func getImageUploadHeaders() -> [String: String] {
+        [
+            HTTPHeader.contentType.rawValue: "application/json"
+        ]
+    }
 
     public func getHeaders() -> [String: String]? {
         if let session = SessionManager.currentSession {

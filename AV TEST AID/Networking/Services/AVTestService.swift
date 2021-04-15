@@ -71,10 +71,19 @@ class AVTestService: BaseApiService<AVTestResource> {
 
     func signIn(signInRequest: SignInUserRequest) -> Observable<User> {
         request(for: .signIn(signInRequest))
-            .map { (user: User, response: Response) in
+            .map { (signInResponse: SignInUserResponse, response: Response) in
+                SessionManager.start(session: Session(accessToken: signInResponse.tokenData.token))
+                UserDataManager.set(user: signInResponse.user)
+                return signInResponse.user
+            }
+    }
+    
+    func uploadImage(_ imageData: Data, name imageName: String) -> Observable<User> {
+        request(for: .uploadImage(imageData, imageName))
+            .map({ (user: User, response: Response) in
                 UserDataManager.set(user: user)
                 return user
-            }
+            })
     }
 
 }

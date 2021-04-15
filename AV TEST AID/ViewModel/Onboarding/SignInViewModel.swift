@@ -28,7 +28,8 @@ class SignInViewModel: BaseViewModel {
                 .signIn(signInRequest: SignInUserRequest(email: email, password: password))
                 .subscribe(onNext: { user in
                     self.state.accept(.idle)
-                    AppNavigator.shared.navigate(to: HomeRoutes.home, with: .changeRoot)
+//                    AppNavigator.shared.navigate(to: HomeRoutes.home, with: .changeRoot)
+                    AppNavigator.shared.navigate(to: OnboardingRoutes.welcome, with: .push)
                 }, onError: { [weak self] error in
                     if let apiError = error as? APIError {
                         self?.state.accept(.error(apiError.errorMessage))

@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 import RxCocoa
 import RxSwift
+import MaterialComponents
 
-class ProfilePictureViewController: UIViewController {
+class ProfilePictureViewController: BaseViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var pictureImageView: UIImageView!
@@ -19,11 +20,13 @@ class ProfilePictureViewController: UIViewController {
     // MARK: - LifeCycle Events
 
     var viewModel: ProfilePictureViewModel!
-    let disposeBag = DisposeBag()
-
+    var profilePicture: UIImage? = nil
+    var imageName = ""
+    private let imagePicker = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        bindToViewModel()
+        setupViews()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -31,19 +34,57 @@ class ProfilePictureViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Skip", style: .plain, target: self, action: #selector(skipTapped))
     }
-
-    private func bindToViewModel() {
-
+    
+    func setupViews() {
+        pictureImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onProfilePictureTapped(_:))))
+    }
+    
+    override func getViewModel() -> BaseViewModel {
+        viewModel
     }
 
     // MARK: - Actions
+    
+    @objc func onProfilePictureTapped(_ sender: UITapGestureRecognizer) {
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
+        present(imagePicker, animated: true)
+    }
 
     @objc func skipTapped() {
-        viewModel.goToProfile()
+        viewModel.navigateToProfile()
     }
 
     @IBAction func addPhotoTapped(_ sender: UIButton) {
-        viewModel.goToProfile()
+        guard let selectedImage = profilePicture else {
+            showDialog(withMessage: "Please select an image to upload")
+            return
+        }
+        
+        viewModel.uploadImage(selectedImage, imageName: imageName)
     }
 
+}
+
+extension ProfilePictureViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
+        guard let image = info[.editedImage] as? UIImage else {
+            showDialog(withMessage: "There was an error processing your image. Please try again.")
+            return
+        }
+
+        if let fileUrl = info[UIImagePickerController.InfoKey.imageURL] as? URL {
+            print(fileUrl.lastPathComponent)
+            imageName = fileUrl.lastPathComponent
+        }
+        
+        pictureImageView.contentMode = .scaleToFill
+        pictureImageView.makeCircular()
+        pictureImageView.image = image
+        profilePicture = image
+    }
+    
 }
