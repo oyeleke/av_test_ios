@@ -12,9 +12,9 @@ class AppNavigator: BaseNavigator {
     static let shared = AppNavigator()
 
     init() {
-        let initialRoute: Route = SessionManager.validSession ?
-                HomeRoutes.home : OnboardingRoutes.firstScreen
-        super.init(with: initialRoute)
+//        let initialRoute: Route = SessionManager.validSession ?
+//                HomeRoutes.home : OnboardingRoutes.firstScreen
+        super.init(with: OnboardingRoutes.firstScreen)
     }
 
     required init(with route: Route) {
