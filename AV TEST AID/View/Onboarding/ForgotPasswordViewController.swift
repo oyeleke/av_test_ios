@@ -35,12 +35,19 @@ class ForgotPasswordViewController: BaseViewController {
 
     private func setupViews() {
         emailController = OutlinedTextInputController(textInput: emailAddressField)
+        
+        signUpNowLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(signUpNowTapped(_:))))
+        signUpNowLabel.isUserInteractionEnabled = true
     }
 
     @IBAction func resetPasswordTapped(_ sender: Any) {
         if Validator.validate(minLength: 5, errorMessage: "Enter your email address", textControllers: emailController) {
             viewModel.initiatePasswordReset(emailAddress: emailAddressField.text!)
         }
+    }
+    
+    @objc func signUpNowTapped(_ sender: UITapGestureRecognizer) {
+        viewModel.navigateToSignUp()
     }
 
 }

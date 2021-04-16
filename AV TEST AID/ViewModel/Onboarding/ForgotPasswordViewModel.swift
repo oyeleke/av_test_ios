@@ -28,5 +28,10 @@ class ForgotPasswordViewModel: BaseViewModel {
                     }
                 }).disposed(by: disposeBag)
     }
+    
+    func navigateToSignUp() {
+        AppNavigator.shared.popToRoot( )
+        AppNavigator.shared.navigate(to: OnboardingRoutes.signUp, with: .push)
+    }
 
 }
