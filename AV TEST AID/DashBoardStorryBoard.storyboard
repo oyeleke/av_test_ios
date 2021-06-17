@@ -393,6 +393,32 @@ Question(s)</string>
                                 </subviews>
                                 <color key="backgroundColor" name="questionBGBaseState"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Q7-sz-VoB" customClass="CustomDesignableButton" customModule="AV_TEST_AID" customModuleProvider="target">
+                                <rect key="frame" x="296" y="779" width="98" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="aviBlue"/>
+                                <inset key="imageEdgeInsets" minX="18" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Next" image="arrow_white_right">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Previous" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hue-GL-e3H">
+                                <rect key="frame" x="56" y="784" width="70" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="18"/>
+                                <color key="textColor" red="0.0039215686269999999" green="0.4941176471" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow_left" translatesAutoresizingMaskIntoConstraints="NO" id="7lp-gl-GHi">
+                                <rect key="frame" x="36" y="791" width="12" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96461466669999996" green="0.96901035310000005" blue="0.98219741220000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </view>
@@ -896,6 +922,7 @@ Question(s)</string>
     <resources>
         <image name="Arrow" width="9" height="14"/>
         <image name="arrow_left" width="13" height="21"/>
+        <image name="arrow_white_right" width="9" height="14"/>
         <image name="bookmark" width="15" height="19"/>
         <image name="comment" width="21" height="21"/>
         <image name="dashboard_knowledge_scores" width="60" height="60"/>
