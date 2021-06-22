@@ -86,9 +86,14 @@
 		A90D575A2602ABCD00857269 /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A90D57552602ABCD00857269 /* Quicksand-Light.ttf */; };
 		A90D575B2602ABCD00857269 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A90D57562602ABCD00857269 /* Quicksand-Regular.ttf */; };
 		A90D575C2602ABCD00857269 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A90D57572602ABCD00857269 /* Quicksand-Bold.ttf */; };
+		A9188AB42682A7C500060D33 /* question_view in Resources */ = {isa = PBXBuildFile; fileRef = A9188AAF2682A7C500060D33 /* question_view */; };
+		A9188AB52682A7C500060D33 /* dashboard in Resources */ = {isa = PBXBuildFile; fileRef = A9188AB02682A7C500060D33 /* dashboard */; };
+		A9188AB62682A7C500060D33 /* questions_menu in Resources */ = {isa = PBXBuildFile; fileRef = A9188AB12682A7C500060D33 /* questions_menu */; };
+		A9188AB72682A7C500060D33 /* xibs in Resources */ = {isa = PBXBuildFile; fileRef = A9188AB22682A7C500060D33 /* xibs */; };
+		A9188AB82682A7C500060D33 /* settings in Resources */ = {isa = PBXBuildFile; fileRef = A9188AB32682A7C500060D33 /* settings */; };
+		A9188ABA2682A80700060D33 /* ChangePasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188AB92682A80600060D33 /* ChangePasswordRequest.swift */; };
 		A953F3F526362D1200102F39 /* DashBoardStorryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A953F3F426362D1200102F39 /* DashBoardStorryBoard.storyboard */; };
 		A9C6A249260937500065CA70 /* CustomDesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C6A248260937500065CA70 /* CustomDesignableView.swift */; };
-		A9F4D79326488E940024940C /* ChangePasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F4D79226488E930024940C /* ChangePasswordRequest.swift */; };
 		A9F65CEE26080505004E9A1F /* CustomDesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F65CED26080505004E9A1F /* CustomDesignableButton.swift */; };
 		E81171921DE5EFB7003D3DF5 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81171911DE5EFB7003D3DF5 /* UIViewControllerExtension.swift */; };
 		E8290BFE1D832D9200599960 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8290BFD1D832D9200599960 /* UIViewExtension.swift */; };
@@ -216,9 +221,14 @@
 		A90D57552602ABCD00857269 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
 		A90D57562602ABCD00857269 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
 		A90D57572602ABCD00857269 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		A9188AAF2682A7C500060D33 /* question_view */ = {isa = PBXFileReference; lastKnownFileType = folder; path = question_view; sourceTree = "<group>"; };
+		A9188AB02682A7C500060D33 /* dashboard */ = {isa = PBXFileReference; lastKnownFileType = folder; path = dashboard; sourceTree = "<group>"; };
+		A9188AB12682A7C500060D33 /* questions_menu */ = {isa = PBXFileReference; lastKnownFileType = folder; path = questions_menu; sourceTree = "<group>"; };
+		A9188AB22682A7C500060D33 /* xibs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = xibs; sourceTree = "<group>"; };
+		A9188AB32682A7C500060D33 /* settings */ = {isa = PBXFileReference; lastKnownFileType = folder; path = settings; sourceTree = "<group>"; };
+		A9188AB92682A80600060D33 /* ChangePasswordRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordRequest.swift; sourceTree = "<group>"; };
 		A953F3F426362D1200102F39 /* DashBoardStorryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DashBoardStorryBoard.storyboard; sourceTree = "<group>"; };
 		A9C6A248260937500065CA70 /* CustomDesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDesignableView.swift; sourceTree = "<group>"; };
-		A9F4D79226488E930024940C /* ChangePasswordRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordRequest.swift; sourceTree = "<group>"; };
 		A9F65CED26080505004E9A1F /* CustomDesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDesignableButton.swift; sourceTree = "<group>"; };
 		E32660417D0DF4CA22B13B4B /* Pods-AcceptanceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcceptanceTests.release.xcconfig"; path = "Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests.release.xcconfig"; sourceTree = "<group>"; };
 		E3292B229DFC8C8E614B726E /* Pods-AV TEST AID.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AV TEST AID.staging.xcconfig"; path = "Target Support Files/Pods-AV TEST AID/Pods-AV TEST AID.staging.xcconfig"; sourceTree = "<group>"; };
@@ -321,6 +331,7 @@
 		71BC2F40D53324BA59107DF3 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				A9188AB92682A80600060D33 /* ChangePasswordRequest.swift */,
 				71BC28D7E4E195AC0D45BE1F /* RegisterUserRequest.swift */,
 				71BC2FF113593551547A1AB3 /* SignInUserRequest.swift */,
 				71BC21AFC289BB051EB30532 /* VerifyUserRequest.swift */,
@@ -328,7 +339,6 @@
 				71BC28C48BCFC97220A47475 /* VerifyPasswordCodeRequest.swift */,
 				71BC2F3BBBBACF39A2FF86DD /* ResetPasswordRequest.swift */,
 				71BC251DACA90C3C8273D420 /* OnboardUserRequest.swift */,
-				A9F4D79226488E930024940C /* ChangePasswordRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -502,6 +512,11 @@
 		9BAFB7BC2114CA8D0099DC61 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A9188AB02682A7C500060D33 /* dashboard */,
+				A9188AAF2682A7C500060D33 /* question_view */,
+				A9188AB12682A7C500060D33 /* questions_menu */,
+				A9188AB32682A7C500060D33 /* settings */,
+				A9188AB22682A7C500060D33 /* xibs */,
 				9B8574DB212C8C330063A3E2 /* Home */,
 				9B8574DA212C8BF10063A3E2 /* Onboarding */,
 				E8290BFB1D832D4100599960 /* CustomControls */,
@@ -789,12 +804,17 @@
 				0ABFB8901FA366D90098F751 /* Main.storyboard in Resources */,
 				A90D575A2602ABCD00857269 /* Quicksand-Light.ttf in Resources */,
 				A90D57582602ABCD00857269 /* Quicksand-Medium.ttf in Resources */,
+				A9188AB62682A7C500060D33 /* questions_menu in Resources */,
 				A90D575C2602ABCD00857269 /* Quicksand-Bold.ttf in Resources */,
 				9B8D306B20AB456C0050697F /* Localization.strings in Resources */,
 				A90D574F2602A08200857269 /* LaunchScreen.storyboard in Resources */,
 				9B0C72721C738D3400BAF3B1 /* Assets.xcassets in Resources */,
+				A9188AB82682A7C500060D33 /* settings in Resources */,
+				A9188AB72682A7C500060D33 /* xibs in Resources */,
 				9B12AF6C1F269B03005FD465 /* ThirdPartyKeys.example.plist in Resources */,
 				A90D575B2602ABCD00857269 /* Quicksand-Regular.ttf in Resources */,
+				A9188AB52682A7C500060D33 /* dashboard in Resources */,
+				A9188AB42682A7C500060D33 /* question_view in Resources */,
 				A953F3F526362D1200102F39 /* DashBoardStorryBoard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1055,10 +1075,10 @@
 				71BC2154B4907477756E2D40 /* TokenData.swift in Sources */,
 				71BC28165DF1B722CA19EE12 /* Validator.swift in Sources */,
 				71BC26F549CE9E967A3C6146 /* BaseViewController.swift in Sources */,
-				A9F4D79326488E940024940C /* ChangePasswordRequest.swift in Sources */,
 				71BC2F8051CEAB61758A5206 /* BaseViewModel.swift in Sources */,
 				71BC2C9AAF4FAF154D252F39 /* BaseApiResponse.swift in Sources */,
 				71BC2915AA5C16A1430F73A2 /* Result.swift in Sources */,
+				A9188ABA2682A80700060D33 /* ChangePasswordRequest.swift in Sources */,
 				71BC2AA3D89707DF6964BE27 /* VerifyUserRequest.swift in Sources */,
 				71BC224B13F233DD62F91506 /* InititateResetPasswordRequest.swift in Sources */,
 				71BC21A632A1375EB07197F6 /* VerifyPasswordCodeRequest.swift in Sources */,
