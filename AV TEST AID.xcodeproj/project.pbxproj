@@ -86,25 +86,9 @@
 		A90D575A2602ABCD00857269 /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A90D57552602ABCD00857269 /* Quicksand-Light.ttf */; };
 		A90D575B2602ABCD00857269 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A90D57562602ABCD00857269 /* Quicksand-Regular.ttf */; };
 		A90D575C2602ABCD00857269 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A90D57572602ABCD00857269 /* Quicksand-Bold.ttf */; };
-		A90DCBB126376C6100E8A8B2 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90DCBB026376C6100E8A8B2 /* DashboardViewController.swift */; };
 		A953F3F526362D1200102F39 /* DashBoardStorryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A953F3F426362D1200102F39 /* DashBoardStorryBoard.storyboard */; };
-		A95D91DF264B59790058076C /* SettingsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95D91DE264B59790058076C /* SettingsRoute.swift */; };
-		A95D91E1264B5AC90058076C /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95D91E0264B5AC90058076C /* ChangePasswordViewController.swift */; };
-		A95D91E3264B5AE00058076C /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95D91E2264B5AE00058076C /* ChangePasswordViewModel.swift */; };
-		A95D91E5264B61310058076C /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95D91E4264B61310058076C /* EditProfileViewController.swift */; };
-		A95D91E7264B614A0058076C /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95D91E6264B614A0058076C /* EditProfileViewModel.swift */; };
-		A95D91E9264B63970058076C /* SettingsNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95D91E8264B63970058076C /* SettingsNavigationViewController.swift */; };
-		A98DF88D265B926400F9D7B4 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DF88C265B926400F9D7B4 /* QuestionView.swift */; };
-		A98DF890265B92C000F9D7B4 /* QuestionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A98DF88F265B92C000F9D7B4 /* QuestionView.xib */; };
-		A9AF1ED126446ED400D3C93C /* DashboardTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AF1ED026446ED400D3C93C /* DashboardTabViewController.swift */; };
-		A9AF1ED426446F8B00D3C93C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AF1ED326446F8B00D3C93C /* SettingsViewController.swift */; };
 		A9C6A249260937500065CA70 /* CustomDesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C6A248260937500065CA70 /* CustomDesignableView.swift */; };
-		A9CDB223263A1CFA00958672 /* DashboardRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CDB222263A1CFA00958672 /* DashboardRoutes.swift */; };
-		A9CDB226263A1D3100958672 /* QuestionMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CDB225263A1D3100958672 /* QuestionMenuViewController.swift */; };
-		A9CDB228263A1D4900958672 /* QuestionMenuRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CDB227263A1D4900958672 /* QuestionMenuRoutes.swift */; };
-		A9D515B526435DEB007B1267 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D515B426435DEA007B1267 /* DashboardViewModel.swift */; };
 		A9F4D79326488E940024940C /* ChangePasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F4D79226488E930024940C /* ChangePasswordRequest.swift */; };
-		A9F4D79526489F550024940C /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F4D79426489F550024940C /* SettingsViewModel.swift */; };
 		A9F65CEE26080505004E9A1F /* CustomDesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F65CED26080505004E9A1F /* CustomDesignableButton.swift */; };
 		E81171921DE5EFB7003D3DF5 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81171911DE5EFB7003D3DF5 /* UIViewControllerExtension.swift */; };
 		E8290BFE1D832D9200599960 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8290BFD1D832D9200599960 /* UIViewExtension.swift */; };
@@ -232,25 +216,9 @@
 		A90D57552602ABCD00857269 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
 		A90D57562602ABCD00857269 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
 		A90D57572602ABCD00857269 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
-		A90DCBB026376C6100E8A8B2 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		A953F3F426362D1200102F39 /* DashBoardStorryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DashBoardStorryBoard.storyboard; sourceTree = "<group>"; };
-		A95D91DE264B59790058076C /* SettingsRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRoute.swift; sourceTree = "<group>"; };
-		A95D91E0264B5AC90058076C /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
-		A95D91E2264B5AE00058076C /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
-		A95D91E4264B61310058076C /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
-		A95D91E6264B614A0058076C /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
-		A95D91E8264B63970058076C /* SettingsNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNavigationViewController.swift; sourceTree = "<group>"; };
-		A98DF88C265B926400F9D7B4 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
-		A98DF88F265B92C000F9D7B4 /* QuestionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionView.xib; sourceTree = "<group>"; };
-		A9AF1ED026446ED400D3C93C /* DashboardTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabViewController.swift; sourceTree = "<group>"; };
-		A9AF1ED326446F8B00D3C93C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A9C6A248260937500065CA70 /* CustomDesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDesignableView.swift; sourceTree = "<group>"; };
-		A9CDB222263A1CFA00958672 /* DashboardRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRoutes.swift; sourceTree = "<group>"; };
-		A9CDB225263A1D3100958672 /* QuestionMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionMenuViewController.swift; sourceTree = "<group>"; };
-		A9CDB227263A1D4900958672 /* QuestionMenuRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionMenuRoutes.swift; sourceTree = "<group>"; };
-		A9D515B426435DEA007B1267 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		A9F4D79226488E930024940C /* ChangePasswordRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordRequest.swift; sourceTree = "<group>"; };
-		A9F4D79426489F550024940C /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		A9F65CED26080505004E9A1F /* CustomDesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDesignableButton.swift; sourceTree = "<group>"; };
 		E32660417D0DF4CA22B13B4B /* Pods-AcceptanceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcceptanceTests.release.xcconfig"; path = "Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests.release.xcconfig"; sourceTree = "<group>"; };
 		E3292B229DFC8C8E614B726E /* Pods-AV TEST AID.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AV TEST AID.staging.xcconfig"; path = "Target Support Files/Pods-AV TEST AID/Pods-AV TEST AID.staging.xcconfig"; sourceTree = "<group>"; };
@@ -534,11 +502,6 @@
 		9BAFB7BC2114CA8D0099DC61 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A98DF88E265B926E00F9D7B4 /* xibs */,
-				A98DF88B265B921F00F9D7B4 /* question_view */,
-				A9AF1ED226446F6D00D3C93C /* settings */,
-				A9CDB224263A1D0700958672 /* questions_menu */,
-				A90DCBAF263769E800E8A8B2 /* dashboard */,
 				9B8574DB212C8C330063A3E2 /* Home */,
 				9B8574DA212C8BF10063A3E2 /* Onboarding */,
 				E8290BFB1D832D4100599960 /* CustomControls */,
@@ -549,7 +512,6 @@
 		9BAFB7BD2114CA9E0099DC61 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				A9D515B626435E1A007B1267 /* dashboard */,
 				9BAFB7C12114E3A80099DC61 /* Home */,
 				9BAFB7C02114E39C0099DC61 /* Onboarding */,
 				FE4D636322B2CDF700685161 /* ViewModelState.swift */,
@@ -657,80 +619,6 @@
 				A90D57542602ABCD00857269 /* Quicksand-SemiBold.ttf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		A90DCBAF263769E800E8A8B2 /* dashboard */ = {
-			isa = PBXGroup;
-			children = (
-				A90DCBB026376C6100E8A8B2 /* DashboardViewController.swift */,
-				A9CDB222263A1CFA00958672 /* DashboardRoutes.swift */,
-				A9AF1ED026446ED400D3C93C /* DashboardTabViewController.swift */,
-			);
-			path = dashboard;
-			sourceTree = "<group>";
-		};
-		A98DF88B265B921F00F9D7B4 /* question_view */ = {
-			isa = PBXGroup;
-			children = (
-				A98DF88C265B926400F9D7B4 /* QuestionView.swift */,
-			);
-			path = question_view;
-			sourceTree = "<group>";
-		};
-		A98DF88E265B926E00F9D7B4 /* xibs */ = {
-			isa = PBXGroup;
-			children = (
-				A98DF88F265B92C000F9D7B4 /* QuestionView.xib */,
-			);
-			path = xibs;
-			sourceTree = "<group>";
-		};
-		A9AF1ED226446F6D00D3C93C /* settings */ = {
-			isa = PBXGroup;
-			children = (
-				A9F4D7972648B1180024940C /* edit_profile */,
-				A9F4D7962648B1090024940C /* change_password */,
-				A9AF1ED326446F8B00D3C93C /* SettingsViewController.swift */,
-				A9F4D79426489F550024940C /* SettingsViewModel.swift */,
-				A95D91DE264B59790058076C /* SettingsRoute.swift */,
-				A95D91E8264B63970058076C /* SettingsNavigationViewController.swift */,
-			);
-			path = settings;
-			sourceTree = "<group>";
-		};
-		A9CDB224263A1D0700958672 /* questions_menu */ = {
-			isa = PBXGroup;
-			children = (
-				A9CDB225263A1D3100958672 /* QuestionMenuViewController.swift */,
-				A9CDB227263A1D4900958672 /* QuestionMenuRoutes.swift */,
-			);
-			path = questions_menu;
-			sourceTree = "<group>";
-		};
-		A9D515B626435E1A007B1267 /* dashboard */ = {
-			isa = PBXGroup;
-			children = (
-				A9D515B426435DEA007B1267 /* DashboardViewModel.swift */,
-			);
-			path = dashboard;
-			sourceTree = "<group>";
-		};
-		A9F4D7962648B1090024940C /* change_password */ = {
-			isa = PBXGroup;
-			children = (
-				A95D91E0264B5AC90058076C /* ChangePasswordViewController.swift */,
-				A95D91E2264B5AE00058076C /* ChangePasswordViewModel.swift */,
-			);
-			path = change_password;
-			sourceTree = "<group>";
-		};
-		A9F4D7972648B1180024940C /* edit_profile */ = {
-			isa = PBXGroup;
-			children = (
-				A95D91E4264B61310058076C /* EditProfileViewController.swift */,
-				A95D91E6264B614A0058076C /* EditProfileViewModel.swift */,
-			);
-			path = edit_profile;
 			sourceTree = "<group>";
 		};
 		A9F65CEC260804C7004E9A1F /* customUI */ = {
@@ -908,7 +796,6 @@
 				9B12AF6C1F269B03005FD465 /* ThirdPartyKeys.example.plist in Resources */,
 				A90D575B2602ABCD00857269 /* Quicksand-Regular.ttf in Resources */,
 				A953F3F526362D1200102F39 /* DashBoardStorryBoard.storyboard in Resources */,
-				A98DF890265B92C000F9D7B4 /* QuestionView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1102,13 +989,11 @@
 				FE583F0C22AFC9EA00EF3CDA /* AnalyticsService.swift in Sources */,
 				9BD409101CE9F19E005223C9 /* UIHelper.swift in Sources */,
 				0697F2172615DA9300B63569 /* ResetPasswordViewModel.swift in Sources */,
-				A9CDB228263A1D4900958672 /* QuestionMenuRoutes.swift in Sources */,
 				FEE8080E22A6BB4F00743D1B /* APIError.swift in Sources */,
 				E8B30E021E72FF8000131DCF /* UIStoryboardExtension.swift in Sources */,
 				FE583F0E22AFC9F300EF3CDA /* FirebaseAnalyticsService.swift in Sources */,
 				FE4D636022B2CB3800685161 /* HomeRoutes.swift in Sources */,
 				9B3AA3A11ED4D014005A4D26 /* HomeViewController.swift in Sources */,
-				A95D91E1264B5AC90058076C /* ChangePasswordViewController.swift in Sources */,
 				9B77E0751E2FB66F0020E450 /* UserDataManager.swift in Sources */,
 				0697F2472616115800B63569 /* ProfileViewModel.swift in Sources */,
 				0697F2332615FDA400B63569 /* ProfilePictureViewModel.swift in Sources */,
@@ -1120,21 +1005,15 @@
 				9B8D307020AB47E90050697F /* JSONEncodingExtension.swift in Sources */,
 				06146B992624585C00D764B3 /* ApiUtils.swift in Sources */,
 				0697F20D2615D39C00B63569 /* PasswordOTPViewModel.swift in Sources */,
-				A98DF88D265B926400F9D7B4 /* QuestionView.swift in Sources */,
-				A95D91E7264B614A0058076C /* EditProfileViewModel.swift in Sources */,
-				A9CDB223263A1CFA00958672 /* DashboardRoutes.swift in Sources */,
 				06A4EF072614A3D400C29BB6 /* PasswordToggleTextField.swift in Sources */,
 				0697F23B2616106A00B63569 /* ProfileViewController.swift in Sources */,
 				FE4D636422B2CDF700685161 /* ViewModelState.swift in Sources */,
 				0697F2092615D2DF00B63569 /* PasswordOTPViewController.swift in Sources */,
 				E81171921DE5EFB7003D3DF5 /* UIViewControllerExtension.swift in Sources */,
 				9B3AA3991ED35007005A4D26 /* SignInViewController.swift in Sources */,
-				A9D515B526435DEB007B1267 /* DashboardViewModel.swift in Sources */,
 				E8FBB1BF1DD21A32000D6740 /* Session.swift in Sources */,
 				0A6990351F9F82A300F4BAC7 /* UIApplicationExtension.swift in Sources */,
 				9B77E0731E2FB6350020E450 /* User.swift in Sources */,
-				A9F4D79526489F550024940C /* SettingsViewModel.swift in Sources */,
-				A9AF1ED126446ED400D3C93C /* DashboardTabViewController.swift in Sources */,
 				FA54D5881E11C59600F0DBEA /* FirstViewController.swift in Sources */,
 				FABDC9221EE1EB2B000DDAC3 /* ConfigurationManager.swift in Sources */,
 				9B8574D7212C81950063A3E2 /* SignUpViewModel.swift in Sources */,
@@ -1144,16 +1023,13 @@
 				9B8574D9212C84130063A3E2 /* UIImageExtension.swift in Sources */,
 				FE583F0A22AFC9E000EF3CDA /* AnalyticsManager.swift in Sources */,
 				0697F2372616061B00B63569 /* CircleView.swift in Sources */,
-				A90DCBB126376C6100E8A8B2 /* DashboardViewController.swift in Sources */,
 				A9F65CEE26080505004E9A1F /* CustomDesignableButton.swift in Sources */,
 				9B3AA39B1ED35013005A4D26 /* SignUpViewController.swift in Sources */,
 				9B0C72711C738D3400BAF3B1 /* AppDelegate.swift in Sources */,
-				A9CDB226263A1D3100958672 /* QuestionMenuViewController.swift in Sources */,
 				FEE8080C22A6AE9900743D1B /* TargetType+Base.swift in Sources */,
 				06D45C6D2617AF68007520D7 /* CustomDropDownView.swift in Sources */,
 				FEE8080A22A6ACFF00743D1B /* APIService.swift in Sources */,
 				06DAB73C2615BACC004DA693 /* ForgotPasswordViewController.swift in Sources */,
-				A95D91E3264B5AE00058076C /* ChangePasswordViewModel.swift in Sources */,
 				0697F2232615E4FF00B63569 /* WelcomeViewController.swift in Sources */,
 				06EE43B126152078000B86D2 /* OTPViewController.swift in Sources */,
 				0697F22D2615FD8F00B63569 /* ProfilePictureViewController.swift in Sources */,
@@ -1171,23 +1047,19 @@
 				9B715A461E28083600C0C039 /* PlaceholderTextView.swift in Sources */,
 				0697F2272615E57B00B63569 /* WelcomeViewModel.swift in Sources */,
 				06EE43BD26152215000B86D2 /* OTPViewModel.swift in Sources */,
-				A95D91E9264B63970058076C /* SettingsNavigationViewController.swift in Sources */,
 				71BC298FF39A278BA7424528 /* RegisterUserRequest.swift in Sources */,
 				71BC264E5A91971F62DD0E67 /* SignInUserRequest.swift in Sources */,
 				71BC2954D2674614700F24CB /* AVTestResource.swift in Sources */,
-				A95D91DF264B59790058076C /* SettingsRoute.swift in Sources */,
 				71BC2132BFC934891633B26D /* AVTestService.swift in Sources */,
 				71BC2BBD94BED25812C01429 /* RegisterUserResponse.swift in Sources */,
 				71BC2154B4907477756E2D40 /* TokenData.swift in Sources */,
 				71BC28165DF1B722CA19EE12 /* Validator.swift in Sources */,
 				71BC26F549CE9E967A3C6146 /* BaseViewController.swift in Sources */,
 				A9F4D79326488E940024940C /* ChangePasswordRequest.swift in Sources */,
-				A95D91E5264B61310058076C /* EditProfileViewController.swift in Sources */,
 				71BC2F8051CEAB61758A5206 /* BaseViewModel.swift in Sources */,
 				71BC2C9AAF4FAF154D252F39 /* BaseApiResponse.swift in Sources */,
 				71BC2915AA5C16A1430F73A2 /* Result.swift in Sources */,
 				71BC2AA3D89707DF6964BE27 /* VerifyUserRequest.swift in Sources */,
-				A9AF1ED426446F8B00D3C93C /* SettingsViewController.swift in Sources */,
 				71BC224B13F233DD62F91506 /* InititateResetPasswordRequest.swift in Sources */,
 				71BC21A632A1375EB07197F6 /* VerifyPasswordCodeRequest.swift in Sources */,
 				71BC27167F35AB5FB58456C9 /* ResetPasswordRequest.swift in Sources */,
