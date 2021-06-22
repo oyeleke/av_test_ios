@@ -123,8 +123,6 @@ public extension Navigator {
 
         currentViewController?.present(viewController, animated: animated, completion: completion)
     }
-    
-    
 
     func pop(animated: Bool = true) {
         rootViewController?.popViewController(animated: animated)

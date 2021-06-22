@@ -35,7 +35,6 @@ class ProfilePictureViewController: BaseViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Skip", style: .plain, target: self, action: #selector(skipTapped))
     }
     
-    
     func setupViews() {
         pictureImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onProfilePictureTapped(_:))))
     }
