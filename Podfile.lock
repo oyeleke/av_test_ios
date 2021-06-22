@@ -166,9 +166,6 @@ PODS:
   - RxCocoa (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
   - RxSwift (4.5.0)
-  - SDWebImage (5.11.1):
-    - SDWebImage/Core (= 5.11.1)
-  - SDWebImage/Core (5.11.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.1)
@@ -191,7 +188,6 @@ DEPENDENCIES:
   - RSFontSizes (~> 1.0.2)
   - RxCocoa (~> 4.5.0)
   - RxSwift (~> 4.5.0)
-  - SDWebImage (~> 5.0)
 
 SPEC REPOS:
   trunk:
@@ -227,7 +223,6 @@ SPEC REPOS:
     - RSFontSizes
     - RxCocoa
     - RxSwift
-    - SDWebImage
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -262,8 +257,7 @@ SPEC CHECKSUMS:
   RSFontSizes: cf14ae41c2807b66573f7064528ccff8c98251c9
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
-  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
 
-PODFILE CHECKSUM: f88bd457fcd66cf91dc6f0eb063603ba3f3bf475
+PODFILE CHECKSUM: 149d2d5a55a5cca8a28fa468e2090bb25c257ef0
 
 COCOAPODS: 1.10.1

@@ -12,8 +12,6 @@ import RxSwift
 
 class SignInViewModel: BaseViewModel {
 
-    var delegate : SignInContract!
-    
     func navigateToSignUp() {
         AppNavigator.shared.popToRoot( )
         AppNavigator.shared.navigate(to: OnboardingRoutes.signUp, with: .push)
@@ -31,10 +29,7 @@ class SignInViewModel: BaseViewModel {
                 .subscribe(onNext: { user in
                     self.state.accept(.idle)
 //                    AppNavigator.shared.navigate(to: HomeRoutes.home, with: .changeRoot)
-//                    AppNavigator.shared.navigate(to: OnboardingRoutes.welcome, with: .push)
-                    //AppNavigator.shared.navigate(to: OnboardingRoutes.dashboard, with: .push)
-                    self.delegate.onUserSignedIn()
-                    
+                    AppNavigator.shared.navigate(to: OnboardingRoutes.welcome, with: .push)
                 }, onError: { [weak self] error in
                     if let apiError = error as? APIError {
                         self?.state.accept(.error(apiError.errorMessage))

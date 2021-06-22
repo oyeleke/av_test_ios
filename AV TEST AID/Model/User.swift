@@ -15,9 +15,6 @@ struct User: Codable {
     let isVerified: Bool
     let firstName: String
     let lastName: String
-    let imageUrl: String?
-    let licenseNumber: String?
-    let nationality: String?
     let createdAt: String
     let profession: String?
 
@@ -27,9 +24,6 @@ struct User: Codable {
         case isVerified = "verified"
         case firstName
         case lastName
-        case imageUrl
-        case licenseNumber
-        case nationality
         case createdAt
         case profession
     }
