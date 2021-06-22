@@ -160,6 +160,9 @@ PODS:
     - OHHTTPStubs/Default
   - OTPFieldView (1.0.1)
   - PromisesObjC (1.2.12)
+  - Realm (10.8.0):
+    - Realm/Headers (= 10.8.0)
+  - Realm/Headers (10.8.0)
   - Result (4.1.0)
   - RSFontSizes (1.0.2):
     - Device (~> 3.1.2)
@@ -185,9 +188,11 @@ DEPENDENCIES:
   - Moya/RxSwift (~> 13.0)
   - OHHTTPStubs/Swift (~> 8.0.0)
   - OTPFieldView (~> 1.0.1)
+  - Realm
   - RSFontSizes (~> 1.0.2)
   - RxCocoa (~> 4.5.0)
   - RxSwift (~> 4.5.0)
+  - SDWebImage (~> 5.0)
 
 SPEC REPOS:
   trunk:
@@ -219,10 +224,12 @@ SPEC REPOS:
     - OHHTTPStubs
     - OTPFieldView
     - PromisesObjC
+    - Realm
     - Result
     - RSFontSizes
     - RxCocoa
     - RxSwift
+    - SDWebImage
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -253,11 +260,13 @@ SPEC CHECKSUMS:
   OHHTTPStubs: 9cbce6364bec557cc3439aa6bb7514670d780881
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  Realm: ad3c5cd762e5a5bc02080fc55aa04a0e43f98575
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RSFontSizes: cf14ae41c2807b66573f7064528ccff8c98251c9
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
 
-PODFILE CHECKSUM: 149d2d5a55a5cca8a28fa468e2090bb25c257ef0
+PODFILE CHECKSUM: dccaa68fe5e59e0169b5e14ce7ca4e21d215e697
 
 COCOAPODS: 1.10.1
