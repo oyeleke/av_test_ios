@@ -19,6 +19,7 @@ target 'AV TEST AID' do
   pod 'DropDown', '~> 2.3.13'
   pod 'MBProgressHUD', '~> 1.2.0'
   pod 'SDWebImage', '~> 5.0'
+  pod 'Realm', '~> 10.8.0'
 
   # FB SDK ---
   pod 'FBSDKCoreKit', '~> 4.33.0'
