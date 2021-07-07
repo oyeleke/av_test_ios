@@ -2,9 +2,10 @@
 //  EditProfileViewController.swift
 //  AV TEST AID
 //
-//  Created by Timileyin Ogunsola on 12/05/2021.
+//  Created by Timileyin Ogunsola on 05/07/2021.
 //  Copyright © 2021 TopTier labs. All rights reserved.
 //
+
 import Foundation
 import UIKit
 import MaterialComponents
@@ -97,3 +98,4 @@ extension EditProfileViewController: UINavigationControllerDelegate, UIImagePick
     }
     
 }
+

@@ -7,7 +7,7 @@ import Foundation
 import Moya
 
 enum AVTestResource {
-
+    
     case register(RegisterUserRequest)
     case verifyUser(VerifyUserRequest)
     case initiatePasswordReset(InitiateResetPasswordRequest)
@@ -19,12 +19,13 @@ enum AVTestResource {
     case fetchProfessions
     case updateProfession(String)
     case onboardUser(OnboardUserRequest)
-
-
+    case fetchUserProfile
+    case changePassword(ChangePasswordRequest)
+    case fetchQuestions
 }
 
 extension AVTestResource: TargetType {
-
+    
     public var path: String {
         switch self {
         case .register:
@@ -49,20 +50,26 @@ extension AVTestResource: TargetType {
             return "professions/\(professionID)"
         case .onboardUser:
             return "/user/onboard"
+        case .fetchUserProfile:
+            return "user/profile"
+        case .changePassword:
+            return "password/change"
+        case .fetchQuestions:
+            return "questions"
         }
     }
-
+    
     public var method: Moya.Method {
         switch self {
         case .register, .verifyUser, .initiatePasswordReset, .verifyPasswordCode, .resendPasswordCode, .resetPassword, .signIn, .uploadImage, .onboardUser:
             return .post
-        case .fetchProfessions:
+        case .fetchProfessions, .fetchUserProfile, .fetchQuestions:
             return .get
-        case .updateProfession:
+        case .updateProfession, .changePassword:
             return .put
         }
     }
-
+    
     public var task: Moya.Task {
         switch self {
         case .register(let registerUserRequest):
@@ -82,13 +89,15 @@ extension AVTestResource: TargetType {
         case .uploadImage(let imageData, let imageName):
             let formData: [Moya.MultipartFormData] = [Moya.MultipartFormData(provider: .data(imageData), name: "image", fileName: imageName, mimeType: "image/jpeg")]
             return .uploadMultipart(formData)
-        case .fetchProfessions, .updateProfession:
+        case .fetchProfessions, .updateProfession, .fetchUserProfile, .fetchQuestions:
             return .requestPlain
         case .onboardUser(let onboardUserRequest):
             return .requestData(onboardUserRequest.asData())
+        case .changePassword(let changePasswordRequest):
+            return .requestData(changePasswordRequest.asData())
         }
     }
-
+    
     var headers: [String: String]? {
         switch self {
         case .register, .initiatePasswordReset, .verifyPasswordCode, .resendPasswordCode, .resetPassword, .signIn:
@@ -97,5 +106,4 @@ extension AVTestResource: TargetType {
             return getHeaders()
         }
     }
-
 }

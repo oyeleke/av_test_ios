@@ -11,12 +11,14 @@ import RxCocoa
 import RxSwift
 
 class SignInViewModel: BaseViewModel {
-
+    
     func navigateToSignUp() {
         AppNavigator.shared.popToRoot( )
         AppNavigator.shared.navigate(to: OnboardingRoutes.signUp, with: .push)
     }
 
+    let signInState = BehaviorRelay(value: false)
+    
     func navigateToForgotPassword() {
         AppNavigator.shared.navigate(to: OnboardingRoutes.forgotPassword, with: .push)
     }
@@ -28,8 +30,7 @@ class SignInViewModel: BaseViewModel {
                 .signIn(signInRequest: SignInUserRequest(email: email, password: password))
                 .subscribe(onNext: { user in
                     self.state.accept(.idle)
-//                    AppNavigator.shared.navigate(to: HomeRoutes.home, with: .changeRoot)
-                    AppNavigator.shared.navigate(to: OnboardingRoutes.welcome, with: .push)
+                    self.signInState.accept(true)
                 }, onError: { [weak self] error in
                     if let apiError = error as? APIError {
                         self?.state.accept(.error(apiError.errorMessage))

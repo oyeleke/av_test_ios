@@ -31,6 +31,7 @@ class SignInViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        bindViewModel()
     }
 
     private func setupViews() {
@@ -48,6 +49,14 @@ class SignInViewController: BaseViewController {
 
     override func getViewModel() -> BaseViewModel {
         viewModel
+    }
+    
+    private func bindViewModel(){
+        viewModel.signInState.subscribe(onNext: {state in
+            if state {
+                self.onUserSignedIn()
+            }
+        }).disposed(by: disposeBag)
     }
 
     // MARK: - Actions
@@ -69,5 +78,17 @@ class SignInViewController: BaseViewController {
 
         viewModel.signIn(withEmail: emailField.text!, andPassword: passwordField.text!)
     }
+    
+        func onUserSignedIn() {
+            let dashboard = (UIStoryboard.instantiateViewController(DashboardTabViewController.self, storyboardIdentifier: "DashBoardStorryBoard") ?? UITabBarController()) as UITabBarController
+            view.window?.rootViewController = dashboard
+            view.window?.makeKeyAndVisible()
+        }
+        
+    }
 
-}
+
+    protocol SignInContract {
+        func onUserSignedIn()
+    }
+

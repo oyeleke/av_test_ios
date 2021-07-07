@@ -129,7 +129,7 @@ PODS:
     - MaterialComponents/private/Math
     - MDFTextAccessibility
   - MBProgressHUD (1.2.0)
-  - MDFInternationalization (2.0.0)
+  - MDFInternationalization (3.0.0)
   - MDFTextAccessibility (2.0.1)
   - MotionAnimator (2.8.1):
     - MotionInterchange (~> 1.6)
@@ -160,9 +160,11 @@ PODS:
     - OHHTTPStubs/Default
   - OTPFieldView (1.0.1)
   - PromisesObjC (1.2.12)
-  - Realm (10.8.0):
-    - Realm/Headers (= 10.8.0)
-  - Realm/Headers (10.8.0)
+  - Realm (4.3.2):
+    - Realm/Headers (= 4.3.2)
+  - Realm/Headers (4.3.2)
+  - RealmSwift (4.3.2):
+    - Realm (= 4.3.2)
   - Result (4.1.0)
   - RSFontSizes (1.0.2):
     - Device (~> 3.1.2)
@@ -191,7 +193,7 @@ DEPENDENCIES:
   - Moya/RxSwift (~> 13.0)
   - OHHTTPStubs/Swift (~> 8.0.0)
   - OTPFieldView (~> 1.0.1)
-  - Realm (~> 10.8.0)
+  - RealmSwift (~> 4.3.0)
   - RSFontSizes (~> 1.0.2)
   - RxCocoa (~> 4.5.0)
   - RxSwift (~> 4.5.0)
@@ -228,6 +230,7 @@ SPEC REPOS:
     - OTPFieldView
     - PromisesObjC
     - Realm
+    - RealmSwift
     - Result
     - RSFontSizes
     - RxCocoa
@@ -254,7 +257,7 @@ SPEC CHECKSUMS:
   KIF: c060ca8bf50986a9b236d0337affab573eacc152
   MaterialComponents: 8de2f7a102ae37bf276a558ac88086780f6d1b5f
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
-  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+  MDFInternationalization: d697c55307816222a55685c4ccb1044ffb030c12
   MDFTextAccessibility: f4bb4cc2194286651b59a215fdeaa0e05dc90ba5
   MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
@@ -263,13 +266,14 @@ SPEC CHECKSUMS:
   OHHTTPStubs: 9cbce6364bec557cc3439aa6bb7514670d780881
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
-  Realm: ad3c5cd762e5a5bc02080fc55aa04a0e43f98575
+  Realm: 5e92902e2875dff4bb0fd02f67bb737c3d5db2bc
+  RealmSwift: 9a360fc7bae04fc2e308a34fbd899d5faa2d6b22
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RSFontSizes: cf14ae41c2807b66573f7064528ccff8c98251c9
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
 
-PODFILE CHECKSUM: be238e6ea09f56883f71b83ed8587891147c409e
+PODFILE CHECKSUM: 415bad3e4d10307ddce0f05034a46221dc795598
 
 COCOAPODS: 1.10.1

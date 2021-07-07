@@ -2,9 +2,10 @@
 //  ChangePasswordViewController.swift
 //  AV TEST AID
 //
-//  Created by Timileyin Ogunsola on 12/05/2021.
+//  Created by Timileyin Ogunsola on 05/07/2021.
 //  Copyright © 2021 TopTier labs. All rights reserved.
 //
+
 import Foundation
 import UIKit
 import RxCocoa
@@ -33,7 +34,6 @@ class ChangePasswordViewController: BaseViewController {
         currentpasswordController = OutlinedTextInputController(textInput: currentPasswordEditText)
         newpasswordController = OutlinedTextInputController(textInput: newPasswordEditText)
         confirmpasswordController = OutlinedTextInputController(textInput: confirmPasswordEditText)
-    
     }
     
     override func getViewModel() -> BaseViewModel {
@@ -75,3 +75,4 @@ class ChangePasswordViewController: BaseViewController {
         viewModel.changePassword(oldPassword: currentPasswordEditText.text!, newPassword: newPasswordEditText.text!)
     }
 }
+
