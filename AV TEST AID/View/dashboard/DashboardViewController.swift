@@ -36,10 +36,7 @@ class DashboardViewController: BaseViewController {
     private func bindViewModel(){
         viewModel.getQuestionsState.subscribe(onNext: {questionState in
             if(questionState){
-                let questions = self.realm.objects(Question.self)
-                for question in questions {
-                    print("\(question.text) //// ")
-                }
+                self.viewModel.getProfession()
             }
         }).disposed(by: disposeBag)
     }

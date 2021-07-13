@@ -40,4 +40,21 @@ class QuestionsViewModel : BaseViewModel {
             }).disposed(by: disposeBag)
     }
     
+    func getProfession(){
+        state.accept(.loading("Initializing"))
+        AVTestService.sharedInstance.fetchProfessions().subscribe( onNext: { (professions) in
+            LocalStorage.shared.delete(key: StringIDs.PersistenceIdentifiers.PROFESSIONS)
+            LocalStorage.shared.persistProfessions(profession: professions)
+            self.state.accept(.idle)
+        }, onError:  { [weak self] error in
+            if let apiError = error as? APIError{
+                print("\(apiError)")
+                self?.state.accept(.error(apiError.errorMessage))
+            } else {
+                 print("\(error)")
+                self?.state.accept(.error(error.localizedDescription))
+            }
+        }).disposed(by: disposeBag)
+    }
+    
 }

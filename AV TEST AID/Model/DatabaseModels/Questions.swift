@@ -43,17 +43,17 @@ class Question: Object {
         return "id"
     }
     
-    func getQuestionResults(forProfessionId professionID: String, _ realm: Realm) -> Results<Question>{
+    static func getQuestionResults(forProfessionId professionID: String, _ realm: Realm) -> Results<Question>{
         let questions = realm.objects(Question.self).filter("profession = %@", professionID)
         return questions
     }
     
-    func getQuestionResults(_ realm: Realm) -> Results<Question>{
-           let questions = realm.objects(Question.self)
-           return questions
-       }
+    static func getQuestionResults(_ realm: Realm) -> Results<Question>{
+        let questions = realm.objects(Question.self)
+        return questions
+    }
     
-    func getPracticeQuestionsUnshuffled(forProfession : String, realm: Realm, count: Int = 10) -> [Question]{
+    static func getPracticeQuestionsUnshuffled(forProfession : String, realm: Realm, count: Int = 10) -> [Question]{
         var practiceQuestions = [Question]()
         let resultsQuestion = getQuestionResults(forProfessionId: forProfession, realm)
         for i in 0 ... count {
@@ -64,36 +64,39 @@ class Question: Object {
     }
     
     
-    func getPracticeQuestionsShuffled(forProfession : String, realm: Realm, count: Int = 10) -> [Question]{
+    static func getPracticeQuestionsShuffled(forProfession : String, realm: Realm, count: Int = 10) -> [Question]{
         var practiceQuestions = [Question]()
         let resultsQuestion = getQuestionResults(forProfessionId: forProfession, realm).shuffled()
-        for i in 0 ... count {
-            practiceQuestions.append(resultsQuestion[i])
+        if resultsQuestion.count <= count{
+            return resultsQuestion
+        } else {
+            for i in 0 ... count {
+                practiceQuestions.append(resultsQuestion[i])
+            }
         }
-        
         return practiceQuestions
     }
     
     
-    func getStudyQuestionsForProfessionShuffled(forProfession : String, realm: Realm) -> [Question]{
+    static func getStudyQuestionsForProfessionShuffled(forProfession : String, realm: Realm) -> [Question]{
         return getQuestionResults(forProfessionId: forProfession, realm).shuffled()
     }
     
-    func getStudyQuestionsForProfessionUnshuffled(forProfession : String, realm: Realm) -> [Question]{
+    static func getStudyQuestionsForProfessionUnshuffled(forProfession : String, realm: Realm) -> [Question]{
         let questionResults =  getQuestionResults(forProfessionId: forProfession, realm)
         let questions : [Question] = questionResults.toArray()
         return questions
     }
     
-    func getAllStudyQuestionsUnshuffled(realm: Realm) -> [Question]{
+    static func getAllStudyQuestionsUnshuffled(realm: Realm) -> [Question]{
         let questionResults =  getQuestionResults(realm)
         let questions : [Question] = questionResults.toArray()
         return questions
     }
     
-    func getAllStudyQuestionsShuffled(realm: Realm) -> [Question]{
+    static func getAllStudyQuestionsShuffled(realm: Realm) -> [Question]{
         return  getQuestionResults(realm).shuffled()
-      }
+    }
 }
 
 extension Results {

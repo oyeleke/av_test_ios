@@ -25,9 +25,12 @@ class QuestionMenuViewController: UIViewController {
     }
     
     @objc func onPracticeQuestionTouched(_ sender: UITapGestureRecognizer){
-        print("it =============================== got here ========== ")
-        let viewController : UIViewController = ProfessionBottomSheetViewController()
+        
+        guard let viewController = UIStoryboard.instantiateViewController(ProfessionBottomSheetViewController.self, storyboardIdentifier: "DashBoardStorryBoard") else {
+                   return
+               }
         let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: viewController)
+         bottomSheet.preferredContentSize = CGSize(width: self.view.frame.size.width, height:  self.view.frame.size.height * 0.5)
         present(bottomSheet, animated: true, completion: nil)
     }
 
