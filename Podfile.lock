@@ -76,6 +76,14 @@ PODS:
     - MotionAnimator (~> 2.0)
   - MaterialComponents/AnimationTiming (110.0.0)
   - MaterialComponents/Availability (110.0.0)
+  - MaterialComponents/BottomSheet (110.0.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/private/KeyboardWatcher
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/ShapeLibrary
+    - MaterialComponents/Shapes
   - MaterialComponents/Buttons (110.0.0):
     - MaterialComponents/Elevation
     - MaterialComponents/Ink
@@ -100,6 +108,8 @@ PODS:
   - MaterialComponents/private/Application (110.0.0)
   - MaterialComponents/private/Color (110.0.0):
     - MaterialComponents/Availability
+  - MaterialComponents/private/KeyboardWatcher (110.0.0):
+    - MaterialComponents/private/Application
   - MaterialComponents/private/Math (110.0.0)
   - MaterialComponents/Ripple (110.0.0):
     - MaterialComponents/AnimationTiming
@@ -188,6 +198,7 @@ DEPENDENCIES:
   - KIF (~> 3.7.4)
   - KIF/IdentifierTests (~> 3.7.3)
   - MaterialComponents/ActivityIndicator (~> 110.0.0)
+  - MaterialComponents/BottomSheet
   - MaterialComponents/TextFields (~> 110.0.0)
   - MBProgressHUD (~> 1.2.0)
   - Moya/RxSwift (~> 13.0)
@@ -274,6 +285,6 @@ SPEC CHECKSUMS:
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
 
-PODFILE CHECKSUM: 415bad3e4d10307ddce0f05034a46221dc795598
+PODFILE CHECKSUM: e082cd5bd7e3b5abd9d73870cdd5d0e1ccd6ee50
 
 COCOAPODS: 1.10.1

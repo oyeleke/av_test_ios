@@ -34,7 +34,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="question_ practice_group" translatesAutoresizingMaskIntoConstraints="NO" id="hCD-Vu-toU">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="question_ practice_group" translatesAutoresizingMaskIntoConstraints="NO" id="hCD-Vu-toU">
                                 <rect key="frame" x="43" y="302" width="328" height="337"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -52,7 +52,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="question_study_group" translatesAutoresizingMaskIntoConstraints="NO" id="5hU-Kh-4ZZ">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="question_study_group" translatesAutoresizingMaskIntoConstraints="NO" id="5hU-Kh-4ZZ">
                                 <rect key="frame" x="43" y="138" width="328" height="224"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -903,6 +903,108 @@ Question(s)</string>
             </objects>
             <point key="canvasLocation" x="-2016" y="-328"/>
         </scene>
+        <!--Profession Bottom Sheet View Controller-->
+        <scene sceneID="mfh-tb-5l9">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="VDR-2I-MXz" customClass="ProfessionBottomSheetViewController" customModule="AV_TEST_AID" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wgu-eu-ZJT"/>
+                        <viewControllerLayoutGuide type="bottom" id="rUy-Zf-GP9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WoR-vl-nD7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d5W-nE-yFs">
+                                <rect key="frame" x="0.0" y="72" width="108" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pilot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bb-OS-8rd">
+                                        <rect key="frame" x="33" y="108" width="34" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0078431372550000003" green="0.16862745100000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pilot_hat_icon" translatesAutoresizingMaskIntoConstraints="NO" id="UX2-Tl-SX3">
+                                        <rect key="frame" x="20" y="20" width="68" height="68"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mm9-qs-WLX">
+                                <rect key="frame" x="153" y="72" width="108" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="air_hostess_icom" translatesAutoresizingMaskIntoConstraints="NO" id="ots-hv-VHe">
+                                        <rect key="frame" x="20" y="20" width="68" height="68"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Km2-JE-vnt">
+                                        <rect key="frame" x="16" y="108" width="76" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">Flight 
+Attendant</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0078431372550000003" green="0.16862745100000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bxE-XI-1vy">
+                                <rect key="frame" x="286" y="72" width="108" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="customer_service_icon" translatesAutoresizingMaskIntoConstraints="NO" id="4PV-Hl-eUe">
+                                        <rect key="frame" x="20" y="20" width="68" height="68"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZo-ex-6I8">
+                                        <rect key="frame" x="15" y="108" width="79" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">Air Traffic 
+Controller</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0078431372550000003" green="0.16862745100000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qgJ-Bc-SIJ">
+                                <rect key="frame" x="153" y="270" width="108" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="engineer_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Srb-qd-bXP">
+                                        <rect key="frame" x="20" y="20" width="68" height="68"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Engineer" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73l-Hx-dls">
+                                        <rect key="frame" x="20" y="108" width="68" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0078431372550000003" green="0.16862745100000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="airTrafficControllerView" destination="bxE-XI-1vy" id="WDN-z9-uTf"/>
+                        <outlet property="engineerView" destination="qgJ-Bc-SIJ" id="qxo-lV-Vgk"/>
+                        <outlet property="flightAttendantView" destination="mm9-qs-WLX" id="uqh-jV-wXc"/>
+                        <outlet property="pilotUIView" destination="d5W-nE-yFs" id="QXu-7F-Z0X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fnn-iV-l33" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="59.598214285714285"/>
+        </scene>
         <!--Settings-->
         <scene sceneID="YeC-Vh-WMP">
             <objects>
@@ -922,16 +1024,20 @@ Question(s)</string>
     </scenes>
     <resources>
         <image name="Arrow" width="9" height="14"/>
+        <image name="air_hostess_icom" width="48" height="48"/>
         <image name="arrow_left" width="13" height="21"/>
         <image name="arrow_white_right" width="9" height="14"/>
         <image name="bookmark" width="15" height="19"/>
         <image name="comment" width="21" height="21"/>
+        <image name="customer_service_icon" width="48" height="48"/>
         <image name="dashboard_knowledge_scores" width="60" height="60"/>
         <image name="dashboard_marked_questions" width="60" height="60"/>
         <image name="dashboard_menu_inactive" width="18" height="18"/>
         <image name="dashboard_practice_question" width="60" height="60"/>
         <image name="dashboard_study_questions" width="60" height="60"/>
         <image name="dummy_circle" width="60" height="60"/>
+        <image name="engineer_icon" width="48" height="48"/>
+        <image name="pilot_hat_icon" width="48" height="48"/>
         <image name="question_ practice_group" width="328" height="168"/>
         <image name="question_image" width="19" height="20"/>
         <image name="question_menu_inactive" width="21" height="17"/>
