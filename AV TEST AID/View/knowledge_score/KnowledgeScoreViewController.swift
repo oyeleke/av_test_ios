@@ -6,25 +6,61 @@
 //  Copyright © 2021 TopTier labs. All rights reserved.
 //
 
+import Foundation
 import UIKit
+import RxCocoa
+import RxSwift
+import SDWebImage
 
-class KnowledgeScoreViewController: UIViewController {
-
+@available(iOS 13.0, *)
+class KnowledgeScoreViewController: BaseViewController {
+    
+    @IBOutlet weak var userImage: UIImageView!
+    
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userProfessionLabel: UILabel!
+    @IBOutlet weak var ratingView: StarRatingView!
+    
+    var viewModel : KnowledgeScoreViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpView()
+        bindViewModel()
+        viewModel.fetchScore()
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
-    */
-
+    
+    func setUpView() {
+        userImage.contentMode = .scaleToFill
+        userImage.makeCircular()
+        guard let userDefaults = UserDataManager.currentUser else { return }
+        self.userName.text = "\(userDefaults.firstName) \(userDefaults.lastName)"
+        self.userProfessionLabel.text = userDefaults.profession
+        if let imageUrl = userDefaults.imageUrl {
+            self.userImage.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "placeholder.png"))
+            
+        }
+    }
+    
+    func bindViewModel(){
+        viewModel.fetchScoreState.subscribe(onNext: {score in
+            self.ratingView.setStarsFor(rating: Float(score))
+        }).disposed(by: disposeBag)
+    }
+    
+    override func getViewModel() -> BaseViewModel {
+        viewModel
+    }
+    
+    
+    @IBAction func keepPracticingView(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }

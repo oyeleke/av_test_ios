@@ -238,17 +238,21 @@ Question(s)</string>
                     </view>
                     <navigationItem key="navigationItem" id="HBH-Sh-wd3"/>
                     <connections>
+                        <outlet property="knowledgeScoreView" destination="AX0-mq-dBP" id="0mD-e5-I4I"/>
+                        <outlet property="markedQuestionsView" destination="iqO-tf-GvG" id="RTB-yG-zpw"/>
+                        <outlet property="practiceQuestionView" destination="x7q-4t-ZU5" id="PiO-x8-wFq"/>
                         <outlet property="searchTextField" destination="9aS-fA-g8z" id="FNf-gc-uTD"/>
+                        <outlet property="studyQuestionView" destination="kBJ-29-wDY" id="yMp-TT-tqj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sRh-AG-uho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-186.95652173913044" y="-652.23214285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Knowledge Score View Controller-->
         <scene sceneID="XbN-fK-uZq">
             <objects>
-                <viewController id="dCD-aG-ige" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="KnowledgeScoreViewController" id="dCD-aG-ige" customClass="KnowledgeScoreViewController" customModule="AV_TEST_AID" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SI7-Yd-CJm"/>
                         <viewControllerLayoutGuide type="bottom" id="3Td-Mf-69n"/>
@@ -261,7 +265,7 @@ Question(s)</string>
                                 <rect key="frame" x="162" y="134" width="101" height="101"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Toyin Olasehinde" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERc-9H-FMd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="timi oguns" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERc-9H-FMd">
                                 <rect key="frame" x="143" y="252" width="134" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="16"/>
@@ -300,6 +304,7 @@ practice consistently.
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="keepPracticingView:" destination="dCD-aG-ige" eventType="touchUpInside" id="OCI-Gx-O6t"/>
                                     <action selector="navigateToChangePassword:" destination="Yp8-aS-tUZ" eventType="touchUpInside" id="vpX-s1-QBd"/>
                                 </connections>
                             </button>
@@ -322,6 +327,12 @@ practice consistently.
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </view>
+                    <connections>
+                        <outlet property="ratingView" destination="VBp-cL-dVZ" id="HrD-tz-gII"/>
+                        <outlet property="userImage" destination="120-mS-Yge" id="j7f-FB-jaP"/>
+                        <outlet property="userName" destination="ERc-9H-FMd" id="Yvn-n0-Pxe"/>
+                        <outlet property="userProfessionLabel" destination="LCC-hb-goW" id="ptc-KY-CtS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aLI-po-gA2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

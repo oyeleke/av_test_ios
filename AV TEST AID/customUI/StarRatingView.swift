@@ -103,7 +103,7 @@ class StarRatingView: UIView {
         self.hstack?.isUserInteractionEnabled = false
     }
     
-    fileprivate func setStarsFor(rating: Float) {
+    func setStarsFor(rating: Float) {
         let starImageViews = [hstack?.star1ImageView, hstack?.star2ImageView, hstack?.star3ImageView, hstack?.star4ImageView, hstack?.star5ImageView]
         for i in 1...5 {
             let iFloat = Float(i)

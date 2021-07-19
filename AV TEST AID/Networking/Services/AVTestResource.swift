@@ -22,6 +22,7 @@ enum AVTestResource {
     case fetchUserProfile
     case changePassword(ChangePasswordRequest)
     case fetchQuestions
+    case fetchScore
 }
 
 extension AVTestResource: TargetType {
@@ -56,6 +57,8 @@ extension AVTestResource: TargetType {
             return "password/change"
         case .fetchQuestions:
             return "questions"
+        case .fetchScore:
+            return "user/score"
         }
     }
     
@@ -63,7 +66,7 @@ extension AVTestResource: TargetType {
         switch self {
         case .register, .verifyUser, .initiatePasswordReset, .verifyPasswordCode, .resendPasswordCode, .resetPassword, .signIn, .uploadImage, .onboardUser:
             return .post
-        case .fetchProfessions, .fetchUserProfile, .fetchQuestions:
+        case .fetchProfessions, .fetchUserProfile, .fetchQuestions, .fetchScore:
             return .get
         case .updateProfession, .changePassword:
             return .put
@@ -89,7 +92,7 @@ extension AVTestResource: TargetType {
         case .uploadImage(let imageData, let imageName):
             let formData: [Moya.MultipartFormData] = [Moya.MultipartFormData(provider: .data(imageData), name: "image", fileName: imageName, mimeType: "image/jpeg")]
             return .uploadMultipart(formData)
-        case .fetchProfessions, .updateProfession, .fetchUserProfile, .fetchQuestions:
+        case .fetchProfessions, .updateProfession, .fetchUserProfile, .fetchQuestions, .fetchScore:
             return .requestPlain
         case .onboardUser(let onboardUserRequest):
             return .requestData(onboardUserRequest.asData())

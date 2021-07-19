@@ -99,6 +99,13 @@ class AVTestService: BaseApiService<AVTestResource> {
         }
     }
     
+    func fetchScores() -> Observable<Double> {
+        request(for: .fetchScore).asObservable().map {
+            (score: Double, response: Response) in
+            score
+        }
+    }
+    
     func uploadImage(_ imageData: Data, name imageName: String) -> Observable<User> {
         request(for: .uploadImage(imageData, imageName))
             .map({ (user: User, response: Response) in
