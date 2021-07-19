@@ -18,6 +18,7 @@ import RealmSwift
 class DashboardViewController: BaseViewController {
     
     @IBOutlet weak var searchTextField: MDCTextField!
+    private var searchController: OutlinedTextInputController!
     var viewModel:  QuestionsViewModel!
     var realm: Realm!
     
@@ -27,11 +28,14 @@ class DashboardViewController: BaseViewController {
         realm = try! Realm()
         viewModel.getQuestionsFromApi(realm)
         bindViewModel()
-        setupSearchButton()
-        
+        setupView()
         // Do any additional setup after loading the view.
     }
     
+    private func setupView(){
+        searchController = OutlinedTextInputController(textInput: searchTextField)
+        setupSearchButton()
+    }
     
     private func bindViewModel(){
         viewModel.getQuestionsState.subscribe(onNext: {questionState in
@@ -49,15 +53,16 @@ class DashboardViewController: BaseViewController {
     
     
     @IBAction func refresh(_ sender: Any) {
+        print("refreshing ur ass bro")
     }
     
     func setupSearchButton() {
         let button = UIButton(type: .custom)
-        button.setImage(UIImage(named: "settings_menu_inactive.png"), for: .normal)
+        button.setImage(UIImage(named: "mic.png"), for: .normal)
         button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -16, bottom: 0, right: 0)
         button.frame = CGRect(x: CGFloat(300), y: CGFloat(5), width: CGFloat(25), height: CGFloat(25))
         button.addTarget(self, action: #selector(self.refresh), for: .touchUpInside)
-        //        searchTextField.rightView = button
-        //        searchTextField.rightViewMode = .always
+        searchTextField.rightView = button
+        searchTextField.rightViewMode = .always
     }
 }

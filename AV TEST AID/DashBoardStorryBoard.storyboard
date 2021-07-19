@@ -69,7 +69,7 @@
             </objects>
             <point key="canvasLocation" x="-961.875" y="102.5"/>
         </scene>
-        <!--Dashboard-->
+        <!--Dashboard View Controller-->
         <scene sceneID="UbV-W2-l9B">
             <objects>
                 <viewController storyboardIdentifier="DashboardViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XCG-nA-irX" customClass="DashboardViewController" customModule="AV_TEST_AID" customModuleProvider="target" sceneMemberID="viewController">
@@ -236,14 +236,96 @@ Question(s)</string>
                             <constraint firstItem="iqO-tf-GvG" firstAttribute="top" secondItem="x7q-4t-ZU5" secondAttribute="bottom" constant="131.33333333333337" id="wPk-Su-fWp"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dashboard" image="dashboard_menu_inactive" id="2md-Dr-uI1"/>
+                    <navigationItem key="navigationItem" id="HBH-Sh-wd3"/>
                     <connections>
                         <outlet property="searchTextField" destination="9aS-fA-g8z" id="FNf-gc-uTD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sRh-AG-uho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1097.1014492753625" y="-652.23214285714278"/>
+            <point key="canvasLocation" x="-186.95652173913044" y="-652.23214285714278"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XbN-fK-uZq">
+            <objects>
+                <viewController id="dCD-aG-ige" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SI7-Yd-CJm"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Td-Mf-69n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QEv-pF-N2b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dummy_circle" translatesAutoresizingMaskIntoConstraints="NO" id="120-mS-Yge" customClass="CircleImageView">
+                                <rect key="frame" x="162" y="134" width="101" height="101"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Toyin Olasehinde" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERc-9H-FMd">
+                                <rect key="frame" x="143" y="252" width="134" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="16"/>
+                                <color key="textColor" red="0.0039215686269999999" green="0.4941176471" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flight Dispatcher" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCC-hb-goW">
+                                <rect key="frame" x="162" y="298" width="94" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sin-4P-1gT">
+                                <rect key="frame" x="138" y="463" width="144" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Your star grows when you 
+practice consistently.
+</string>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAQ-ve-vNa" customClass="CustomDesignableButton" customModule="AV_TEST_AID" customModuleProvider="target">
+                                <rect key="frame" x="120" y="551" width="181" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
+                                <color key="backgroundColor" red="0.0039215686269999999" green="0.4941176471" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="Keep practicing">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="navigateToChangePassword:" destination="Yp8-aS-tUZ" eventType="touchUpInside" id="vpX-s1-QBd"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VBp-cL-dVZ" customClass="StarRatingView" customModule="AV_TEST_AID" customModuleProvider="target">
+                                <rect key="frame" x="87" y="381" width="251" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                        <real key="value" value="3.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="starColor">
+                                        <color key="value" red="0.0039215686269999999" green="0.4941176471" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starRoundingRawValue">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aLI-po-gA2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757.97101449275374" y="-652.23214285714278"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="M6z-7x-P0a">
@@ -426,7 +508,7 @@ Question(s)</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CuS-Bj-TmN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="-732.58928571428567"/>
+            <point key="canvasLocation" x="1659" y="-735"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="fdn-oT-vCD">
@@ -636,7 +718,7 @@ Question(s)</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qIT-kB-2vq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1823.1884057971015" y="-299.33035714285711"/>
+            <point key="canvasLocation" x="2733.3333333333335" y="-299.33035714285711"/>
         </scene>
         <!--Edit Profile View Controller-->
         <scene sceneID="Vif-ye-CWb">
@@ -786,7 +868,7 @@ Question(s)</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="81B-eY-gLU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2639.130434782609" y="-565.17857142857144"/>
+            <point key="canvasLocation" x="3549.275362318841" y="-565.17857142857144"/>
         </scene>
         <!--Change Password View Controller-->
         <scene sceneID="lyb-qF-SiL">
@@ -894,7 +976,7 @@ Question(s)</string>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="XCG-nA-irX" kind="relationship" relationship="viewControllers" id="AjW-xx-1aK"/>
+                        <segue destination="ska-Qq-DIx" kind="relationship" relationship="viewControllers" id="AjW-xx-1aK"/>
                         <segue destination="EOO-l8-Ly6" kind="relationship" relationship="viewControllers" id="g0c-Hm-rsw"/>
                         <segue destination="8Gn-ZP-wg1" kind="relationship" relationship="viewControllers" id="mHK-BA-HLf"/>
                     </connections>
@@ -1019,7 +1101,25 @@ Controller</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUe-xL-os3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="913.04347826086962" y="-299.33035714285711"/>
+            <point key="canvasLocation" x="1823.1884057971015" y="-299.33035714285711"/>
+        </scene>
+        <!--Dashboard-->
+        <scene sceneID="kdy-aq-KWn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ska-Qq-DIx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="dashboard_menu_inactive" id="2md-Dr-uI1"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rQz-dK-1O2">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XCG-nA-irX" kind="relationship" relationship="rootViewController" id="fCp-Li-xvE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zdJ-oE-wqQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1097.1014492753625" y="-652.23214285714278"/>
         </scene>
     </scenes>
     <resources>

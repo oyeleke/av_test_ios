@@ -43,16 +43,19 @@ class Question: Object {
         return "id"
     }
     
+    @discardableResult
     static func getQuestionResults(forProfessionId professionID: String, _ realm: Realm) -> Results<Question>{
         let questions = realm.objects(Question.self).filter("profession = %@", professionID)
         return questions
     }
     
+    @discardableResult
     static func getQuestionResults(_ realm: Realm) -> Results<Question>{
         let questions = realm.objects(Question.self)
         return questions
     }
     
+    @discardableResult
     static func getPracticeQuestionsUnshuffled(forProfession : String, realm: Realm, count: Int = 10) -> [Question]{
         var practiceQuestions = [Question]()
         let resultsQuestion = getQuestionResults(forProfessionId: forProfession, realm)
@@ -63,7 +66,7 @@ class Question: Object {
         return practiceQuestions
     }
     
-    
+    @discardableResult
     static func getPracticeQuestionsShuffled(forProfession : String, realm: Realm, count: Int = 10) -> [Question]{
         var practiceQuestions = [Question]()
         let resultsQuestion = getQuestionResults(forProfessionId: forProfession, realm).shuffled()
@@ -77,25 +80,33 @@ class Question: Object {
         return practiceQuestions
     }
     
-    
+    @discardableResult
     static func getStudyQuestionsForProfessionShuffled(forProfession : String, realm: Realm) -> [Question]{
         return getQuestionResults(forProfessionId: forProfession, realm).shuffled()
     }
     
+    @discardableResult
     static func getStudyQuestionsForProfessionUnshuffled(forProfession : String, realm: Realm) -> [Question]{
         let questionResults =  getQuestionResults(forProfessionId: forProfession, realm)
         let questions : [Question] = questionResults.toArray()
         return questions
     }
     
+    @discardableResult
     static func getAllStudyQuestionsUnshuffled(realm: Realm) -> [Question]{
         let questionResults =  getQuestionResults(realm)
         let questions : [Question] = questionResults.toArray()
         return questions
     }
     
+    @discardableResult
     static func getAllStudyQuestionsShuffled(realm: Realm) -> [Question]{
         return  getQuestionResults(realm).shuffled()
+    }
+    
+    @discardableResult
+    static func getQuestion(withQuestionId questionId: String, _ realm: Realm) -> Question? {
+        return realm.objects(Question.self).filter("id = %@", questionId).first
     }
 }
 
