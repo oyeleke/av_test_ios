@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uDE-wN-Hqu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uDE-wN-Hqu">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -57,7 +58,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Questions" image="question_menu_inactive" id="9eQ-rw-htU"/>
                     <connections>
@@ -81,70 +82,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x7q-4t-ZU5" customClass="CustomDesignableView" customModule="AV_TEST_AID" customModuleProvider="target">
-                                <rect key="frame" x="23" y="155" width="150" height="170"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fMc-i5-hjc">
-                                        <rect key="frame" x="8" y="110" width="142" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <string key="text">Resume 
-Practice Session</string>
-                                        <color key="textColor" red="0.0078431372550000003" green="0.16862745100000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dashboard_practice_question" translatesAutoresizingMaskIntoConstraints="NO" id="DS4-7O-rfR">
-                                        <rect key="frame" x="45" y="28" width="60" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="A4n-Od-VHQ"/>
-                                    <constraint firstAttribute="height" constant="170" id="w11-Jd-RXV"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kBJ-29-wDY" customClass="CustomDesignableView" customModule="AV_TEST_AID" customModuleProvider="target">
-                                <rect key="frame" x="241" y="155" width="150" height="170"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MVF-nj-7Hi">
-                                        <rect key="frame" x="8" y="110" width="142" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <string key="text">Resume 
-Study Session</string>
-                                        <color key="textColor" red="0.0078431372550000003" green="0.16862745100000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dashboard_study_questions" translatesAutoresizingMaskIntoConstraints="NO" id="M5p-ht-EUj">
-                                        <rect key="frame" x="45" y="28" width="60" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="UUr-E5-ghK"/>
-                                    <constraint firstAttribute="width" constant="150" id="jk8-jX-8Sg"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9aS-fA-g8z" customClass="MDCTextField">
                                 <rect key="frame" x="36" y="54" width="342" height="36"/>
                                 <constraints>
@@ -153,87 +90,158 @@ Study Session</string>
                                 <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AX0-mq-dBP" customClass="CustomDesignableView" customModule="AV_TEST_AID" customModuleProvider="target">
-                                <rect key="frame" x="241" y="456.33333333333326" width="150" height="170"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="oa4-Uq-f74" userLabel="Left Stack View">
+                                <rect key="frame" x="16" y="150" width="177" height="633"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2QO-vv-XpO">
-                                        <rect key="frame" x="8" y="110" width="142" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <string key="text">Knowledge 
-Score</string>
-                                        <color key="textColor" red="0.0078431372550000003" green="0.16862745100000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dashboard_knowledge_scores" translatesAutoresizingMaskIntoConstraints="NO" id="Fch-9w-bhY">
-                                        <rect key="frame" x="45" y="28" width="60" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="NfZ-ZE-lMR"/>
-                                    <constraint firstAttribute="width" constant="150" id="s0Q-jY-V14"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqO-tf-GvG" customClass="CustomDesignableView" customModule="AV_TEST_AID" customModuleProvider="target">
-                                <rect key="frame" x="23" y="456.33333333333326" width="150" height="170"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="b7V-2M-Z52">
-                                        <rect key="frame" x="8" y="110" width="142" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <string key="text">Marked 
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x7q-4t-ZU5" customClass="CustomDesignableView" customModule="AV_TEST_AID" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="177" height="170"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fMc-i5-hjc">
+                                                <rect key="frame" x="8" y="110" width="142" height="52"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <string key="text">Resume 
+Practice Session</string>
+                                                <color key="textColor" red="0.0078431372550000003" green="0.16862745100000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dashboard_practice_question" translatesAutoresizingMaskIntoConstraints="NO" id="DS4-7O-rfR">
+                                                <rect key="frame" x="45" y="28" width="60" height="60"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="170" id="nmJ-sp-ujB"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="pq0-UB-hsx"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqO-tf-GvG" customClass="CustomDesignableView" customModule="AV_TEST_AID" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="463" width="177" height="170"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="b7V-2M-Z52">
+                                                <rect key="frame" x="8" y="110" width="142" height="52"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <string key="text">Marked 
 Question(s)</string>
-                                        <color key="textColor" red="0.0078431372550000003" green="0.16862745100000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dashboard_marked_questions" translatesAutoresizingMaskIntoConstraints="NO" id="BY4-ox-zGQ">
-                                        <rect key="frame" x="45" y="28" width="60" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
+                                                <color key="textColor" red="0.0078431372550000003" green="0.16862745100000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dashboard_marked_questions" translatesAutoresizingMaskIntoConstraints="NO" id="BY4-ox-zGQ">
+                                                <rect key="frame" x="45" y="28" width="60" height="60"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="170" id="Qwr-SG-1MJ"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="jZe-mE-nC9"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="Q5t-7t-V5U"/>
-                                    <constraint firstAttribute="width" constant="150" id="TEc-dD-ZRe"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="vlW-0F-4Tn" userLabel="Right Stack View">
+                                <rect key="frame" x="221" y="150" width="177" height="633"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kBJ-29-wDY" customClass="CustomDesignableView" customModule="AV_TEST_AID" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="177" height="170"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MVF-nj-7Hi">
+                                                <rect key="frame" x="8" y="110" width="142" height="52"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <string key="text">Resume 
+Study Session</string>
+                                                <color key="textColor" red="0.0078431372550000003" green="0.16862745100000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dashboard_study_questions" translatesAutoresizingMaskIntoConstraints="NO" id="M5p-ht-EUj">
+                                                <rect key="frame" x="45" y="28" width="60" height="60"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="RhC-ev-i1k"/>
+                                            <constraint firstAttribute="height" constant="170" id="ZuD-z3-3QG"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AX0-mq-dBP" customClass="CustomDesignableView" customModule="AV_TEST_AID" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="463" width="177" height="170"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2QO-vv-XpO">
+                                                <rect key="frame" x="8" y="110" width="142" height="52"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <string key="text">Knowledge 
+Score</string>
+                                                <color key="textColor" red="0.0078431372550000003" green="0.16862745100000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dashboard_knowledge_scores" translatesAutoresizingMaskIntoConstraints="NO" id="Fch-9w-bhY">
+                                                <rect key="frame" x="45" y="28" width="60" height="60"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="170" id="cUR-cs-wEc"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="nwe-Ww-h89"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="iqO-tf-GvG" firstAttribute="trailing" secondItem="x7q-4t-ZU5" secondAttribute="trailing" id="4ME-Ek-3zs"/>
-                            <constraint firstItem="x7q-4t-ZU5" firstAttribute="top" secondItem="9aS-fA-g8z" secondAttribute="bottom" constant="65" id="4w8-et-1bB"/>
-                            <constraint firstItem="AX0-mq-dBP" firstAttribute="trailing" secondItem="kBJ-29-wDY" secondAttribute="trailing" id="5Vc-jI-0Z0"/>
+                            <constraint firstItem="vlW-0F-4Tn" firstAttribute="leading" secondItem="oa4-Uq-f74" secondAttribute="trailing" constant="28" id="2Pc-I2-jwB"/>
+                            <constraint firstItem="vlW-0F-4Tn" firstAttribute="width" secondItem="oa4-Uq-f74" secondAttribute="width" id="77R-Ip-I44"/>
+                            <constraint firstItem="ouj-QW-Ima" firstAttribute="top" secondItem="oa4-Uq-f74" secondAttribute="bottom" constant="30" id="Cpv-oW-AG1"/>
+                            <constraint firstAttribute="trailing" secondItem="vlW-0F-4Tn" secondAttribute="trailing" constant="16" id="D1a-Wa-Rtq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9aS-fA-g8z" secondAttribute="trailing" constant="16" id="FmT-Lt-wmD"/>
-                            <constraint firstItem="kBJ-29-wDY" firstAttribute="bottom" secondItem="x7q-4t-ZU5" secondAttribute="bottom" id="GeA-m8-fNx"/>
-                            <constraint firstItem="x7q-4t-ZU5" firstAttribute="leading" secondItem="VQF-Sh-lYS" secondAttribute="leading" constant="23" id="NNT-di-MjR"/>
-                            <constraint firstItem="AX0-mq-dBP" firstAttribute="leading" secondItem="kBJ-29-wDY" secondAttribute="leading" id="Txo-pB-H0V"/>
-                            <constraint firstItem="kBJ-29-wDY" firstAttribute="top" secondItem="9aS-fA-g8z" secondAttribute="bottom" constant="65" id="VpO-pF-bDf"/>
+                            <constraint firstItem="oa4-Uq-f74" firstAttribute="bottom" secondItem="vlW-0F-4Tn" secondAttribute="bottom" id="NKh-p1-Qud"/>
                             <constraint firstItem="9aS-fA-g8z" firstAttribute="leading" secondItem="VQF-Sh-lYS" secondAttribute="leadingMargin" constant="16" id="W2y-aq-F5D"/>
-                            <constraint firstAttribute="trailing" secondItem="kBJ-29-wDY" secondAttribute="trailing" constant="23" id="Xao-OX-3oI"/>
-                            <constraint firstItem="iqO-tf-GvG" firstAttribute="leading" secondItem="x7q-4t-ZU5" secondAttribute="leading" id="elr-yN-ha8"/>
-                            <constraint firstItem="iqO-tf-GvG" firstAttribute="bottom" secondItem="AX0-mq-dBP" secondAttribute="bottom" id="iLS-wE-ysN"/>
+                            <constraint firstItem="oa4-Uq-f74" firstAttribute="top" secondItem="9aS-fA-g8z" secondAttribute="bottom" constant="60" id="ZYu-hY-JNC"/>
+                            <constraint firstItem="vlW-0F-4Tn" firstAttribute="top" secondItem="oa4-Uq-f74" secondAttribute="top" id="cQd-8y-ngQ"/>
                             <constraint firstItem="9aS-fA-g8z" firstAttribute="top" secondItem="r3X-kN-liQ" secondAttribute="bottom" constant="10" id="t6v-99-b3W"/>
-                            <constraint firstItem="iqO-tf-GvG" firstAttribute="top" secondItem="x7q-4t-ZU5" secondAttribute="bottom" constant="131.33333333333337" id="wPk-Su-fWp"/>
+                            <constraint firstItem="oa4-Uq-f74" firstAttribute="leading" secondItem="VQF-Sh-lYS" secondAttribute="leading" constant="16" id="vxW-5e-Q85"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HBH-Sh-wd3"/>
@@ -311,7 +319,7 @@ practice consistently.
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VBp-cL-dVZ" customClass="StarRatingView" customModule="AV_TEST_AID" customModuleProvider="target">
                                 <rect key="frame" x="87" y="381" width="251" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rating">
                                         <real key="value" value="3.5"/>
@@ -325,7 +333,7 @@ practice consistently.
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="ratingView" destination="VBp-cL-dVZ" id="HrD-tz-gII"/>
@@ -514,7 +522,7 @@ practice consistently.
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CuS-Bj-TmN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -574,7 +582,7 @@ practice consistently.
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C3r-D1-Yht">
                                 <rect key="frame" x="0.0" y="247" width="414" height="160"/>
@@ -628,7 +636,7 @@ practice consistently.
                                         </connections>
                                     </switch>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Practice Questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fc8-43-YiY">
                                 <rect key="frame" x="20" y="422" width="148" height="22"/>
@@ -696,7 +704,7 @@ practice consistently.
                                         </connections>
                                     </switch>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YB9-fC-46W" customClass="CustomDesignableButton" customModule="AV_TEST_AID" customModuleProvider="target">
                                 <rect key="frame" x="213" y="653" width="181" height="45"/>
@@ -750,7 +758,7 @@ practice consistently.
                                         <rect key="frame" x="8" y="23" width="240" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="35"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -839,7 +847,7 @@ practice consistently.
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jxa-2E-jNS" firstAttribute="leading" secondItem="dww-xO-9az" secondAttribute="leading" constant="20" id="5YX-Sp-sI6"/>
                             <constraint firstItem="fjk-tC-wx9" firstAttribute="top" secondItem="4p9-pY-CLc" secondAttribute="bottom" constant="8" id="Aok-y5-JcP"/>
@@ -901,7 +909,7 @@ practice consistently.
                                         <rect key="frame" x="8" y="23" width="302" height="104"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="35"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -965,7 +973,7 @@ practice consistently.
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="confirmPasswordEditText" destination="6XF-eW-CBc" id="PMG-i9-IyQ"/>
@@ -1024,7 +1032,7 @@ practice consistently.
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mm9-qs-WLX">
                                 <rect key="frame" x="153" y="72" width="108" height="149"/>
@@ -1044,7 +1052,7 @@ Attendant</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bxE-XI-1vy">
                                 <rect key="frame" x="286" y="72" width="108" height="149"/>
@@ -1064,7 +1072,7 @@ Controller</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qgJ-Bc-SIJ">
                                 <rect key="frame" x="153" y="270" width="108" height="149"/>
@@ -1082,10 +1090,10 @@ Controller</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="airTrafficControllerView" destination="bxE-XI-1vy" id="WDN-z9-uTf"/>
@@ -1133,6 +1141,23 @@ Controller</string>
             <point key="canvasLocation" x="-1097.1014492753625" y="-652.23214285714278"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="2Q7-sz-VoB">
+            <size key="intrinsicContentSize" width="47" height="22"/>
+        </designable>
+        <designable name="C3d-2g-8TU">
+            <size key="intrinsicContentSize" width="44" height="36"/>
+        </designable>
+        <designable name="YB9-fC-46W">
+            <size key="intrinsicContentSize" width="171" height="23"/>
+        </designable>
+        <designable name="enm-cy-JMt">
+            <size key="intrinsicContentSize" width="44" height="36"/>
+        </designable>
+        <designable name="nAQ-ve-vNa">
+            <size key="intrinsicContentSize" width="152" height="23"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Arrow" width="9" height="14"/>
         <image name="air_hostess_icom" width="48" height="48"/>
@@ -1161,5 +1186,11 @@ Controller</string>
         <namedColor name="questionBGBaseState">
             <color red="0.96899998188018799" green="0.98400002717971802" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
