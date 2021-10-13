@@ -92,6 +92,14 @@
 		A916AE9C26A1E30300ECFB42 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A916AE9B26A1E30300ECFB42 /* EmptyView.swift */; };
 		A9188ABA2682A80700060D33 /* ChangePasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188AB92682A80600060D33 /* ChangePasswordRequest.swift */; };
 		A9188ABC2682AD9400060D33 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188ABB2682AD9400060D33 /* Questions.swift */; };
+		A924B92727172D88007EC96A /* StudyQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924B92627172D88007EC96A /* StudyQuestionsViewController.swift */; };
+		A93A4EC32705FC410052FB05 /* QuestionScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A4EC22705FC410052FB05 /* QuestionScoresViewController.swift */; };
+		A9464AFF270D736B0093ACBF /* ReviewQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9464AFE270D736A0093ACBF /* ReviewQuestionsViewController.swift */; };
+		A9464B01270D95490093ACBF /* ReviewQuestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9464B00270D95490093ACBF /* ReviewQuestionsViewModel.swift */; };
+		A9464B04270F20F60093ACBF /* MarkedQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9464B03270F20F60093ACBF /* MarkedQuestionsViewController.swift */; };
+		A9464B06270F21150093ACBF /* MarkedQuestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9464B05270F21150093ACBF /* MarkedQuestionsViewModel.swift */; };
+		A9464B09270F30190093ACBF /* MarkedQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9464B08270F30190093ACBF /* MarkedQuestions.swift */; };
+		A9464B0B270F32010093ACBF /* MarkedQuestionStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9464B0A270F32010093ACBF /* MarkedQuestionStates.swift */; };
 		A953F3F526362D1200102F39 /* DashBoardStorryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A953F3F426362D1200102F39 /* DashBoardStorryBoard.storyboard */; };
 		A963AC442693ADA9004B6CCF /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A963AC432693ADA9004B6CCF /* ChangePasswordViewController.swift */; };
 		A963AC462693ADE9004B6CCF /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A963AC452693ADE9004B6CCF /* ChangePasswordViewModel.swift */; };
@@ -100,6 +108,10 @@
 		A976C90226A0C88C008C9BC3 /* QuestionSessionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A976C90126A0C88C008C9BC3 /* QuestionSessionItem.swift */; };
 		A976C90426A0CA1C008C9BC3 /* QuestionSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A976C90326A0CA1C008C9BC3 /* QuestionSession.swift */; };
 		A976C90726A1739A008C9BC3 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A976C90626A1739A008C9BC3 /* EmptyView.xib */; };
+		A97878CA2706440D00745229 /* CustomOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97878C92706440D00745229 /* CustomOptionView.swift */; };
+		A97878CD2706448200745229 /* OptionStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97878CC2706448100745229 /* OptionStates.swift */; };
+		A97878CF27065C1800745229 /* OptionsSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97878CE27065C1800745229 /* OptionsSelected.swift */; };
+		A97C3155270A6CC9001D6F4A /* SessionOptionsChosen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97C3154270A6CC9001D6F4A /* SessionOptionsChosen.swift */; };
 		A9ACA9842692DD9D009F0EB5 /* DashboardTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACA9832692DD9D009F0EB5 /* DashboardTabViewController.swift */; };
 		A9ACA986269322D1009F0EB5 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACA985269322D1009F0EB5 /* DashboardViewController.swift */; };
 		A9ACA989269323BA009F0EB5 /* QuestionMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACA988269323BA009F0EB5 /* QuestionMenuViewController.swift */; };
@@ -114,6 +126,7 @@
 		A9B0134726A55FB3001BC648 /* KnowldgeScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B0134626A55FB3001BC648 /* KnowldgeScoreViewModel.swift */; };
 		A9C6A249260937500065CA70 /* CustomDesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C6A248260937500065CA70 /* CustomDesignableView.swift */; };
 		A9C86CF826978D24009C3A02 /* ProfessionBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C86CF726978D24009C3A02 /* ProfessionBottomSheetViewController.swift */; };
+		A9EE80B526FC8F6400D63D50 /* PracticeQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EE80B426FC8F6400D63D50 /* PracticeQuestionViewController.swift */; };
 		A9F0DC9726873B920023D07A /* QuestionRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F0DC9626873B920023D07A /* QuestionRest.swift */; };
 		A9F0DC9926873C560023D07A /* OptionsRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F0DC9826873C560023D07A /* OptionsRest.swift */; };
 		A9F0DC9B26873FD20023D07A /* QuestionsPagedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F0DC9A26873FD20023D07A /* QuestionsPagedResponse.swift */; };
@@ -252,6 +265,14 @@
 		A916AE9B26A1E30300ECFB42 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		A9188AB92682A80600060D33 /* ChangePasswordRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordRequest.swift; sourceTree = "<group>"; };
 		A9188ABB2682AD9400060D33 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		A924B92627172D88007EC96A /* StudyQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyQuestionsViewController.swift; sourceTree = "<group>"; };
+		A93A4EC22705FC410052FB05 /* QuestionScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionScoresViewController.swift; sourceTree = "<group>"; };
+		A9464AFE270D736A0093ACBF /* ReviewQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewQuestionsViewController.swift; sourceTree = "<group>"; };
+		A9464B00270D95490093ACBF /* ReviewQuestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewQuestionsViewModel.swift; sourceTree = "<group>"; };
+		A9464B03270F20F60093ACBF /* MarkedQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkedQuestionsViewController.swift; sourceTree = "<group>"; };
+		A9464B05270F21150093ACBF /* MarkedQuestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkedQuestionsViewModel.swift; sourceTree = "<group>"; };
+		A9464B08270F30190093ACBF /* MarkedQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkedQuestions.swift; sourceTree = "<group>"; };
+		A9464B0A270F32010093ACBF /* MarkedQuestionStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkedQuestionStates.swift; sourceTree = "<group>"; };
 		A953F3F426362D1200102F39 /* DashBoardStorryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DashBoardStorryBoard.storyboard; sourceTree = "<group>"; };
 		A963AC432693ADA9004B6CCF /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		A963AC452693ADE9004B6CCF /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
@@ -260,6 +281,10 @@
 		A976C90126A0C88C008C9BC3 /* QuestionSessionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionSessionItem.swift; sourceTree = "<group>"; };
 		A976C90326A0CA1C008C9BC3 /* QuestionSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionSession.swift; sourceTree = "<group>"; };
 		A976C90626A1739A008C9BC3 /* EmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
+		A97878C92706440D00745229 /* CustomOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOptionView.swift; sourceTree = "<group>"; };
+		A97878CC2706448100745229 /* OptionStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionStates.swift; sourceTree = "<group>"; };
+		A97878CE27065C1800745229 /* OptionsSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsSelected.swift; sourceTree = "<group>"; };
+		A97C3154270A6CC9001D6F4A /* SessionOptionsChosen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionOptionsChosen.swift; sourceTree = "<group>"; };
 		A9ACA9832692DD9D009F0EB5 /* DashboardTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabViewController.swift; sourceTree = "<group>"; };
 		A9ACA985269322D1009F0EB5 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		A9ACA988269323BA009F0EB5 /* QuestionMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionMenuViewController.swift; sourceTree = "<group>"; };
@@ -274,6 +299,7 @@
 		A9B0134626A55FB3001BC648 /* KnowldgeScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowldgeScoreViewModel.swift; sourceTree = "<group>"; };
 		A9C6A248260937500065CA70 /* CustomDesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDesignableView.swift; sourceTree = "<group>"; };
 		A9C86CF726978D24009C3A02 /* ProfessionBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionBottomSheetViewController.swift; sourceTree = "<group>"; };
+		A9EE80B426FC8F6400D63D50 /* PracticeQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeQuestionViewController.swift; sourceTree = "<group>"; };
 		A9F0DC9626873B920023D07A /* QuestionRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionRest.swift; sourceTree = "<group>"; };
 		A9F0DC9826873C560023D07A /* OptionsRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsRest.swift; sourceTree = "<group>"; };
 		A9F0DC9A26873FD20023D07A /* QuestionsPagedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsPagedResponse.swift; sourceTree = "<group>"; };
@@ -571,6 +597,8 @@
 		9BAFB7BC2114CA8D0099DC61 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A9464B02270F206E0093ACBF /* marked_questions */,
+				A9EE80B326FC8F3400D63D50 /* questions */,
 				A9B0134526A55F84001BC648 /* knowledge_score */,
 				A9C86CF626978CEC009C3A02 /* dialogs */,
 				A9ACA98A26932437009F0EB5 /* settings */,
@@ -586,6 +614,7 @@
 		9BAFB7BD2114CA9E0099DC61 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A9464B07270F21360093ACBF /* dashboard */,
 				A9F0DC9C268743C20023D07A /* questions */,
 				9BAFB7C12114E3A80099DC61 /* Home */,
 				9BAFB7C02114E39C0099DC61 /* Onboarding */,
@@ -656,6 +685,7 @@
 		9BFA84EE1C7767D9009F64E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A97878CB2706443700745229 /* StructStates */,
 				A9F0DC9526873B6C0023D07A /* DatabaseModels */,
 				E8FBB1BE1DD21A32000D6740 /* Session.swift */,
 				9B77E0721E2FB6350020E450 /* User.swift */,
@@ -706,6 +736,23 @@
 			path = xibControllers;
 			sourceTree = "<group>";
 		};
+		A9464B02270F206E0093ACBF /* marked_questions */ = {
+			isa = PBXGroup;
+			children = (
+				A9464B05270F21150093ACBF /* MarkedQuestionsViewModel.swift */,
+				A9464B03270F20F60093ACBF /* MarkedQuestionsViewController.swift */,
+			);
+			path = marked_questions;
+			sourceTree = "<group>";
+		};
+		A9464B07270F21360093ACBF /* dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				A9B0134626A55FB3001BC648 /* KnowldgeScoreViewModel.swift */,
+			);
+			path = dashboard;
+			sourceTree = "<group>";
+		};
 		A963AC422693AD81004B6CCF /* change_password */ = {
 			isa = PBXGroup;
 			children = (
@@ -730,6 +777,15 @@
 				A976C90626A1739A008C9BC3 /* EmptyView.xib */,
 			);
 			path = xib;
+			sourceTree = "<group>";
+		};
+		A97878CB2706443700745229 /* StructStates */ = {
+			isa = PBXGroup;
+			children = (
+				A97878CC2706448100745229 /* OptionStates.swift */,
+				A9464B0A270F32010093ACBF /* MarkedQuestionStates.swift */,
+			);
+			path = StructStates;
 			sourceTree = "<group>";
 		};
 		A9ACA9822692DD48009F0EB5 /* dashboard */ = {
@@ -765,7 +821,6 @@
 			isa = PBXGroup;
 			children = (
 				A9B0134326A55F74001BC648 /* KnowledgeScoreViewController.swift */,
-				A9B0134626A55FB3001BC648 /* KnowldgeScoreViewModel.swift */,
 			);
 			path = knowledge_score;
 			sourceTree = "<group>";
@@ -778,6 +833,17 @@
 			path = dialogs;
 			sourceTree = "<group>";
 		};
+		A9EE80B326FC8F3400D63D50 /* questions */ = {
+			isa = PBXGroup;
+			children = (
+				A9EE80B426FC8F6400D63D50 /* PracticeQuestionViewController.swift */,
+				A93A4EC22705FC410052FB05 /* QuestionScoresViewController.swift */,
+				A9464AFE270D736A0093ACBF /* ReviewQuestionsViewController.swift */,
+				A924B92627172D88007EC96A /* StudyQuestionsViewController.swift */,
+			);
+			path = questions;
+			sourceTree = "<group>";
+		};
 		A9F0DC9526873B6C0023D07A /* DatabaseModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -785,6 +851,9 @@
 				A9F0DC9F2687D61E0023D07A /* Option.swift */,
 				A976C90126A0C88C008C9BC3 /* QuestionSessionItem.swift */,
 				A976C90326A0CA1C008C9BC3 /* QuestionSession.swift */,
+				A97878CE27065C1800745229 /* OptionsSelected.swift */,
+				A97C3154270A6CC9001D6F4A /* SessionOptionsChosen.swift */,
+				A9464B08270F30190093ACBF /* MarkedQuestions.swift */,
 			);
 			path = DatabaseModels;
 			sourceTree = "<group>";
@@ -793,6 +862,7 @@
 			isa = PBXGroup;
 			children = (
 				A9F0DC9D268743F40023D07A /* QuestionsViewModel.swift */,
+				A9464B00270D95490093ACBF /* ReviewQuestionsViewModel.swift */,
 			);
 			path = questions;
 			sourceTree = "<group>";
@@ -808,6 +878,7 @@
 				06A4EF062614A3D400C29BB6 /* PasswordToggleTextField.swift */,
 				0697F2362616061B00B63569 /* CircleView.swift */,
 				06D45C6C2617AF68007520D7 /* CustomDropDownView.swift */,
+				A97878C92706440D00745229 /* CustomOptionView.swift */,
 			);
 			path = customUI;
 			sourceTree = "<group>";
@@ -909,7 +980,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 1000;
-				ORGANIZATIONNAME = "TopTier labs";
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					9B2BF7281EBB9AB5001638C4 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -1178,6 +1249,8 @@
 				FEE8080E22A6BB4F00743D1B /* APIError.swift in Sources */,
 				A963AC442693ADA9004B6CCF /* ChangePasswordViewController.swift in Sources */,
 				E8B30E021E72FF8000131DCF /* UIStoryboardExtension.swift in Sources */,
+				A97878CF27065C1800745229 /* OptionsSelected.swift in Sources */,
+				A97878CD2706448200745229 /* OptionStates.swift in Sources */,
 				FE583F0E22AFC9F300EF3CDA /* FirebaseAnalyticsService.swift in Sources */,
 				A9F0DC9E268743F40023D07A /* QuestionsViewModel.swift in Sources */,
 				A9F0DCA02687D61E0023D07A /* Option.swift in Sources */,
@@ -1189,14 +1262,17 @@
 				0697F2332615FDA400B63569 /* ProfilePictureViewModel.swift in Sources */,
 				A9F0DC9B26873FD20023D07A /* QuestionsPagedResponse.swift in Sources */,
 				9BD01E361F01641E007255E3 /* DictionaryExtension.swift in Sources */,
+				A9464AFF270D736B0093ACBF /* ReviewQuestionsViewController.swift in Sources */,
 				06DAB7402615BB5E004DA693 /* ForgotPasswordViewModel.swift in Sources */,
 				E8290C021D8330A800599960 /* StringExtension.swift in Sources */,
+				A93A4EC32705FC410052FB05 /* QuestionScoresViewController.swift in Sources */,
 				FE4D636222B2CBB000685161 /* OnboardingRoutes.swift in Sources */,
 				071CD2622228544700E6D385 /* FontExtension.swift in Sources */,
 				9B8D307020AB47E90050697F /* JSONEncodingExtension.swift in Sources */,
 				06146B992624585C00D764B3 /* ApiUtils.swift in Sources */,
 				0697F20D2615D39C00B63569 /* PasswordOTPViewModel.swift in Sources */,
 				06A4EF072614A3D400C29BB6 /* PasswordToggleTextField.swift in Sources */,
+				A9464B06270F21150093ACBF /* MarkedQuestionsViewModel.swift in Sources */,
 				0697F23B2616106A00B63569 /* ProfileViewController.swift in Sources */,
 				FE4D636422B2CDF700685161 /* ViewModelState.swift in Sources */,
 				0697F2092615D2DF00B63569 /* PasswordOTPViewController.swift in Sources */,
@@ -1204,6 +1280,7 @@
 				A963AC4B2693AE5E004B6CCF /* EditProfileViewModel.swift in Sources */,
 				A908EFED269E03D400CF2947 /* StringLiterals.swift in Sources */,
 				9B3AA3991ED35007005A4D26 /* SignInViewController.swift in Sources */,
+				A97878CA2706440D00745229 /* CustomOptionView.swift in Sources */,
 				E8FBB1BF1DD21A32000D6740 /* Session.swift in Sources */,
 				0A6990351F9F82A300F4BAC7 /* UIApplicationExtension.swift in Sources */,
 				9B77E0731E2FB6350020E450 /* User.swift in Sources */,
@@ -1215,10 +1292,14 @@
 				9BE3669D1F101737007CAECD /* MultipartMedia.swift in Sources */,
 				A9C6A249260937500065CA70 /* CustomDesignableView.swift in Sources */,
 				9B8574D9212C84130063A3E2 /* UIImageExtension.swift in Sources */,
+				A924B92727172D88007EC96A /* StudyQuestionsViewController.swift in Sources */,
 				FE583F0A22AFC9E000EF3CDA /* AnalyticsManager.swift in Sources */,
 				A9B0134026A4BEFC001BC648 /* StarRatingStackView.swift in Sources */,
+				A9464B0B270F32010093ACBF /* MarkedQuestionStates.swift in Sources */,
+				A9464B01270D95490093ACBF /* ReviewQuestionsViewModel.swift in Sources */,
 				0697F2372616061B00B63569 /* CircleView.swift in Sources */,
 				A9F65CEE26080505004E9A1F /* CustomDesignableButton.swift in Sources */,
+				A9464B04270F20F60093ACBF /* MarkedQuestionsViewController.swift in Sources */,
 				A9B0133F26A4BEFC001BC648 /* StarRatingView.swift in Sources */,
 				9B3AA39B1ED35013005A4D26 /* SignUpViewController.swift in Sources */,
 				9B0C72711C738D3400BAF3B1 /* AppDelegate.swift in Sources */,
@@ -1240,18 +1321,21 @@
 				0697F2132615DA4000B63569 /* ResetPasswordViewController.swift in Sources */,
 				FE4D635E22B2CAFF00685161 /* AppNavigator.swift in Sources */,
 				E8FBB1C11DD21D18000D6740 /* SessionManager.swift in Sources */,
+				A97C3155270A6CC9001D6F4A /* SessionOptionsChosen.swift in Sources */,
 				9BE3669F1F10175E007CAECD /* Base64Media.swift in Sources */,
 				9BAFB7C32114E3CD0099DC61 /* SignInViewModel.swift in Sources */,
 				A9C86CF826978D24009C3A02 /* ProfessionBottomSheetViewController.swift in Sources */,
 				9B88CC671CAB305900AE60C5 /* Constants.swift in Sources */,
 				A908EFEF269E044100CF2947 /* Identifiers.swift in Sources */,
 				9BAFB7BF2114D9910099DC61 /* HomeViewModel.swift in Sources */,
+				A9EE80B526FC8F6400D63D50 /* PracticeQuestionViewController.swift in Sources */,
 				9B715A461E28083600C0C039 /* PlaceholderTextView.swift in Sources */,
 				0697F2272615E57B00B63569 /* WelcomeViewModel.swift in Sources */,
 				06EE43BD26152215000B86D2 /* OTPViewModel.swift in Sources */,
 				71BC298FF39A278BA7424528 /* RegisterUserRequest.swift in Sources */,
 				A976C90226A0C88C008C9BC3 /* QuestionSessionItem.swift in Sources */,
 				A9ACA989269323BA009F0EB5 /* QuestionMenuViewController.swift in Sources */,
+				A9464B09270F30190093ACBF /* MarkedQuestions.swift in Sources */,
 				71BC264E5A91971F62DD0E67 /* SignInUserRequest.swift in Sources */,
 				A9ACA98E269324E4009F0EB5 /* SettingsViewController.swift in Sources */,
 				71BC2954D2674614700F24CB /* AVTestResource.swift in Sources */,

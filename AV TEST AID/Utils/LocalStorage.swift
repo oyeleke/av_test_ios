@@ -39,16 +39,37 @@ final class LocalStorage: NSObject {
         guard
             let data = UserDefaults.standard.data(forKey: StringIDs.PersistenceIdentifiers.PROFESSIONS),
             let professions = try? JSONDecoder().decode([Profession].self, from: data)
-        else { return [] }
+            else { return [] }
         return professions
+    }
+    
+    
+    
+    public func persistProfession(profession: Profession){
+        guard let data = try? JSONEncoder().encode(profession) else {return}
+        UserDefaults.standard.set(data, forKey: StringIDs.PersistenceIdentifiers.PROFESSIONS)
+    }
+    
+    public func getProfession() -> Profession? {
+        guard
+            let data = UserDefaults.standard.data(forKey: StringIDs.PersistenceIdentifiers.PROFESSION),
+            let profession = try? JSONDecoder().decode(Profession.self, from: data)
+            else { return nil }
+        return profession
     }
     
     public func persistData(encodedData: Data!, key: String) {
         delete(key: key)
-
+        
         UserDefaults.standard.set(encodedData, forKey: key)
         UserDefaults.standard.synchronize()
     }
+    
+    public func persistBoolean(value: Bool, key: String) {
+          delete(key: key);
+          UserDefaults.standard.set(value, forKey: key);
+          UserDefaults.standard.synchronize();
+      }
     
     public func persistInt(value: Int!, key: String){
         delete(key: key);
@@ -66,6 +87,11 @@ final class LocalStorage: NSObject {
         UserDefaults.standard.synchronize()
         return UserDefaults.standard.value(forKey: key) as? String;
     }
+    
+    public func getBoolean(key: String) -> Bool? {
+          UserDefaults.standard.synchronize()
+          return UserDefaults.standard.value(forKey: key) as? Bool;
+      }
     
     public func getObject(key: String) -> NSObject? {
         if let data = UserDefaults.standard.data(forKey: key),

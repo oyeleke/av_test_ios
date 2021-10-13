@@ -17,6 +17,9 @@ class SettingsViewController: BaseViewController {
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var editProfileImageButton: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var shufflePracticeQuestionSwitch: UISwitch!
+    @IBOutlet weak var shuffleStudyQuestionSwitch: UISwitch!
+    @IBOutlet weak var showCorrectAnswerOnlySwitch: UISwitch!
     var viewModel : SettingsViewModel!
     
     override func viewDidLoad() {
@@ -42,6 +45,14 @@ class SettingsViewController: BaseViewController {
         
         userImageView.contentMode = .scaleToFill
         userImageView.makeCircular()
+        
+        shufflePracticeQuestionSwitch.isOn = LocalStorage.shared.getBoolean(key: StringIDs.PersistenceIdentifiers.SHUFFLE_PRACTICE_QUESTION) ?? false
+        
+        shuffleStudyQuestionSwitch.isOn = LocalStorage.shared.getBoolean(key: StringIDs.PersistenceIdentifiers.SHUFFLE_STUDY_QUESTION) ?? false
+        
+        
+        showCorrectAnswerOnlySwitch.isOn = LocalStorage.shared.getBoolean(key: StringIDs.PersistenceIdentifiers.SHOW_ONLY_CORRECT_QUESTION) ?? false
+        
     }
     
     // MARK: - ViewModel
@@ -69,12 +80,16 @@ class SettingsViewController: BaseViewController {
     //MARK: - UI actions
     
     @IBAction func studyShuffleMode(_ sender: Any) {
+        let state = LocalStorage.shared.getBoolean(key: StringIDs.PersistenceIdentifiers.SHUFFLE_STUDY_QUESTION) ?? false
+           LocalStorage.shared.persistBoolean(value: !state, key: StringIDs.PersistenceIdentifiers.SHUFFLE_STUDY_QUESTION)
     }
     
     @IBAction func studyShowCorrectAnswer(_ sender: Any) {
     }
     
     @IBAction func practiceShuffleMode(_ sender: Any) {
+        let state = LocalStorage.shared.getBoolean(key: StringIDs.PersistenceIdentifiers.SHUFFLE_PRACTICE_QUESTION) ?? false 
+        LocalStorage.shared.persistBoolean(value: !state, key: StringIDs.PersistenceIdentifiers.SHUFFLE_PRACTICE_QUESTION)
     }
     
     @IBAction func practiceShowOnlyCOrrectAnswer(_ sender: Any) {

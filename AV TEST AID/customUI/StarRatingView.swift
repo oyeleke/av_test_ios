@@ -1,9 +1,3 @@
-//
-//  StarRatingView.swift
-//
-//  Created by Guido on 7/1/20.
-//  Copyright © applified.life - All rights reserved.
-//
 
 import UIKit
 

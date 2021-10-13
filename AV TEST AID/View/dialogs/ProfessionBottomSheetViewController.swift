@@ -17,6 +17,7 @@ class ProfessionBottomSheetViewController: UIViewController {
     @IBOutlet weak var airTrafficControllerView: UIView!
     @IBOutlet weak var engineerView: UIView!
     var questionViewModel : QuestionsViewModel!
+    var delegate: OnProfessionSelected? = nil
     var realm : Realm!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,41 +38,44 @@ class ProfessionBottomSheetViewController: UIViewController {
         let pilot = professions.first { (profession) -> Bool in
             profession.name == StringIDs.ProfessionIdentifiers.PILOT
         }
+        if self.delegate != nil {
+            self.dismiss(animated: true, completion: nil)
+            self.delegate?.moveToPracticeQuestion(profession: pilot!)
+        }
+    }
+    
+    @objc func onFlightAttendantViewClicked(_ sender: UITapGestureRecognizer) {
+        let professions = LocalStorage.shared.getProfessions()
+        let pilot = professions.first { (profession) -> Bool in
+            profession.name == StringIDs.ProfessionIdentifiers.FLIGHT_ATTENDANT
+        }
         let questions = Question.getPracticeQuestionsShuffled(forProfession : pilot?.id ?? "", realm: realm)
         
         print("\(questions)")
-     }
-    
-    @objc func onFlightAttendantViewClicked(_ sender: UITapGestureRecognizer) {
-         let professions = LocalStorage.shared.getProfessions()
-               let pilot = professions.first { (profession) -> Bool in
-                   profession.name == StringIDs.ProfessionIdentifiers.FLIGHT_ATTENDANT
-               }
-               let questions = Question.getPracticeQuestionsShuffled(forProfession : pilot?.id ?? "", realm: realm)
-               
-               print("\(questions)")
-            
-      }
+        
+    }
     
     @objc func onAirTrafficViewClicked(_ sender: UITapGestureRecognizer) {
-         let professions = LocalStorage.shared.getProfessions()
-               let pilot = professions.first { (profession) -> Bool in
-                   profession.name == StringIDs.ProfessionIdentifiers.AIR_TRAFFIC_CONTROLLER
-               }
-               let questions = Question.getPracticeQuestionsShuffled(forProfession : pilot?.id ?? "", realm: realm)
-               
-               print("\(questions)")
-            
-      }
+        let professions = LocalStorage.shared.getProfessions()
+        let pilot = professions.first { (profession) -> Bool in
+            profession.name == StringIDs.ProfessionIdentifiers.AIR_TRAFFIC_CONTROLLER
+        }
+        //LocalStorage.shared.persistProfession(profession: pilot!)
+        
+    }
     
     @objc func onEngineerViewClicked(_ sender: UITapGestureRecognizer) {
-         let professions = LocalStorage.shared.getProfessions()
-               let pilot = professions.first { (profession) -> Bool in
-                   profession.name == StringIDs.ProfessionIdentifiers.ENGINEER
-               }
-               let questions = Question.getPracticeQuestionsShuffled(forProfession : pilot?.id ?? "", realm: realm)
-               
-               print("\(questions)")
-            
-      }
+        let professions = LocalStorage.shared.getProfessions()
+        let pilot = professions.first { (profession) -> Bool in
+            profession.name == StringIDs.ProfessionIdentifiers.ENGINEER
+        }
+        let questions = Question.getPracticeQuestionsShuffled(forProfession : pilot?.id ?? "", realm: realm)
+        
+        print("\(questions)")
+        
+    }
+}
+
+protocol OnProfessionSelected {
+    func moveToPracticeQuestion(profession: Profession)
 }

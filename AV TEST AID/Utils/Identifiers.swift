@@ -19,6 +19,10 @@ struct StringIDs {
     
     struct PersistenceIdentifiers {
         static let PROFESSIONS =                        "professions"
+        static let PROFESSION  =                        "profession"
+        static let SHUFFLE_PRACTICE_QUESTION =          "shuffle_practice_question"
+        static let SHUFFLE_STUDY_QUESTION =             "shuffle_study_question"
+        static let SHOW_ONLY_CORRECT_QUESTION =         "show_only_correct_question"
     }
     
     struct ProfessionIdentifiers {

@@ -3,7 +3,7 @@
 //  AV TEST AID
 //
 //  Created by Timileyin Ogunsola on 23/06/2021.
-//  Copyright © 2021 TopTier labs. All rights reserved.
+//  
 //
 
 import Foundation
@@ -67,9 +67,10 @@ class Question: Object {
     }
     
     @discardableResult
-    static func getPracticeQuestionsShuffled(forProfession : String, realm: Realm, count: Int = 10) -> [Question]{
+    static func getPracticeQuestionsShuffled(forProfession : String, realm: Realm, count: Int = 9) -> [Question]{
         var practiceQuestions = [Question]()
         let resultsQuestion = getQuestionResults(forProfessionId: forProfession, realm).shuffled()
+        print("count \(resultsQuestion.count)")
         if resultsQuestion.count <= count{
             return resultsQuestion
         } else {
@@ -107,6 +108,13 @@ class Question: Object {
     @discardableResult
     static func getQuestion(withQuestionId questionId: String, _ realm: Realm) -> Question? {
         return realm.objects(Question.self).filter("id = %@", questionId).first
+    }
+    
+    @discardableResult
+    static func getAllBookMarkedQuestion(_ realm: Realm) -> [Question] {
+        let keys = MarkedQuestions.getAllMarkedQuestions(realm)
+        let markedQuestions = realm.objects(Question.self).filter("id IN %@", keys)
+        return markedQuestions.toArray()
     }
 }
 

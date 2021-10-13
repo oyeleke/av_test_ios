@@ -43,6 +43,7 @@ class DashboardViewController: BaseViewController {
         markedQuestionsView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(moveToMarkedQuestions(_:))))
         practiceQuestionView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(moveToPracticeQuestions(_:))))
         studyQuestionView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(moveToStudyQuestions)))
+        MarkedQuestions.createMarkedQuestionsInRealmIfitDoesNotExist(realm)
     }
     
     private func bindViewModel(){
@@ -84,18 +85,42 @@ class DashboardViewController: BaseViewController {
         } else {
             print("earlier version not avialable")
         }
-       
-    }
-    
-    @objc func moveToMarkedQuestions(_ sender: UITapGestureRecognizer){
         
     }
     
+    @objc func moveToMarkedQuestions(_ sender: UITapGestureRecognizer){
+        guard let markedQuestionsViewController = UIStoryboard.instantiateViewController(MarkedQuestionsViewController.self, storyboardIdentifier: "DashBoardStorryBoard") else {
+            return
+        }
+        markedQuestionsViewController.viewModel = MarkedQuestionsViewModel()
+        navigationController?.pushViewController(markedQuestionsViewController, animated: true)
+    }
+    
     @objc func moveToPracticeQuestions(_ sender: UITapGestureRecognizer){
-         
-     }
+        guard let viewController = UIStoryboard.instantiateViewController(ProfessionBottomSheetViewController.self, storyboardIdentifier: "DashBoardStorryBoard") else {
+            return
+        }
+        let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: viewController)
+        bottomSheet.preferredContentSize = CGSize(width: self.view.frame.size.width, height:  self.view.frame.size.height * 0.5)
+        viewController.delegate = self
+        present(bottomSheet, animated: true, completion: nil)
+    }
     
     @objc func moveToStudyQuestions(_ sender: UITapGestureRecognizer){
-         
-     }
+        
+    }
+}
+
+extension DashboardViewController : OnProfessionSelected {
+    
+    func moveToPracticeQuestion(profession: Profession) {
+        print("practice question clicked.....")
+        guard let practiceQuestionViewController = UIStoryboard.instantiateViewController(PracticeQuestionViewController.self, storyboardIdentifier: "DashBoardStorryBoard") else {
+            return
+        }
+        print("Settings arrow passed.....")
+        practiceQuestionViewController.profession = profession
+        practiceQuestionViewController.viewModel = QuestionsViewModel()
+        navigationController?.pushViewController(practiceQuestionViewController, animated: true)
+    }
 }

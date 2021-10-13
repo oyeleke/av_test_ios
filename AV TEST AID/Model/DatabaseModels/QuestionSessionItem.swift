@@ -12,21 +12,24 @@ import RealmSwift
 class QuestionSessionItem : Object{
     @objc dynamic var optionSelectedId: String?
     @objc dynamic var questionId: String?
-    @objc dynamic var isCorrect = false
+    @objc dynamic var question: Question?
+    @objc dynamic var optionIsCorrect = false
+
     
     override required init() {
     }
     
-    convenience init(questionId: String) {
+    convenience init(questionId: String, question: Question) {
         self.init()
         self.questionId = questionId
+        self.question = question
     }
     
-    convenience init(questionId: String, optionSelectedId: String, isCorrect: Bool) {
+    convenience init(questionId: String, optionSelectedId: String, optionIsCorrect: Bool) {
         self.init()
         self.questionId = questionId
         self.optionSelectedId = optionSelectedId
-        self.isCorrect = isCorrect
+        self.optionIsCorrect = optionIsCorrect
     }
     
     override static func primaryKey() -> String? {
