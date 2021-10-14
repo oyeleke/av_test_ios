@@ -63,6 +63,7 @@ class StudyQuestionsViewController: BaseViewController {
     
     
     func setupViews(){
+        topicLabel.text = "All"
         optionTextList = [option1Label, option2Label, option3Label, option4Label]
         optionsContainerList = [option1Layout, option2Layout, option3Layout, option4Layout]
         option1Layout.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onOptionTapped0(_:))))

@@ -16,14 +16,18 @@ import RealmSwift
 class QuestionsViewModel : BaseViewModel {
     
     let getQuestionsState = BehaviorRelay(value: false)
-    let currentQuestion = BehaviorRelay<QuestionSessionItem?>(value: nil)
+    let currentQuestionSessionItem = BehaviorRelay<QuestionSessionItem?>(value: nil)
+    let currentQuestion = BehaviorRelay<Question?>(value: nil)
     var currentQuestionNumber = -1
     var currentQuestionList : [Question] = []
+    var filteredQuestionList : [Question] = []
     var currentSessionQuestionList: [QuestionSessionItem] = []
     var currentQuestionSession : QuestionSession? = nil
     var totalQuestions = 0;
+    var totalQuestionsFiltered = 0;
     var questionIdOptionChosenIdDictionary: [String : String] = [:]
     var markedQuestionSet : Set<String> = []
+    var studyQuestionsTopics : Set<String> = []
     
     
     func getQuestionsFromApi(_ realm: Realm){
@@ -82,32 +86,66 @@ class QuestionsViewModel : BaseViewModel {
             guard let currentQuestionSession = QuestionSession.getCurrentQuestionAndStateForSession(realm) else {return}
             totalQuestions = currentQuestionSession.2
             currentQuestionNumber = currentQuestionSession.1
-            self.currentQuestion.accept(currentQuestionSession.0)
+            self.currentQuestionSessionItem.accept(currentQuestionSession.0)
         } else {
             guard let currentQuestionSession = QuestionSession.getCurrentQuestionAndStateForSession(realm) else {return}
             markedQuestionSet = MarkedQuestions.getAllMarkedQuestionsAsSet(realm)
             totalQuestions = currentQuestionSession.2
             currentQuestionNumber = currentQuestionSession.1
             resetOptionsSelectedIntoDictionary(optionsSelected: currentQuestionSession.3)
-            self.currentQuestion.accept(currentQuestionSession.0)
+            self.currentQuestionSessionItem.accept(currentQuestionSession.0)
+        }
+    }
+    
+    func setupStudyQuestions(realm: Realm, id: String){
+        markedQuestionSet = MarkedQuestions.getAllMarkedQuestionsAsSet(realm)
+        if(LocalStorage.shared.getBoolean(key: StringIDs.PersistenceIdentifiers.SHUFFLE_STUDY_QUESTION) ?? false){
+            currentQuestionList = Question.getStudyQuestionsForProfessionShuffled(forProfession: id, realm: realm)
+        } else {
+            currentQuestionList = Question.getStudyQuestionsForProfessionUnshuffled(forProfession: id, realm: realm)
+        }
+        filteredQuestionList = currentQuestionList;
+        totalQuestions = currentQuestionList.count;
+    }
+    
+    func moveToNextQuestionStudySession(){
+        if(currentQuestionNumber < totalQuestions - 1){
+            currentQuestionNumber =  currentQuestionNumber + 1;
+            self.currentQuestion.accept(filteredQuestionList[currentQuestionNumber])
+        }
+    }
+    
+    func moveToPrevQuestionStudySession(){
+        if(currentQuestionNumber > 0){
+            currentQuestionNumber =  currentQuestionNumber - 1;
+            self.currentQuestion.accept(filteredQuestionList[currentQuestionNumber])
+        }
+    }
+    
+    func getAllUniqueTopics(questions: [Question]){
+        studyQuestionsTopics.insert("All")
+        for question in questions {
+            if let topic = question.topic{
+                studyQuestionsTopics.insert(topic)
+            }
         }
     }
     
     
-    func moveToNextQuestion(_ realm: Realm){
+    func moveToNextQuestionPracticeSession(_ realm: Realm){
         if(currentQuestionNumber < totalQuestions - 1){
             let currentQuestionInSession = QuestionSession.getCurrentQuestionForSessionOnNext(realm)
             currentQuestionNumber = currentQuestionInSession!.1
             
-            self.currentQuestion.accept(currentQuestionInSession?.0)
+            self.currentQuestionSessionItem.accept(currentQuestionInSession?.0)
         }
     }
     
-    func moveToPreviousQuestion(_ realm: Realm){
+    func moveToPreviousQuestionPracticeSession(_ realm: Realm){
         if(currentQuestionNumber > 0){
             let currentQuestionInSession = QuestionSession.getCurrentQuestionForSessionOnPrev(realm)
             currentQuestionNumber = currentQuestionInSession!.1
-            self.currentQuestion.accept(currentQuestionInSession?.0)
+            self.currentQuestionSessionItem.accept(currentQuestionInSession?.0)
         }
     }
     

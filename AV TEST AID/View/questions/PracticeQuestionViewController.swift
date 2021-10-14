@@ -71,12 +71,12 @@ class PracticeQuestionViewController: BaseViewController{
      }
      */
     @IBAction func moveToNextQuestion(_ sender: Any) {
-        viewModel.moveToNextQuestion(realm)
+        viewModel.moveToNextQuestionPracticeSession(realm)
         
     }
     
     @IBAction func moveToPreviousQuestion(_ sender: Any) {
-        viewModel.moveToPreviousQuestion(realm)
+        viewModel.moveToPreviousQuestionPracticeSession(realm)
         
     }
     
@@ -100,7 +100,7 @@ class PracticeQuestionViewController: BaseViewController{
     
     
     private func subscribeObservers(){
-        viewModel.currentQuestion.subscribe(onNext: {question in
+        viewModel.currentQuestionSessionItem.subscribe(onNext: {question in
             //print("question: \(question?.questionId)")
             guard let question = question else {return}
             self.mQuestionSessionItem = question
