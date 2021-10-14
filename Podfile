@@ -20,6 +20,7 @@ target 'AV TEST AID' do
   pod 'MBProgressHUD', '~> 1.2.0'
   pod 'SDWebImage', '~> 5.0'
   pod 'RealmSwift', '~> 4.3.0'
+  pod 'MaterialComponents/BottomSheet'
  
 
   # FB SDK ---

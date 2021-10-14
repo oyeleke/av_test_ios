@@ -92,10 +92,17 @@ class AVTestService: BaseApiService<AVTestResource> {
         }
     }
     
-    func fetchQuestions() -> Observable<QuestionsPagedResponse> {
+    func fetchQuestions() -> Observable<[QuestionRest]> {
         request(for: .fetchQuestions).asObservable().map {
-            (questionsPagedResponse : QuestionsPagedResponse, response: Response) in
+            (questionsPagedResponse : [QuestionRest], response: Response) in
             questionsPagedResponse
+        }
+    }
+    
+    func fetchScores() -> Observable<Double> {
+        request(for: .fetchScore).asObservable().map {
+            (score: Double, response: Response) in
+            score
         }
     }
     

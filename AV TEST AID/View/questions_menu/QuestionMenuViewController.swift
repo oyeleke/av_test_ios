@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MaterialComponents.MaterialBottomSheet
 
 class QuestionMenuViewController: UIViewController {
 
@@ -16,19 +17,21 @@ class QuestionMenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupViews()
+    }
+        
+    private func setupViews(){
+        practiceQuestionImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onPracticeQuestionTouched(_:))))
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func onPracticeQuestionTouched(_ sender: UITapGestureRecognizer){
+        
+        guard let viewController = UIStoryboard.instantiateViewController(ProfessionBottomSheetViewController.self, storyboardIdentifier: "DashBoardStorryBoard") else {
+                   return
+               }
+        let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: viewController)
+         bottomSheet.preferredContentSize = CGSize(width: self.view.frame.size.width, height:  self.view.frame.size.height * 0.5)
+        present(bottomSheet, animated: true, completion: nil)
     }
-    */
 
 }

@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 class Option : Object{
-    dynamic var isCorrect : Bool = false
+      @objc dynamic var isCorrect : Bool = false
       @objc dynamic var id: String?
       @objc dynamic var text: String?
     

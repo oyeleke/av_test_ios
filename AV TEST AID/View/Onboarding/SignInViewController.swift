@@ -40,6 +40,7 @@ class SignInViewController: BaseViewController {
 
         forgotPasswordLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(forgotPasswordTapped(_:))))
         signUpInsteadLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(signUpInsteadTapped(_:))))
+        prefillUserEmail()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -58,8 +59,15 @@ class SignInViewController: BaseViewController {
             }
         }).disposed(by: disposeBag)
     }
+    
+    
 
     // MARK: - Actions
+    
+    func prefillUserEmail(){
+        guard let userDefaults = UserDataManager.currentUser else { return }
+        emailField.text = userDefaults.email
+    }
 
     @objc func forgotPasswordTapped(_ sender: UITapGestureRecognizer) {
         viewModel.navigateToForgotPassword()
