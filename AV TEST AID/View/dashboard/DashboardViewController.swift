@@ -107,12 +107,18 @@ class DashboardViewController: BaseViewController {
     }
     
     @objc func moveToStudyQuestions(_ sender: UITapGestureRecognizer){
-        
+        guard let viewController = UIStoryboard.instantiateViewController(ProfessionBottomSheetViewController.self, storyboardIdentifier: "DashBoardStorryBoard") else {
+            return
+        }
+        let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: viewController)
+        bottomSheet.preferredContentSize = CGSize(width: self.view.frame.size.width, height:  self.view.frame.size.height * 0.5)
+        viewController.delegate = self
+        viewController.isStudyQuestion = true
+        present(bottomSheet, animated: true, completion: nil)
     }
 }
 
 extension DashboardViewController : OnProfessionSelected {
-    
     func moveToPracticeQuestion(profession: Profession) {
         print("practice question clicked.....")
         guard let practiceQuestionViewController = UIStoryboard.instantiateViewController(PracticeQuestionViewController.self, storyboardIdentifier: "DashBoardStorryBoard") else {
@@ -122,5 +128,16 @@ extension DashboardViewController : OnProfessionSelected {
         practiceQuestionViewController.profession = profession
         practiceQuestionViewController.viewModel = QuestionsViewModel()
         navigationController?.pushViewController(practiceQuestionViewController, animated: true)
+    }
+    
+    func moveToStudyQuestion(profession: Profession) {
+        print("practice question clicked.....")
+        guard let studyQuestionViewController = UIStoryboard.instantiateViewController(StudyQuestionsViewController.self, storyboardIdentifier: "DashBoardStorryBoard") else {
+            return
+        }
+        print("Settings arrow passed.....")
+        studyQuestionViewController.profession = profession
+        studyQuestionViewController.viewModel = QuestionsViewModel()
+        navigationController?.pushViewController(studyQuestionViewController, animated: true)
     }
 }

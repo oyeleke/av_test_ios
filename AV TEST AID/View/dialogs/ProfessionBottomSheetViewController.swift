@@ -16,6 +16,7 @@ class ProfessionBottomSheetViewController: UIViewController {
     @IBOutlet weak var flightAttendantView: UIView!
     @IBOutlet weak var airTrafficControllerView: UIView!
     @IBOutlet weak var engineerView: UIView!
+    var isStudyQuestion = false
     var questionViewModel : QuestionsViewModel!
     var delegate: OnProfessionSelected? = nil
     var realm : Realm!
@@ -40,7 +41,11 @@ class ProfessionBottomSheetViewController: UIViewController {
         }
         if self.delegate != nil {
             self.dismiss(animated: true, completion: nil)
-            self.delegate?.moveToPracticeQuestion(profession: pilot!)
+            if isStudyQuestion {
+                self.delegate?.moveToStudyQuestion(profession: pilot!)
+            } else {
+                self.delegate?.moveToPracticeQuestion(profession: pilot!)
+            }
         }
     }
     
@@ -52,7 +57,6 @@ class ProfessionBottomSheetViewController: UIViewController {
         let questions = Question.getPracticeQuestionsShuffled(forProfession : pilot?.id ?? "", realm: realm)
         
         print("\(questions)")
-        
     }
     
     @objc func onAirTrafficViewClicked(_ sender: UITapGestureRecognizer) {
@@ -61,7 +65,6 @@ class ProfessionBottomSheetViewController: UIViewController {
             profession.name == StringIDs.ProfessionIdentifiers.AIR_TRAFFIC_CONTROLLER
         }
         //LocalStorage.shared.persistProfession(profession: pilot!)
-        
     }
     
     @objc func onEngineerViewClicked(_ sender: UITapGestureRecognizer) {
@@ -78,4 +81,5 @@ class ProfessionBottomSheetViewController: UIViewController {
 
 protocol OnProfessionSelected {
     func moveToPracticeQuestion(profession: Profession)
+    func moveToStudyQuestion(profession: Profession)
 }

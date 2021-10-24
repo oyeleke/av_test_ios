@@ -14,7 +14,8 @@ class Question: Object {
     @objc dynamic var  text: String?
     @objc dynamic var  explanation : String?
     @objc dynamic var  profession: String?
-    @objc dynamic var  topic: String?
+    @objc dynamic var  topicId: String?
+    @objc dynamic var  topicString: String?
     dynamic var  options = List<Option>()
     
     convenience init(questionRest: QuestionRest) {
@@ -23,7 +24,8 @@ class Question: Object {
         self.text = questionRest.text
         self.explanation = questionRest.explanation
         self.profession = questionRest.profession.id
-        self.topic = questionRest.topic.id
+        self.topicId = questionRest.topic.id
+        self.topicString = questionRest.topic.name
         questionRest.options.forEach { (value) in
             options.append(Option(optionsRest: value))
         }

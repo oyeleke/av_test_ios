@@ -18,6 +18,7 @@ class QuestionsViewModel : BaseViewModel {
     let getQuestionsState = BehaviorRelay(value: false)
     let currentQuestionSessionItem = BehaviorRelay<QuestionSessionItem?>(value: nil)
     let currentQuestion = BehaviorRelay<Question?>(value: nil)
+    let onFilterApplied = BehaviorRelay(value: false)
     var currentQuestionNumber = -1
     var currentQuestionList : [Question] = []
     var filteredQuestionList : [Question] = []
@@ -28,6 +29,7 @@ class QuestionsViewModel : BaseViewModel {
     var questionIdOptionChosenIdDictionary: [String : String] = [:]
     var markedQuestionSet : Set<String> = []
     var studyQuestionsTopics : Set<String> = []
+    var topics = BehaviorRelay<[String]>(value: [])
     
     
     func getQuestionsFromApi(_ realm: Realm){
@@ -104,13 +106,19 @@ class QuestionsViewModel : BaseViewModel {
         } else {
             currentQuestionList = Question.getStudyQuestionsForProfessionUnshuffled(forProfession: id, realm: realm)
         }
+        
         filteredQuestionList = currentQuestionList;
         totalQuestions = currentQuestionList.count;
+        totalQuestionsFiltered = filteredQuestionList.count;
+        getAllUniqueTopics(questions: currentQuestionList)
+        moveToNextQuestionStudySession()
+       
     }
     
     func moveToNextQuestionStudySession(){
-        if(currentQuestionNumber < totalQuestions - 1){
-            currentQuestionNumber =  currentQuestionNumber + 1;
+        if(currentQuestionNumber < totalQuestionsFiltered - 1){
+            currentQuestionNumber =  currentQuestionNumber + 1
+            print("current question number view model \(currentQuestionNumber)")
             self.currentQuestion.accept(filteredQuestionList[currentQuestionNumber])
         }
     }
@@ -123,12 +131,16 @@ class QuestionsViewModel : BaseViewModel {
     }
     
     func getAllUniqueTopics(questions: [Question]){
-        studyQuestionsTopics.insert("All")
         for question in questions {
-            if let topic = question.topic{
+            if let topic = question.topicString{
                 studyQuestionsTopics.insert(topic)
             }
         }
+        var studyQuestionsList : [String] = []
+        studyQuestionsList.append("All")
+        studyQuestionsList.append(contentsOf: studyQuestionsTopics.map{$0})
+        
+        topics.accept(studyQuestionsList)
     }
     
     
@@ -163,6 +175,19 @@ class QuestionsViewModel : BaseViewModel {
     func resetQuestionSession(_ realm: Realm){
         QuestionSession.resetSession(realm)
         questionIdOptionChosenIdDictionary.removeAll()
+    }
+    
+    func onNewTopicSelected(topic: String){
+        if topic != "All" {
+            filteredQuestionList = currentQuestionList.filter { $0.topicString == topic }
+        } else {
+            filteredQuestionList = currentQuestionList
+        }
+        
+        totalQuestionsFiltered = filteredQuestionList.count
+        currentQuestionNumber = -1
+        moveToNextQuestionStudySession()
+        onFilterApplied.accept(true)
     }
 }
 

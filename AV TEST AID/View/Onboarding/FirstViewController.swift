@@ -43,7 +43,8 @@ class FirstViewController: UIViewController {
     // MARK: - Actions
 
     @IBAction func createAccountTapped(_ sender: Any) {
-        viewModel.signUp()
+        //viewModel.signUp()
+       AppNavigator.shared.navigate(to: OnboardingRoutes.profile, with: .push)
     }
 
     @IBAction func signInTapped(_ sender: Any) {

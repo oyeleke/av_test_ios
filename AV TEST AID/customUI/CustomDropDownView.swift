@@ -70,5 +70,4 @@ class CustomDropDownView: CustomDesignableView {
         }
         setDropDownData(options)
     }
-
 }
